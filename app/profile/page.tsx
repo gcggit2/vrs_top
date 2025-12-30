@@ -28,12 +28,38 @@ export default function Profile() {
         </div>
       </div>
 
+      {/* Navigation Menu */}
+      <div className="bg-white pb-12 md:pb-16">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-5xl mx-auto">
+            <Link href="#profile" className="group border border-brand-red p-4 flex justify-between items-center bg-white hover:bg-brand-red/5 transition-colors">
+              <span className="text-gray-900 font-medium">プロフィール</span>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1} stroke="currentColor" className="w-6 h-6 text-gray-400 group-hover:text-brand-red transition-colors">
+                <path strokeLinecap="round" strokeLinejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+              </svg>
+            </Link>
+            <Link href="#story" className="group border border-brand-red p-4 flex justify-between items-center bg-white hover:bg-brand-red/5 transition-colors">
+              <span className="text-gray-900 font-medium">ストーリー</span>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1} stroke="currentColor" className="w-6 h-6 text-gray-400 group-hover:text-brand-red transition-colors">
+                <path strokeLinecap="round" strokeLinejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+              </svg>
+            </Link>
+            <Link href="#partner" className="group border border-brand-red p-4 flex justify-between items-center bg-white hover:bg-brand-red/5 transition-colors">
+              <span className="text-gray-900 font-medium">パートナー紹介</span>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1} stroke="currentColor" className="w-6 h-6 text-gray-400 group-hover:text-brand-red transition-colors">
+                <path strokeLinecap="round" strokeLinejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+              </svg>
+            </Link>
+          </div>
+        </div>
+      </div>
+
       {/* Main Content */}
-      <div className="bg-white py-20 md:py-32">
+      <div className="bg-white py-12 md:py-20">
         <div className="container mx-auto px-4">
 
           {/* New Profile Section (Updated) */}
-          <div className="max-w-4xl mx-auto mb-32 bg-white border border-gray-100 rounded-2xl p-8 md:p-12 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)]">
+          <div id="profile" className="scroll-mt-24 max-w-4xl mx-auto mb-32 bg-white border border-gray-100 rounded-2xl p-8 md:p-12 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)]">
             
             {/* Summary Section */}
             <div className="mb-12 text-gray-700 leading-relaxed font-medium">
@@ -112,7 +138,7 @@ export default function Profile() {
           </div>
           
           {/* Intro Section */}
-          <div className="max-w-4xl mx-auto mb-24 text-center">
+          <div id="story" className="scroll-mt-24 max-w-4xl mx-auto mb-24 text-center">
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-8">
               マンパワーに頼る「属人化の壁」を、<br/>
               AIとマーケティングで突破する
@@ -295,7 +321,7 @@ export default function Profile() {
           </div>
 
           {/* Partner Section */}
-          <div className="max-w-6xl mx-auto mt-32">
+          <div id="partner" className="scroll-mt-24 max-w-6xl mx-auto mt-32">
              <div className="bg-white border border-gray-100 rounded-2xl p-8 md:p-12 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)]">
               <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6 text-center">パートナー紹介</h2>
               <p className="text-gray-600 text-center mb-12 max-w-3xl mx-auto">
