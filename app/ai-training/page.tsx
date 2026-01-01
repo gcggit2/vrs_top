@@ -294,7 +294,7 @@ export default function AiTrainingPage() {
           <div className="max-w-4xl mx-auto">
              <div className="text-center mb-10">
                <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
-                 AIで半自動化できること
+                 AIで<br className="md:hidden" />半自動化できること
                </h2>
              </div>
              
@@ -512,7 +512,7 @@ export default function AiTrainingPage() {
                 </div>
                 <div className="md:w-1/2">
                   <div className="text-blue-600 font-black text-2xl tracking-widest mb-2 opacity-30">01</div>
-                  <h3 className="text-3xl font-bold text-gray-900 mb-6">超実践的なカリキュラム</h3>
+                  <h3 className="text-3xl font-bold text-gray-900 mb-6">超実践的な<br className="md:hidden" />カリキュラム</h3>
                   <p className="text-gray-600 leading-relaxed text-lg mb-8 border-l-4 border-blue-600 pl-4">
                     理論だけでなく、明日から使える実践的な内容を中心に構成。現場ですぐに役立つスキルを習得できます。
                   </p>
@@ -544,7 +544,7 @@ export default function AiTrainingPage() {
                 </div>
                 <div className="md:w-1/2">
                   <div className="text-blue-600 font-black text-2xl tracking-widest mb-2 opacity-30">02</div>
-                  <h3 className="text-3xl font-bold text-gray-900 mb-6">業務を最大85%時短</h3>
+                  <h3 className="text-3xl font-bold text-gray-900 mb-6">業務を<br className="md:hidden" />最大85%時短</h3>
                   <p className="text-gray-600 leading-relaxed text-lg mb-8 border-l-4 border-blue-600 pl-4">
                     AIを活用することで、従来の業務時間を大幅に削減。空いた時間で、より付加価値の高い業務に集中できます。
                   </p>
@@ -576,7 +576,7 @@ export default function AiTrainingPage() {
                 </div>
                 <div className="md:w-1/2">
                   <div className="text-blue-600 font-black text-2xl tracking-widest mb-2 opacity-30">03</div>
-                  <h3 className="text-3xl font-bold text-gray-900 mb-6">全職種の生産性UP</h3>
+                  <h3 className="text-3xl font-bold text-gray-900 mb-6">全職種の<br className="md:hidden" />生産性UP</h3>
                   <p className="text-gray-600 leading-relaxed text-lg mb-8 border-l-4 border-blue-600 pl-4">
                     営業、事務、マーケティング、エンジニアなど、全職種に対応。職種ごとの具体的な活用事例も豊富です。
                   </p>
@@ -610,7 +610,7 @@ export default function AiTrainingPage() {
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
-                研修後のサポートも充実
+                研修後の<br className="md:hidden" />サポートも充実
               </h2>
               <p className="text-gray-500 mt-4 font-bold">「研修して終わり」ではありません。研修内容を実践できるように無償サポートします。</p>
             </div>
@@ -1095,7 +1095,7 @@ export default function AiTrainingPage() {
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-20">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
-                当社が選ばれる理由
+                当社が<br className="md:hidden" />選ばれる理由
               </h2>
               
               <div className="mt-8 bg-blue-50 border-2 border-blue-100 rounded-2xl p-6 inline-block max-w-3xl shadow-sm">

@@ -291,7 +291,7 @@ export default function AiMarkeTrainingPage() {
           <div className="max-w-4xl mx-auto">
              <div className="text-center mb-10">
                <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
-                 AIで半自動化できること
+                 AIで<br className="md:hidden" />半自動化できること
                </h2>
              </div>
              
@@ -613,7 +613,7 @@ export default function AiMarkeTrainingPage() {
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
-                研修後のサポートも充実
+                研修後の<br className="md:hidden" />サポートも充実
               </h2>
               <p className="text-gray-500 mt-4 font-bold">「研修して終わり」ではありません。研修内容を実践できるように無償サポートします。</p>
             </div>
@@ -1121,12 +1121,12 @@ export default function AiMarkeTrainingPage() {
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-20">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
-                当社が選ばれる理由
+                当社が<br className="md:hidden" />選ばれる理由
               </h2>
               
               <div className="mt-8 bg-orange-50 border-2 border-orange-100 rounded-2xl p-6 inline-block max-w-3xl shadow-sm">
                 <p className="text-lg md:text-xl font-bold text-gray-900 mb-3">
-                  AIとマーケティング、<span className="text-orange-600">両方の実務に精通した会社</span>は希少です。
+                  AIとマーケティング、<br className="md:hidden" /><span className="text-orange-600">両方の実務に精通した会社</span>は希少です。
                 </p>
                 <p className="text-sm md:text-base text-gray-700 font-medium leading-relaxed">
                   特定の施策（広告のみ等）ではなく、集客全体を横断的にカバーできる<br className="hidden md:block"/>

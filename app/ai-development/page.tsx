@@ -274,7 +274,7 @@ export default function AiDevelopmentPage() {
             <div className="text-center mb-16">
               <span className="text-teal-600 font-bold text-lg tracking-widest uppercase mb-2 block">Service 01</span>
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
-                AIツール・AIエージェント開発
+                AIツール・<br className="md:hidden" />AIエージェント開発
               </h2>
               <p className="text-gray-500 mt-4 text-lg font-medium">
                 貴社の業務フローに特化した、独自のAIツール・AIエージェントを開発します。<br/>
@@ -328,7 +328,7 @@ export default function AiDevelopmentPage() {
             <div className="text-center mb-16">
               <span className="text-teal-600 font-bold text-lg tracking-widest uppercase mb-2 block">Service 02</span>
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
-                マイGPT・プロンプト制作
+                マイGPT・<br className="md:hidden" />プロンプト制作
               </h2>
               <p className="text-gray-500 mt-4 text-lg font-medium">
                 ツール開発までは不要な業務も、プロンプトの改善で成果が劇的に変わります。<br/>

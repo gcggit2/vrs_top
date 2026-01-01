@@ -423,7 +423,7 @@ export default function ConsultingPage() {
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-20">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900">AIマーケ顧問とは？</h2>
-              <p className="text-gray-500 mt-2 text-sm font-bold">AI活用とマーケティング支援の融合</p>
+              <p className="text-gray-500 mt-2 text-sm font-bold">AI活用と<br className="md:hidden" />マーケティング支援の融合</p>
             </div>
 
             {/* Concept Diagram - Simplified & Benefit-Oriented */}
@@ -450,7 +450,7 @@ export default function ConsultingPage() {
                <div className="absolute inset-0 opacity-10 pointer-events-none" style={{ backgroundImage: 'radial-gradient(#C50E1D 1px, transparent 1px)', backgroundSize: '16px 16px' }}></div>
                
                <h3 className="text-2xl md:text-3xl font-black text-gray-900 mb-10 text-center relative z-10">
-                 なぜ、圧倒的な投資対効果が出るのか？
+                 なぜ、圧倒的な<br className="md:hidden" />投資対効果が出るのか？
                </h3>
                <div className="grid md:grid-cols-2 gap-6 md:gap-10">
                  <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
@@ -520,7 +520,7 @@ export default function ConsultingPage() {
                 </div>
                 <div className="md:w-1/2">
                   <div className="text-brand-red font-black text-2xl tracking-widest mb-2 opacity-30">01</div>
-                  <h3 className="text-3xl font-bold text-gray-900 mb-6">月1回のオンライン通話相談</h3>
+                  <h3 className="text-3xl font-bold text-gray-900 mb-6">月1回の<br className="md:hidden" />オンライン通話相談</h3>
                   <p className="text-gray-600 leading-relaxed text-lg mb-8 border-l-4 border-brand-red pl-4">
                     AI活用・マーケティングについて、現状の課題整理から具体的な施策提案まで、マンツーマンでご相談いただけます。
                   </p>
@@ -564,7 +564,7 @@ export default function ConsultingPage() {
                 </div>
                 <div className="md:w-1/2">
                   <div className="text-brand-red font-black text-2xl tracking-widest mb-2 opacity-30">02</div>
-                  <h3 className="text-3xl font-bold text-gray-900 mb-6">チャットサポート（無制限）</h3>
+                  <h3 className="text-3xl font-bold text-gray-900 mb-6">チャットサポート<br className="md:hidden" />（無制限）</h3>
                   <p className="text-gray-600 leading-relaxed text-lg mb-8 border-l-4 border-brand-red pl-4">
                     日々の業務で発生した「困りごと」や「緊急のトラブル」も、チャットで即座に相談・解決できます。
                   </p>
@@ -733,7 +733,7 @@ export default function ConsultingPage() {
       <section className="py-20 bg-white border-y border-gray-100">
         <div className="container mx-auto px-4 max-w-5xl">
           <h2 className="text-2xl md:text-3xl font-bold text-center mb-12 text-gray-900">
-            こんなご相談をよくいただきます
+            こんなご相談を<br className="md:hidden" />よくいただきます
           </h2>
           <div className="grid md:grid-cols-2 gap-4 md:gap-6">
             {[
@@ -818,7 +818,7 @@ export default function ConsultingPage() {
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-20">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
-                AIマーケ顧問が選ばれる理由
+                AIマーケ顧問が<br className="md:hidden" />選ばれる理由
               </h2>
             </div>
 
