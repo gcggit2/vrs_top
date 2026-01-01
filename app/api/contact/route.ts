@@ -2,7 +2,9 @@ import { NextResponse } from 'next/server';
 import { Resend } from 'resend';
 import { contactSchema } from '@/lib/schema';
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+// 環境変数がなくてもビルドエラーにならないようにダミー値をデフォルトとして設定
+const resendApiKey = process.env.RESEND_API_KEY || 're_dummy_123456789';
+const resend = new Resend(resendApiKey);
 
 export async function POST(request: Request) {
   try {
