@@ -139,14 +139,9 @@ export default function ConsultingPage() {
         <div className="absolute top-0 right-0 w-1/2 h-full bg-white skew-x-12 transform origin-top-right z-0 opacity-50"></div>
         
         <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-8 md:gap-16">
-            
-            {/* SP/PC Combined Layout with Scaling for Mobile */}
-            <div className="w-[280%] xs:w-[250%] sm:w-[200%] md:w-auto origin-top-left transform scale-[0.35] xs:scale-[0.4] sm:scale-[0.5] md:transform-none md:scale-100 mb-[-60%] md:mb-0">
-              <div className="flex flex-row items-center gap-8 md:gap-16">
-                
-                {/* Text Content */}
-                <div className="w-3/5">
+          <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-10 md:gap-16">
+            {/* Text Content */}
+            <div className="w-full">
                   <div className="inline-block bg-brand-red/10 text-brand-red font-bold px-4 py-1.5 rounded-full text-sm mb-6 border border-brand-red/20">
                     中小企業経営者・AI/マーケ担当の方へ
                   </div>
@@ -226,28 +221,47 @@ export default function ConsultingPage() {
                       </div>
                     </div>
                   </div>
-                </div>
-                
-                {/* Image */}
-                <div className="w-2/5">
-                   <div className="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white">
-                     <Image 
-                       src="/consulting/representative.jpg" 
-                       alt="ジェネラルコンサルティンググループ株式会社 代表取締役 槙 優真" 
-                       width={600}
-                       height={800}
-                       className="w-full h-auto object-cover" 
-                     />
-                   </div>
-                   <p className="text-sm text-gray-500 text-right mt-3 font-medium leading-relaxed">
-                     ジェネラルコンサルティンググループ株式会社<br/>
-                     代表取締役 槙 優真
-                   </p>
-                </div>
-
-              </div>
             </div>
+            
+            {/* Image */}
+            <div className="hidden md:block w-full">
+              <div className="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white mx-auto max-w-sm md:max-w-none">
+                <Image 
+                  src="/consulting/representative.jpg" 
+                  alt="ジェネラルコンサルティンググループ株式会社 代表取締役 槙 優真" 
+                  width={600}
+                  height={800}
+                  className="w-full h-auto object-cover" 
+                  priority
+                />
+              </div>
+              <p className="text-sm text-gray-500 text-center md:text-right mt-3 font-medium leading-relaxed">
+                ジェネラルコンサルティンググループ株式会社<br/>
+                代表取締役 槙 優真
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
 
+      {/* Representative Image (Mobile) */}
+      <section className="md:hidden bg-gray-50 pb-10">
+        <div className="container mx-auto px-4">
+          <div className="max-w-md mx-auto">
+            <div className="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white">
+              <Image 
+                src="/consulting/representative.jpg" 
+                alt="ジェネラルコンサルティンググループ株式会社 代表取締役 槙 優真" 
+                width={600}
+                height={800}
+                className="w-full h-auto object-cover" 
+                priority
+              />
+            </div>
+            <p className="text-sm text-gray-500 text-center mt-3 font-medium leading-relaxed">
+              ジェネラルコンサルティンググループ株式会社<br/>
+              代表取締役 槙 優真
+            </p>
           </div>
         </div>
       </section>

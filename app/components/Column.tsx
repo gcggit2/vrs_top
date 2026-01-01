@@ -1,5 +1,7 @@
 import Link from 'next/link';
 
+import Image from 'next/image';
+
 const columns = [
   {
     date: '2025.10.15',
@@ -32,10 +34,12 @@ export default function Column() {
           {columns.map((col, index) => (
             <a key={index} href="https://note.com/gcg_maki" target="_blank" rel="noopener noreferrer" className="group bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-xl transition-all duration-300">
               <div className="h-48 overflow-hidden relative">
-                <img 
+                <Image 
                   src={col.image} 
                   alt={col.title} 
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
                 />
               </div>
               <div className="p-6">

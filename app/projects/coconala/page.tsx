@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import Link from 'next/link';
@@ -24,9 +25,11 @@ export default function CoconalaProject() {
             
             {/* Eye-catch Image */}
             <div className="rounded-2xl overflow-hidden shadow-xl max-w-md mx-auto">
-                <img 
+                <Image 
                     src="/projects/coconala/coconala.png" 
                     alt="株式会社ココナラさま" 
+                    width={600}
+                    height={400}
                     className="w-full h-auto"
                 />
             </div>
@@ -108,9 +111,11 @@ export default function CoconalaProject() {
             <div className="grid grid-cols-1 gap-8">
               {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((num) => (
                 <div key={num} className="rounded-lg overflow-hidden border border-gray-200 shadow-sm">
-                  <img 
+                  <Image 
                     src={`/projects/coconala/coconala${num}.png`}
                     alt={`支援実績イメージ ${num}`}
+                    width={800}
+                    height={600}
                     className="w-full h-auto"
                   />
                 </div>

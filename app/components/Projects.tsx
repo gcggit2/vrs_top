@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { projects } from '../projects/data';
 
 const getCategoryStyle = (category: string) => {
@@ -48,10 +49,12 @@ export default function Projects() {
             <Link key={index} href={project.url} className="group cursor-pointer block">
               <div className="relative bg-gray-50 rounded-xl overflow-hidden shadow-sm group-hover:shadow-xl transition-all duration-500 aspect-[4/3] mb-5">
                 {/* Image */}
-                <img 
+                <Image 
                   src={project.image} 
                   alt={project.client} 
-                  className="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-700"
+                  fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
+                  className="object-cover object-center group-hover:scale-110 transition-transform duration-700"
                 />
                 {/* Category Label Overlay */}
                 <div className="absolute top-4 left-4">

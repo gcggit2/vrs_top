@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import Link from 'next/link';
@@ -69,10 +70,12 @@ export default async function ProjectsPaginatedPage({
                 <div className="flex flex-col h-full bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100">
                   {/* Image */}
                   <div className="relative aspect-[4/3] overflow-hidden bg-gray-100">
-                    <img 
+                    <Image 
                       src={project.image} 
                       alt={project.client} 
-                      className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700"
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                      className="object-cover object-center group-hover:scale-105 transition-transform duration-700"
                     />
                     {/* Category Label Overlay */}
                     <div className="absolute top-4 left-4">

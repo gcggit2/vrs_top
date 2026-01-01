@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 
@@ -23,9 +24,11 @@ export default function BusinessWorkshopProject() {
             
             {/* Eye-catch Image */}
             <div className="rounded-2xl overflow-hidden shadow-xl max-w-md mx-auto">
-                <img 
+                <Image 
                     src="/projects/business-workshop/business-workshop.jpg" 
                     alt="ビジネスマン向け講座" 
+                    width={600}
+                    height={400}
                     className="w-full h-auto"
                 />
             </div>
@@ -175,9 +178,11 @@ export default function BusinessWorkshopProject() {
             <div className="grid grid-cols-1 gap-8">
               {[1, 2, 3].map((num) => (
                 <div key={num} className="rounded-lg overflow-hidden border border-gray-200 shadow-sm">
-                  <img 
+                  <Image 
                     src={`/projects/business-workshop/business-workshop${num}.png`}
                     alt={`支援実績イメージ ${num}`}
+                    width={800}
+                    height={600}
                     className="w-full h-auto"
                   />
                 </div>

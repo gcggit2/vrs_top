@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 const services = [
   {
@@ -49,10 +50,12 @@ export default function Service() {
           {services.map((service, index) => (
             <div key={index} className="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-xl transition-shadow group flex flex-col h-full border border-gray-100">
               <div className="relative h-48 overflow-hidden">
-                <img 
+                <Image 
                   src={service.image} 
                   alt={service.title} 
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
                 />
               </div>
               <div className="p-6 flex flex-col flex-grow">

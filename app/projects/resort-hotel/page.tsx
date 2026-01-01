@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 
@@ -23,9 +24,11 @@ export default function ResortHotelProject() {
             
             {/* Eye-catch Image */}
             <div className="rounded-2xl overflow-hidden shadow-xl max-w-md mx-auto">
-                <img 
+                <Image 
                     src="/projects/resort-hotel/resort-hotel.jpg" 
                     alt="リゾートホテル運営企業" 
+                    width={600}
+                    height={400}
                     className="w-full h-auto"
                 />
             </div>

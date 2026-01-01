@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { ReviewItem } from '../data';
 
 interface ReviewListProps {
@@ -12,10 +13,12 @@ export default function ReviewList({ reviews }: ReviewListProps) {
       {reviews.map((review) => (
         <div key={review.id} className="review-item bg-white p-6 md:p-8 rounded-xl border border-gray-100 shadow-sm">
           {/* Image Placeholder */}
-          <div className="mb-8 rounded-lg overflow-hidden border border-gray-100 bg-gray-50">
-            <img 
+          <div className="mb-8 rounded-lg overflow-hidden border border-gray-100 bg-gray-50 relative">
+            <Image 
               src={review.image} 
               alt={`お客様の声 ${review.id}`} 
+              width={800}
+              height={600}
               className="w-full h-auto"
               onError={(e) => {
                   // Fallback if image not found

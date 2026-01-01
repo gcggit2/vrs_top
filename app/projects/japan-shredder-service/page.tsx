@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import Link from 'next/link';
@@ -24,9 +25,11 @@ export default function JapanShredderServiceProject() {
             
             {/* Eye-catch Image */}
             <div className="rounded-2xl overflow-hidden shadow-xl max-w-md mx-auto">
-                <img 
+                <Image 
                     src="/projects/japan-shredder-service/japan-shredder-service.png" 
                     alt="日本シュレッダーサービスさま" 
+                    width={600}
+                    height={400}
                     className="w-full h-auto"
                 />
             </div>
@@ -117,9 +120,11 @@ export default function JapanShredderServiceProject() {
             <div className="grid grid-cols-1 gap-8">
               {[1, 2, 3, 4, 5].map((num) => (
                 <div key={num} className="rounded-lg overflow-hidden border border-gray-200 shadow-sm">
-                  <img 
+                  <Image 
                     src={`/projects/japan-shredder-service/japan-shredder-service${num}.png`}
                     alt={`支援実績イメージ ${num}`}
+                    width={800}
+                    height={600}
                     className="w-full h-auto"
                   />
                 </div>

@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import Link from 'next/link';
@@ -24,9 +25,11 @@ export default function TourismInfrastructureProject() {
             
             {/* Eye-catch Image */}
             <div className="rounded-2xl overflow-hidden shadow-xl max-w-md mx-auto">
-                <img 
+                <Image 
                     src="/projects/tourism-infrastructure/tourism-infrastructure.jpg" 
                     alt="観光インフラ会社（東証プライム上場）" 
+                    width={600}
+                    height={400}
                     className="w-full h-auto"
                 />
             </div>

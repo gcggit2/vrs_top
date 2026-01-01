@@ -2,6 +2,7 @@ import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import { newsData } from '../data';
 import Link from 'next/link';
+import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
 
@@ -58,10 +59,12 @@ export default async function NewsDetail({ params }: { params: Promise<{ slug: s
           
           {/* Thumbnail if available */}
           {post.thumbnail && (
-            <div className="mb-12 rounded-xl overflow-hidden shadow-sm border border-gray-100">
-              <img 
+            <div className="mb-12 rounded-xl overflow-hidden shadow-sm border border-gray-100 relative">
+              <Image 
                 src={post.thumbnail} 
                 alt={post.title} 
+                width={800}
+                height={500}
                 className="w-full h-auto object-cover max-h-[500px]"
               />
             </div>

@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import Link from 'next/link';
@@ -24,9 +25,11 @@ export default function LawFirmProject() {
             
             {/* Eye-catch Image */}
             <div className="rounded-2xl overflow-hidden shadow-xl max-w-md mx-auto">
-                <img 
+                <Image 
                     src="/projects/law-firm/lawyer.jpg" 
                     alt="弁護士法人（法律事務所）さま" 
+                    width={600}
+                    height={400}
                     className="w-full h-auto"
                 />
             </div>
