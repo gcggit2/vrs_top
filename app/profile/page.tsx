@@ -305,8 +305,8 @@ export default function Profile() {
                     素晴らしい価値を持つ企業の経営者さま・スタッフさま共に「仕組みで売れる状態に至り、心にゆとりを持って働ける」。そんな持続可能な経営を実現できるよう、誠実にサポートできればと思っています｡
                   </p>
                   
-                  <div className="text-center md:text-right mt-12">
-                    <p className="font-bold text-gray-900 mb-1 inline-block md:block text-left md:text-right">
+                  <div className="text-left md:text-right mt-12">
+                    <p className="font-bold text-gray-900 mb-1 text-left md:text-right">
                       ジェネラルコンサルティング<br className="md:hidden"/>グループ株式会社
                     </p>
                     <p className="font-bold text-gray-900 text-left md:text-right">代表取締役 槙 優真</p>
