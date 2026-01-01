@@ -14,6 +14,11 @@ export default function Company() {
     {
       number: '01',
       title: 'マーケティング・AIの知見',
+      titleMobile: (
+        <>
+          マーケティング・<br className="md:hidden"/>AIの知見
+        </>
+      ),
       description: 'マーケティング領域では、経営層・コンサルタント両方の立場で、新規事業立ち上げ・既存事業の売上改善に多数かかわってきました。',
       extra: 'AI領域でも、単なる「最新のAI活用法」ではなく「実務の成果に直結するAIスキル」を扱っています。',
       conclusion: 'そのため、単なる「マーケティング代理店」「AI研修会社」とは、内容の質と深さが全く異なります。',
@@ -99,7 +104,9 @@ export default function Company() {
                 <div className="md:w-1/2">
                   <div className="flex items-baseline gap-4 mb-8 border-b border-gray-100 pb-6">
                     <span className="text-6xl font-black text-gray-100 leading-none">{s.number}</span>
-                    <h3 className="text-2xl md:text-3xl font-bold text-gray-900">{s.title}</h3>
+                    <h3 className="text-2xl md:text-3xl font-bold text-gray-900">
+                      {(s as any).titleMobile ? (s as any).titleMobile : s.title}
+                    </h3>
                   </div>
                   <div className="text-gray-600 leading-loose space-y-6">
                     <div className="font-medium text-lg text-gray-800 whitespace-pre-wrap">{s.description}</div>
@@ -152,13 +159,17 @@ export default function Company() {
             <div className="bg-white p-10 md:p-14 rounded-xl border border-gray-200 flex flex-col justify-center text-center">
               <span className="text-brand-red font-bold tracking-widest mb-6 block opacity-80">MISSION</span>
               <h3 className="text-xl md:text-2xl font-bold leading-snug text-gray-900">
-                価値ある商品・サービスを広め、<br />「心にゆとりある社会」を創る
+                価値ある商品・サービスを広め、<br className="hidden md:inline" />
+                <span className="md:hidden block mb-1" />
+                「心にゆとりある社会」を創る
               </h3>
             </div>
             <div className="bg-white p-10 md:p-14 rounded-xl border border-gray-200 flex flex-col justify-center text-center">
               <span className="text-brand-red font-bold tracking-widest mb-6 block opacity-80">VISION</span>
               <h3 className="text-xl md:text-2xl font-bold leading-snug text-gray-900">
-                マーケティングとAIの力を融合し、<br />「成果」と「時間」の両方を生み出す
+                マーケティングとAIの力を融合し、<br className="hidden md:inline" />
+                <span className="md:hidden block mb-1" />
+                「成果」と「時間」の両方を生み出す
               </h3>
             </div>
           </div>
