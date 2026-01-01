@@ -142,7 +142,7 @@ export default function Home() {
                     {/* Shine Effect */}
                     <div className="absolute top-0 left-0 w-1/2 h-full bg-gradient-to-r from-transparent via-white/30 to-transparent -skew-x-12 -translate-x-full animate-shine" />
                     
-                    <span className="relative z-10 text-sm md:text-lg whitespace-nowrap">代表プロフィール・創業ストーリー</span>
+                    <span className="relative z-10 text-sm md:text-lg whitespace-nowrap">代表プロフィール・ストーリー</span>
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5 md:w-6 md:h-6 relative z-10 group-hover:translate-x-1 transition-transform">
                       <path fillRule="evenodd" d="M12.97 3.97a.75.75 0 011.06 0l7.5 7.5a.75.75 0 010 1.06l-7.5 7.5a.75.75 0 11-1.06-1.06l6.22-6.22H3a.75.75 0 010-1.5h16.19l-6.22-6.22a.75.75 0 010-1.06z" clipRule="evenodd" />
                     </svg>

@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import Link from 'next/link';
@@ -118,9 +119,11 @@ export default function Profile() {
                 </div>
                 <div className="md:w-1/2 order-1 md:order-2 flex justify-center">
                   <div className="bg-white p-3 shadow-lg transform rotate-2 max-w-sm">
-                    <img 
+                    <Image 
                       src="/story/story1.jpg" 
                       alt="医学部A判定からビジネス修行の道へ" 
+                      width={400}
+                      height={300}
                       className="w-full h-auto"
                     />
                   </div>
@@ -131,9 +134,11 @@ export default function Profile() {
               <div className="flex flex-col md:flex-row items-center gap-12 md:gap-20">
                 <div className="md:w-1/2 order-1 flex justify-center">
                   <div className="bg-white p-3 shadow-lg transform -rotate-2 max-w-sm">
-                    <img 
+                    <Image 
                       src="/story/story2.jpg" 
                       alt="事業の成功と蓄積される歪み" 
+                      width={400}
+                      height={300}
                       className="w-full h-auto"
                     />
                   </div>
@@ -147,7 +152,7 @@ export default function Profile() {
                       その後、SNSマーケティングのスタートアップ企業やYahoo! JAPANでの経験を経て、23歳で再び独立。独立後の歩みは、決して平坦ではありませんでしたが、それまでの努力が実を結びます｡売上は伸び、経済的な余裕も生まれ、一見すると成功への階段を上っているように見えました。
                     </p>
                     <p>
-                      しかし、その「成功」は非常に危ういバランスの上にありました。当時のスタイルは、典型的な「マンパワー依存」。自分が動かなければ売上が止まる。組織が大きくなるほど、私の時間は現場対応に奪われていく。「このまま走り続けることはできるのだろうか？」。拡大する数字とは裏腹に、拭えない違和感が蓄積されていきました。
+                      しかし、その「成功」は非常に危ういバランスの上にありました。当時のスタイルは、典型的な「マンパワー依存」。自分が動かなければ売上が止まる。案件が増え、規模も大きくなるほど、私の時間は現場対応に奪われていく。「このまま走り続けることはできるのだろうか？」という、拭えない違和感が蓄積されていきました。
                     </p>
                   </div>
                 </div>
@@ -171,9 +176,11 @@ export default function Profile() {
                 <div className="md:w-1/2 order-1 md:order-2 flex justify-center">
                   <div className="bg-white p-3 shadow-lg transform rotate-1 max-w-sm">
                     {/* Placeholder for new image */}
-                    <img 
+                    <Image 
                       src="/story/story3.jpg" 
                       alt="強制終了と静寂の中での気づき" 
+                      width={400}
+                      height={300}
                       className="w-full h-auto"
                     />
                   </div>
@@ -184,23 +191,25 @@ export default function Profile() {
               <div className="flex flex-col md:flex-row items-center gap-12 md:gap-20">
                 <div className="md:w-1/2 order-1 flex justify-center">
                   <div className="bg-white p-3 shadow-lg transform -rotate-3 max-w-sm">
-                    <img 
+                    <Image 
                       src="/story/story4.jpg" 
                       alt="AIの衝撃と新たな希望" 
+                      width={400}
+                      height={300}
                       className="w-full h-auto"
                     />
                   </div>
                 </div>
                 <div className="md:w-1/2 order-2">
                   <h3 className="text-2xl font-bold text-gray-900 mb-6 border-l-4 border-brand-red pl-4">
-                    AIへの戦慄。<br/>それは「マンパワーの限界」を突破する唯一の鍵。
+                    AIへの戦慄。<br/>それは「マンパワーの限界」を突破する鍵。
                   </h3>
                   <div className="text-gray-600 leading-loose space-y-4">
                     <p>
                       2022年春に復帰し、活動を続ける中、2024年4月に大きな衝撃が走りました。進化を続けるAIツールに触れた際、その圧倒的な処理能力と文章品質に、私は戦慄しました。すでに多くの人間や、専門的なライターよりも、洗練された文章を、瞬時に生成している。
                     </p>
                     <p>
-                      専門スキルすら代替される衝撃。しかし同時に、これはかつて私が直面した「属人化と根性の限界」を突破する、唯一無二の鍵になると直感しました。AIを使いこなせば、人間は「作業」から解放され、より本質的な「経営」や「判断」に集中できる。AIは脅威ではなく、経営を次のステージへ押し上げる最強のパートナーになると確信したのです。
+                      専門スキルすら代替される衝撃。しかし同時に、これはかつて私が直面した「属人化と根性の限界」を突破する鍵になると直感しました。AIを使いこなせば、人間は「作業」から解放され、より本質的な「経営」や「判断」に集中できる。AIは脅威ではなく、経営を次のステージへ押し上げる最強のパートナーになると確信したのです。
                     </p>
                   </div>
                 </div>
@@ -226,9 +235,11 @@ export default function Profile() {
                 </div>
                 <div className="md:w-1/2 order-1 md:order-2 flex justify-center">
                   <div className="bg-white p-3 shadow-lg transform rotate-1 max-w-sm">
-                    <img 
+                    <Image 
                       src="/story/story5.jpg" 
                       alt="未開拓市場での挑戦と信念" 
+                      width={400}
+                      height={300}
                       className="w-full h-auto"
                     />
                   </div>
@@ -249,9 +260,11 @@ export default function Profile() {
                   <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12 mb-12 max-w-4xl mx-auto">
                     <div className="md:w-5/12 flex justify-center md:justify-end">
                       <div className="max-w-xs w-full shadow-xl rounded-lg overflow-hidden bg-white p-2">
-                        <img 
+                        <Image 
                           src="/story/story6.jpg" 
                           alt="AIとマーケティングによる仕組み化" 
+                          width={400}
+                          height={300}
                           className="w-full h-auto"
                         />
                       </div>
@@ -296,7 +309,7 @@ export default function Profile() {
                     <p className="font-bold text-gray-900 mb-1 inline-block md:block text-left md:text-right">
                       ジェネラルコンサルティング<br className="md:hidden"/>グループ株式会社
                     </p>
-                    <p className="font-bold text-gray-900 text-left md:text-right pl-4 md:pl-0">代表取締役　槙 優真</p>
+                    <p className="font-bold text-gray-900 text-left md:text-right">代表取締役 槙 優真</p>
                   </div>
                 </div>
               </div>
@@ -318,9 +331,11 @@ export default function Profile() {
             
             <div className="flex flex-col md:flex-row items-center md:justify-start gap-8 md:gap-12 mb-12">
               <div className="w-[160px] md:w-[220px] flex-shrink-0 shadow-lg rounded-xl overflow-hidden">
-                <img 
+                <Image 
                   src="/representative.jpg" 
                   alt="槙 優真" 
+                  width={220}
+                  height={220}
                   className="w-full h-auto object-cover"
                 />
               </div>
@@ -433,9 +448,10 @@ export default function Profile() {
                 <div className="bg-white p-6 rounded-lg border border-gray-100 flex flex-col md:flex-row gap-6 group hover:border-brand-red/30 transition-colors duration-300 items-center md:items-start">
                   <div className="md:w-1/3 flex-shrink-0 flex justify-center md:justify-start">
                     <div className="w-32 h-32 md:w-full md:h-auto md:aspect-square rounded-full md:rounded-lg overflow-hidden relative shadow-sm border-4 border-gray-50">
-                      <img 
+                      <Image 
                         src="/partner-ryoichi.jpg" 
                         alt="Ryoichi.E" 
+                        fill
                         className="absolute inset-0 w-full h-full object-cover object-top transition-all duration-500 ease-out group-hover:scale-105" 
                         style={{ transform: 'scale(0.95)' }} 
                       />
@@ -463,9 +479,10 @@ export default function Profile() {
                 <div className="bg-white p-6 rounded-lg border border-gray-100 flex flex-col md:flex-row gap-6 group hover:border-brand-red/30 transition-colors duration-300 items-center md:items-start">
                   <div className="md:w-1/3 flex-shrink-0 flex justify-center md:justify-start">
                     <div className="w-32 h-32 md:w-full md:h-auto md:aspect-square rounded-full md:rounded-lg overflow-hidden relative shadow-sm border-4 border-gray-50">
-                      <img 
+                      <Image 
                         src="/partner-masahiro.jpg" 
                         alt="Masahiro.N" 
+                        fill
                         className="absolute inset-0 w-full h-full object-cover object-top transition-all duration-500 ease-out group-hover:scale-105" 
                       />
                     </div>
@@ -492,9 +509,10 @@ export default function Profile() {
                 <div className="bg-white p-6 rounded-lg border border-gray-100 flex flex-col md:flex-row gap-6 group hover:border-brand-red/30 transition-colors duration-300 items-center md:items-start">
                   <div className="md:w-1/3 flex-shrink-0 flex justify-center md:justify-start">
                     <div className="w-32 h-32 md:w-full md:h-auto md:aspect-square rounded-full md:rounded-lg overflow-hidden relative shadow-sm border-4 border-gray-50">
-                      <img 
+                      <Image 
                         src="/partner-miki.jpg" 
                         alt="Miki.S" 
+                        fill
                         className="absolute inset-0 w-full h-full object-cover object-top transition-all duration-500 ease-out group-hover:scale-105" 
                       />
                     </div>
@@ -521,9 +539,10 @@ export default function Profile() {
                 <div className="bg-white p-6 rounded-lg border border-gray-100 flex flex-col md:flex-row gap-6 group hover:border-brand-red/30 transition-colors duration-300 items-center md:items-start">
                   <div className="md:w-1/3 flex-shrink-0 flex justify-center md:justify-start">
                     <div className="w-32 h-32 md:w-full md:h-auto md:aspect-square rounded-full md:rounded-lg overflow-hidden relative shadow-sm border-4 border-gray-50">
-                      <img 
+                      <Image 
                         src="/partner-seiichi.jpg" 
                         alt="Seiichi.S" 
+                        fill
                         className="absolute inset-0 w-full h-full object-cover object-top transition-all duration-500 ease-out group-hover:scale-105" 
                       />
                     </div>
