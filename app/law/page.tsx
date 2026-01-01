@@ -57,7 +57,7 @@ export default function Law() {
       {/* Page Header */}
       <div className="bg-gray-50 py-16 md:py-24 border-b border-gray-100">
         <div className="container mx-auto px-4 text-center">
-          <span className="text-brand-red font-bold tracking-widest block mb-2">ACT ON SPECIFIED COMMERCIAL TRANSACTIONS</span>
+          <span className="text-brand-red font-bold tracking-widest block mb-2">LAW</span>
           <h1 className="text-3xl md:text-5xl font-bold text-gray-900">特定商取引法に基づく表示</h1>
           <div className="w-16 h-1 bg-brand-red mx-auto mt-6"></div>
         </div>
@@ -68,20 +68,18 @@ export default function Law() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="bg-white rounded-2xl shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] border border-gray-100 overflow-hidden">
-              <table className="w-full text-left border-collapse">
-                <tbody>
-                  {lawInfo.map((item, index) => (
-                    <tr key={index} className="border-b border-gray-50 last:border-0 group">
-                      <th className="py-6 px-6 md:px-12 w-1/3 bg-gray-50/50 text-gray-900 font-bold align-top">
-                        {item.label}
-                      </th>
-                      <td className="py-6 px-6 md:px-12 text-gray-700 leading-relaxed">
-                        {item.value}
-                      </td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
+              <div className="flex flex-col">
+                {lawInfo.map((item, index) => (
+                  <div key={index} className="flex flex-col md:flex-row border-b border-gray-50 last:border-0">
+                    <div className="py-4 px-6 md:py-6 md:px-12 md:w-1/3 bg-gray-50/50 text-gray-900 font-bold md:border-r border-gray-50 flex items-center">
+                      {item.label}
+                    </div>
+                    <div className="py-4 px-6 md:py-6 md:px-12 md:w-2/3 text-gray-700 leading-relaxed">
+                      {item.value}
+                    </div>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>
