@@ -159,17 +159,17 @@ export default function Company() {
             <div className="bg-white p-10 md:p-14 rounded-xl border border-gray-200 flex flex-col justify-center text-center">
               <span className="text-brand-red font-bold tracking-widest mb-6 block opacity-80">MISSION</span>
               <h3 className="text-lg md:text-2xl font-bold leading-relaxed md:leading-snug text-gray-900 tracking-tight">
-                価値ある商品・サービスを広め、<br className="hidden md:inline" />
+                <span className="inline-block">価値ある商品・サービスを広め、</span>
                 <span className="md:hidden block mb-1" />
-                「心にゆとりある社会」を創る
+                <span className="inline-block">「心にゆとりある社会」を創る</span>
               </h3>
             </div>
             <div className="bg-white p-10 md:p-14 rounded-xl border border-gray-200 flex flex-col justify-center text-center">
               <span className="text-brand-red font-bold tracking-widest mb-6 block opacity-80">VISION</span>
               <h3 className="text-lg md:text-2xl font-bold leading-relaxed md:leading-snug text-gray-900 tracking-tight">
-                マーケティングとAIの力を融合し、<br className="hidden md:inline" />
+                <span className="inline-block">マーケティングとAIの力を融合し、</span>
                 <span className="md:hidden block mb-1" />
-                「成果」と「時間」の両方を生み出す
+                <span className="inline-block">「成果」と「時間」の両方を生み出す</span>
               </h3>
             </div>
           </div>
