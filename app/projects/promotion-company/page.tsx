@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   description: 'ジェネラルコンサルティンググループの支援事例詳細ページです。プロモーション代行会社の課題解決プロセスと成果をご紹介します。',
 };
 
- PromotionCompanyProject() {
+export default function PromotionCompanyProject() {
   return (
     <main className="min-h-screen bg-white font-sans text-gray-800">
       <Header />

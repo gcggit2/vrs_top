@@ -28,8 +28,8 @@ export default function LogoSlider() {
             item.type === 'image' ? (
               <div key={index} className={`relative ${item.className} w-auto`}>
                 <Image 
-                  src={item.src} 
-                  alt={item.alt} 
+                  src={item.src as string} 
+                  alt={item.alt as string} 
                   width={200}
                   height={100}
                   className="w-auto h-full object-contain" 
@@ -49,8 +49,8 @@ export default function LogoSlider() {
              item.type === 'image' ? (
               <div key={`clone-${index}`} className={`relative ${item.className} w-auto`}>
                 <Image 
-                  src={item.src} 
-                  alt={item.alt} 
+                  src={item.src as string} 
+                  alt={item.alt as string} 
                   width={200}
                   height={100}
                   className="w-auto h-full object-contain" 

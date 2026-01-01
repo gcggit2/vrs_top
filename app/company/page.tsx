@@ -104,17 +104,10 @@ export default function Company() {
                   <div className="text-gray-600 leading-loose space-y-6">
                     <div className="font-medium text-lg text-gray-800 whitespace-pre-wrap">{s.description}</div>
                     
-                    {s.extra && <div className="font-medium text-lg text-gray-800 whitespace-pre-wrap">{s.extra}</div>}
+                    {(s as any).extra && <div className="font-medium text-lg text-gray-800 whitespace-pre-wrap">{(s as any).extra}</div>}
                     
-                    {/* @ts-expect-error details property might not exist on all items but checked */}
-                    {s.details && <div className="font-medium text-lg text-gray-800 whitespace-pre-wrap">{s.details}</div>}
+                    {(s as any).details && <div className="font-medium text-lg text-gray-800 whitespace-pre-wrap">{(s as any).details}</div>}
                     
-                    {/* @ts-expect-error merit property might not exist on all items but checked */}
-                    {s.merit && (
-                        <div className="mt-6">
-                            <p className="font-medium text-lg text-gray-800 mt-2">{s.merit}</p>
-                        </div>
-                    )}
 
                     {s.conclusion && <p className="font-medium text-lg text-gray-800">{s.conclusion}</p>}
                     

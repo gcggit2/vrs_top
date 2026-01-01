@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   description: 'ジェネラルコンサルティンググループの支援事例詳細ページです。弁護士法人（法律事務所）さまの課題解決プロセスと成果をご紹介します。',
 };
 
- LawFirmProject() {
+export default function LawFirmProject() {
   return (
     <main className="min-h-screen bg-white font-sans text-gray-800">
       <Header />

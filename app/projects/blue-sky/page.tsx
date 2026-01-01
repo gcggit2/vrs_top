@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   description: 'ジェネラルコンサルティンググループの支援事例詳細ページです。株式会社Blue Skyさまの課題解決プロセスと成果をご紹介します。',
 };
 
- BlueSkyProject() {
+export default function BlueSkyProject() {
   return (
     <main className="min-h-screen bg-white font-sans text-gray-800">
       <Header />

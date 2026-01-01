@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description: 'ジェネラルコンサルティンググループの支援事例詳細ページです。都内の美容クリニックの課題解決プロセスと成果をご紹介します。',
 };
 
- BeautyClinicProject() {
+export default function BeautyClinicProject() {
   return (
     <main className="min-h-screen bg-white font-sans text-gray-800">
       <Header />

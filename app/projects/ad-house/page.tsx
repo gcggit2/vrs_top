@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   description: 'ジェネラルコンサルティンググループの支援事例詳細ページです。大喜建設（AD HOUSE）さまの課題解決プロセスと成果をご紹介します。',
 };
 
- AdHouseProject() {
+export default function AdHouseProject() {
   return (
     <main className="min-h-screen bg-white font-sans text-gray-800">
       <Header />

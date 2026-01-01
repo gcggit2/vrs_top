@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description: 'ジェネラルコンサルティンググループの支援事例詳細ページです。別荘販売会社の課題解決プロセスと成果をご紹介します。',
 };
 
- VillaSalesCompanyProject() {
+export default function VillaSalesCompanyProject() {
   return (
     <main className="min-h-screen bg-white font-sans text-gray-800">
       <Header />

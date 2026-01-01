@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   description: 'ジェネラルコンサルティンググループの支援事例詳細ページです。観光インフラ会社（東証プライム上場）の課題解決プロセスと成果をご紹介します。',
 };
 
- TourismInfrastructureProject() {
+export default function TourismInfrastructureProject() {
   return (
     <main className="min-h-screen bg-white font-sans text-gray-800">
       <Header />

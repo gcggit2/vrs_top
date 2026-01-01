@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description: 'ジェネラルコンサルティンググループの支援事例詳細ページです。カプセルホテル運営企業の課題解決プロセスと成果をご紹介します。',
 };
 
- CapsuleHotelProject() {
+export default function CapsuleHotelProject() {
   return (
     <main className="min-h-screen bg-white font-sans text-gray-800">
       <Header />

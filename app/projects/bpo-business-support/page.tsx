@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description: 'ジェネラルコンサルティンググループの支援事例詳細ページです。BPO業務支援企業の課題解決プロセスと成果をご紹介します。',
 };
 
- BpoBusinessSupportProject() {
+export default function BpoBusinessSupportProject() {
   return (
     <main className="min-h-screen bg-white font-sans text-gray-800">
       <Header />
