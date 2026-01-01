@@ -128,193 +128,112 @@ export default function AiMarkeTrainingPage() {
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-8 md:gap-16">
             
-            {/* SP Layout: Image & Text Mix */}
-            <div className="md:hidden w-full mb-6">
-               <div className="flex items-end justify-between gap-2">
-                  <div className="w-2/3">
-                    <div className="inline-block bg-orange-600/10 text-orange-600 font-bold px-3 py-1 rounded-full text-[10px] mb-3 border border-orange-600/20 leading-tight">
-                      社員数名〜150名規模の<br/>経営層・集客担当にオススメ
-                    </div>
-                    <p className="text-3xl font-bold text-gray-900 leading-[1.2] tracking-tight mb-3">
-                      <span className="text-orange-600">兼務でも､集客最大化</span>
-                    </p>
+            {/* SP/PC Combined Layout with Scaling for Mobile */}
+            <div className="w-[280%] xs:w-[250%] sm:w-[200%] md:w-auto origin-top-left transform scale-[0.35] xs:scale-[0.4] sm:scale-[0.5] md:transform-none md:scale-100 mb-[-60%] md:mb-0">
+              <div className="flex flex-row items-center gap-8 md:gap-16">
+                
+                {/* Text Content */}
+                <div className="w-3/5">
+                  <div className="inline-block bg-orange-600/10 text-orange-600 font-bold px-4 py-1.5 rounded-full text-sm mb-6 border border-orange-600/20">
+                    社員数名〜150名規模の、経営層・集客担当にオススメ
                   </div>
-                  <div className="w-1/3">
+                  <p className="text-3xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-[1.2] tracking-tight">
+                    <span className="text-orange-600">兼務でも､集客最大化</span>
+                  </p>
+                  <div className="flex items-center gap-4 mb-8">
+                      <div className="h-px bg-gray-300 w-12"></div>
+                      <h1 className="text-lg font-bold text-gray-400 tracking-widest">AIマーケ研修</h1>
+                      <div className="h-px bg-gray-300 w-12"></div>
+                  </div>
+                  <p className="text-xl md:text-2xl text-gray-800 mb-10 leading-relaxed font-bold border-l-4 border-orange-600 pl-6">
+                    AI×マーケで&quot;売れる仕組み&quot;を再現性高く内製化
+                  </p>
+                  
+                  {/* 3つの訴求ポイント */}
+                  <div className="flex flex-col sm:flex-row gap-4 md:gap-6 mb-10 max-w-2xl">
+                    {[
+                      {
+                        icon: (
+                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-5 h-5">
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
+                          </svg>
+                        ),
+                        main: "超実践的",
+                        sub: "コンサル歴10年以上の知見"
+                      },
+                      {
+                        icon: (
+                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-5 h-5">
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v12m-3-2.818l.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                          </svg>
+                        ),
+                        main: "全額返金保証",
+                        sub: "投資対効果にコミット"
+                      },
+                      {
+                        icon: (
+                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-5 h-5">
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
+                          </svg>
+                        ),
+                        main: "2ヶ月伴走",
+                        sub: "当社代表による支援も"
+                      }
+                    ].map((item, i) => (
+                      <div key={i} className="flex-1 bg-white/80 backdrop-blur-sm border-l-4 border-orange-600 py-3 px-4 shadow-sm hover:shadow-md transition-shadow">
+                        <div className="flex items-center gap-2 text-gray-900 font-bold text-lg leading-tight mb-1">
+                          <span className="text-orange-600">{item.icon}</span>
+                          {item.main}
+                        </div>
+                        <div className="text-gray-500 font-bold text-xs pl-7">
+                          {item.sub}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                  
+                  <p className="text-gray-600 font-medium text-sm md:text-base mb-10 text-center sm:text-left">
+                    広告・SEO・SNS・公式LINEなど幅広く対応可
+                  </p>
+
+                  <div className="flex flex-col sm:flex-row gap-4 items-start">
+                    <div className="flex flex-col items-center gap-2 w-full sm:w-auto">
+                      <Link 
+                        href="https://general-cg.com/contact/" 
+                        className="inline-flex items-center justify-center w-full sm:w-auto bg-orange-600 text-white font-bold py-4 px-12 rounded-full hover:bg-orange-700 transition-all shadow-xl hover:shadow-2xl hover:-translate-y-1 text-lg group"
+                      >
+                        AIマーケ研修の話を聞く
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform">
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                        </svg>
+                      </Link>
+                      <div className="text-center mt-2">
+                        <p className="text-xs text-gray-500 mb-1">※無理な勧誘は一切いたしません</p>
+                        <p className="text-xs text-gray-500">フォーム入力は1分で完了します</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                {/* Image (Representative) */}
+                <div className="w-2/5">
+                   <div className="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white">
                      <Image 
                        src="/ai-marke-training/representative.jpg" 
                        alt="ジェネラルコンサルティンググループ株式会社 代表取締役 槙 優真" 
-                       width={400}
-                       height={400}
-                       className="w-full h-auto object-cover rounded-xl shadow-md border-2 border-white" 
+                       width={600}
+                       height={800}
+                       className="w-full h-auto object-cover" 
+                       priority
                      />
-                     <p className="text-[10px] text-gray-500 text-right mt-1.5 leading-snug font-medium">
-                       ジェネラルコンサルティング<br/>グループ(株) 代表 槙 優真
-                     </p>
-                  </div>
-               </div>
-               
-               <div className="flex items-center gap-3 mb-3">
-                  <div className="h-px bg-gray-300 flex-grow"></div>
-                  <h1 className="text-sm font-bold text-gray-400 tracking-widest">AIマーケ研修</h1>
-                  <div className="h-px bg-gray-300 flex-grow"></div>
-               </div>
-
-               <p className="text-lg text-gray-900 font-bold text-center leading-relaxed">
-                 AI×マーケで&quot;売れる仕組み&quot;を再現性高く内製化
-               </p>
-            </div>
-
-            {/* PC Content */}
-            <div className="hidden md:block md:w-3/5">
-              <div className="inline-block bg-orange-600/10 text-orange-600 font-bold px-4 py-1.5 rounded-full text-sm mb-6 border border-orange-600/20">
-                社員数名〜150名規模の、経営層・集客担当にオススメ
-              </div>
-              <p className="text-3xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-[1.2] tracking-tight">
-                <span className="text-orange-600">兼務でも､集客最大化</span>
-              </p>
-              <div className="flex items-center gap-4 mb-8">
-                  <div className="h-px bg-gray-300 w-12"></div>
-                  <h1 className="text-lg font-bold text-gray-400 tracking-widest">AIマーケ研修</h1>
-                  <div className="h-px bg-gray-300 w-12"></div>
-              </div>
-              <p className="text-xl md:text-2xl text-gray-800 mb-10 leading-relaxed font-bold border-l-4 border-orange-600 pl-6">
-                AI×マーケで&quot;売れる仕組み&quot;を再現性高く内製化
-              </p>
-              
-              {/* 3つの訴求ポイント */}
-              <div className="flex flex-col sm:flex-row gap-4 md:gap-6 mb-10 max-w-2xl">
-                {[
-                  {
-                    icon: (
-                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-5 h-5">
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
-                      </svg>
-                    ),
-                    main: "超実践的",
-                    sub: "コンサル歴10年以上の知見"
-                  },
-                  {
-                    icon: (
-                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-5 h-5">
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v12m-3-2.818l.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                      </svg>
-                    ),
-                    main: "全額返金保証",
-                    sub: "投資対効果にコミット"
-                  },
-                  {
-                    icon: (
-                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-5 h-5">
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
-                      </svg>
-                    ),
-                    main: "2ヶ月伴走",
-                    sub: "当社代表による支援も"
-                  }
-                ].map((item, i) => (
-                  <div key={i} className="flex-1 bg-white/80 backdrop-blur-sm border-l-4 border-orange-600 py-3 px-4 shadow-sm hover:shadow-md transition-shadow">
-                    <div className="flex items-center gap-2 text-gray-900 font-bold text-lg leading-tight mb-1">
-                      <span className="text-orange-600">{item.icon}</span>
-                      {item.main}
-                    </div>
-                    <div className="text-gray-500 font-bold text-xs pl-7">
-                      {item.sub}
-                    </div>
-                  </div>
-                ))}
-              </div>
-              
-              <p className="text-gray-600 font-medium text-sm md:text-base mb-10 text-center sm:text-left">
-                広告・SEO・SNS・公式LINEなど幅広く対応可
-              </p>
-
-              <div className="flex flex-col sm:flex-row gap-4 items-start">
-                <div className="flex flex-col items-center gap-2 w-full sm:w-auto">
-                  <Link 
-                    href="https://general-cg.com/contact/" 
-                    className="inline-flex items-center justify-center w-full sm:w-auto bg-orange-600 text-white font-bold py-4 px-12 rounded-full hover:bg-orange-700 transition-all shadow-xl hover:shadow-2xl hover:-translate-y-1 text-lg group"
-                  >
-                    AIマーケ研修の話を聞く
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform">
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
-                    </svg>
-                  </Link>
-                  <div className="text-center mt-2">
-                    <p className="text-xs text-gray-500 mb-1">※無理な勧誘は一切いたしません</p>
-                    <p className="text-xs text-gray-500">フォーム入力は1分で完了します</p>
-                  </div>
+                   </div>
+                   <p className="text-sm text-gray-500 text-right mt-3 font-medium leading-relaxed">
+                     ジェネラルコンサルティンググループ株式会社<br/>
+                     代表取締役 槙 優真
+                   </p>
                 </div>
-              </div>
-            </div>
-            
-            {/* PC Image (Representative) */}
-            <div className="hidden md:block md:w-2/5 w-full">
-               <div className="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white">
-                 <Image 
-                   src="/ai-marke-training/representative.jpg" 
-                   alt="ジェネラルコンサルティンググループ株式会社 代表取締役 槙 優真" 
-                   width={600}
-                   height={800}
-                   className="w-full h-auto object-cover" 
-                 />
-               </div>
-               <p className="text-sm text-gray-500 text-right mt-3 font-medium leading-relaxed">
-                 ジェネラルコンサルティンググループ株式会社<br/>
-                 代表取締役 槙 優真
-               </p>
-            </div>
 
-            {/* SP Layout: Features & CTA */}
-            <div className="md:hidden w-full">
-              {/* 3つの訴求ポイント (SP) */}
-              <div className="grid grid-cols-3 gap-2 mb-4">
-                {[
-                  {
-                    top: "コンサル歴\n10年の",
-                    main: "超実践的",
-                    sub: "カリキュラム",
-                    isText: true
-                  },
-                  {
-                    top: "投資対効果\nコミット",
-                    main: "全額返金保証",
-                    sub: "保証"
-                  },
-                  {
-                    top: "代表伴走\n2ヶ月",
-                    main: "2ヶ月",
-                    sub: "伴走支援"
-                  }
-                ].map((item, i) => (
-                  <div key={i} className="bg-orange-50/50 rounded-lg p-2 text-center border border-orange-100 relative pt-5">
-                     <div className="absolute -top-2 left-1/2 transform -translate-x-1/2 w-5 h-5 bg-orange-400 text-white rounded-full flex items-center justify-center border border-white shadow-sm">
-                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={3} stroke="currentColor" className="w-3 h-3">
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
-                      </svg>
-                    </div>
-                    <p className="text-[10px] text-gray-600 font-bold mb-0.5 whitespace-pre-wrap leading-tight">{item.top}</p>
-                    <p className={`text-orange-600 font-black leading-tight ${item.isText ? 'text-xs' : 'text-lg'}`}>
-                      {item.main}
-                    </p>
-                  </div>
-                ))}
               </div>
-              <p className="text-orange-600 font-bold text-center text-xs mb-6">
-                社員数名〜150名規模の、経営層・集客担当にオススメ
-              </p>
-              
-              <div className="flex flex-col items-center gap-3">
-                  <Link 
-                    href="https://general-cg.com/contact/" 
-                    className="inline-flex items-center justify-center w-full bg-orange-600 text-white font-bold py-4 rounded-full shadow-lg text-lg animate-pulse"
-                  >
-                    AIマーケ研修の話を聞く
-                  </Link>
-                  <div className="text-center mt-2">
-                    <p className="text-xs text-gray-500 mb-1">※無理な勧誘は一切いたしません</p>
-                    <p className="text-xs text-gray-500">フォーム入力は1分で完了します</p>
-                 </div>
-               </div>
             </div>
 
           </div>
@@ -1104,11 +1023,13 @@ export default function AiMarkeTrainingPage() {
                  { src: "/projects/promotional-support/promotional-support.jpg", label: "BtoBの販促支援サービス", cat: "マーケティング" },
                ].map((item, i) => (
                  <div key={i} className="group relative rounded-xl overflow-hidden bg-white hover:shadow-lg transition-shadow duration-300">
-                    <div className="aspect-video w-full overflow-hidden rounded-xl border border-gray-100">
-                       <img 
+                    <div className="aspect-video w-full overflow-hidden rounded-xl border border-gray-100 relative">
+                       <Image 
                          src={item.src} 
                          alt={item.label} 
-                         className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500" 
+                         fill
+                         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                         className="object-cover transform group-hover:scale-105 transition-transform duration-500" 
                        />
                        {/* Category Badge */}
                        <div className="absolute top-2 left-2">

@@ -81,177 +81,102 @@ export default function AiDevelopmentPage() {
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-8 md:gap-16">
             
-            {/* SP Layout: Image & Text Mix */}
-            <div className="md:hidden w-full mb-6">
-               <div className="flex items-end justify-between gap-2">
-                  <div className="w-2/3">
-                    <div className="inline-block bg-teal-600/10 text-teal-600 font-bold px-3 py-1 rounded-full text-[10px] mb-3 border border-teal-600/20 leading-tight">
-                      AIツール・AIエージェント開発
-                    </div>
-                    <p className="text-3xl font-bold text-gray-900 leading-[1.2] tracking-tight mb-3">
-                      <span className="text-teal-600">大幅なコスト削減<br/>売上UPを実現</span>
-                    </p>
+            {/* SP/PC Combined Layout with Scaling for Mobile */}
+            <div className="w-[280%] xs:w-[250%] sm:w-[200%] md:w-auto origin-top-left transform scale-[0.35] xs:scale-[0.4] sm:scale-[0.5] md:transform-none md:scale-100 mb-[-60%] md:mb-0">
+              <div className="flex flex-row items-center gap-8 md:gap-16">
+                
+                {/* Text Content */}
+                <div className="w-3/5">
+                  <div className="inline-block bg-teal-600/10 text-teal-600 font-bold px-4 py-1.5 rounded-full text-sm mb-6 border border-teal-600/20">
+                    AIツール・AIエージェント開発
                   </div>
-                  <div className="w-1/3">
-                     <Image 
-                       src="/service/development.jpg" 
-                       alt="AI開発イメージ" 
-                       width={400}
-                       height={400}
-                       className="w-full h-auto object-cover rounded-xl shadow-md border-2 border-white" 
-                     />
+                  <p className="text-3xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-[1.2] tracking-tight">
+                    <span className="text-teal-600">大幅なコスト削減<br/>売上UPを実現</span>
+                  </p>
+                  <div className="flex items-center gap-4 mb-8">
+                      <div className="h-px bg-gray-300 w-12"></div>
+                      <h1 className="text-lg font-bold text-gray-400 tracking-widest">AIツールの受託開発</h1>
+                      <div className="h-px bg-gray-300 w-12"></div>
                   </div>
-               </div>
-               
-               <div className="flex items-center gap-3 mb-3">
-                  <div className="h-px bg-gray-300 flex-grow"></div>
-                  <div className="text-sm font-bold text-gray-400 tracking-widest">AIツールの受託開発</div>
-                  <div className="h-px bg-gray-300 flex-grow"></div>
-               </div>
-
-               <p className="text-lg text-gray-900 font-bold text-center leading-relaxed">
-                 貴社の業務フローに合わせた<br/>独自のAIツールを開発します
-               </p>
-            </div>
-
-            {/* PC Content */}
-            <div className="hidden md:block md:w-3/5">
-              <div className="inline-block bg-teal-600/10 text-teal-600 font-bold px-4 py-1.5 rounded-full text-sm mb-6 border border-teal-600/20">
-                AIツール・AIエージェント開発
-              </div>
-              <p className="text-3xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-[1.2] tracking-tight">
-                <span className="text-teal-600">大幅なコスト削減<br/>売上UPを実現</span>
-              </p>
-              <div className="flex items-center gap-4 mb-8">
-                  <div className="h-px bg-gray-300 w-12"></div>
-                  <h1 className="text-lg font-bold text-gray-400 tracking-widest">AIツールの受託開発</h1>
-                  <div className="h-px bg-gray-300 w-12"></div>
-              </div>
-              <p className="text-xl md:text-2xl text-gray-800 mb-10 leading-relaxed font-bold border-l-4 border-teal-600 pl-6">
-                貴社の業務フローに合わせた<br/>独自のAIツールを開発します
-              </p>
-              
-              <div className="flex flex-col sm:flex-row gap-4 md:gap-6 mb-10 max-w-2xl">
-                {[
-                  {
-                    icon: (
-                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-5 h-5">
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M9 17.25v1.007a3 3 0 01-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0115 18.257V17.25m6-12V15a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 15V5.25m18 0A2.25 2.25 0 0018.75 3H5.25A2.25 2.25 0 003 5.25m18 0V12a2.25 2.25 0 01-2.25 2.25H5.25" />
-                      </svg>
-                    ),
-                    main: "AIツール開発",
-                    sub: "AIエージェント開発など"
-                  },
-                  {
-                    icon: (
-                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-5 h-5">
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5" />
-                      </svg>
-                    ),
-                    main: "プロンプト制作",
-                    sub: "マイGPT・Gemなど"
-                  },
-                  {
-                    icon: (
-                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-5 h-5">
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m-15.686 0A8.959 8.959 0 013 12c0-.778.099-1.533.284-2.253m0 0A11.953 11.953 0 0112 10.5c2.998 0 5.74-1.1 7.843-2.918" />
-                      </svg>
-                    ),
-                    main: "Web/LP制作も",
-                    sub: "AI活用で高品質に"
-                  }
-                ].map((item, i) => (
-                  <div key={i} className="flex-1 bg-white/80 backdrop-blur-sm border-l-4 border-teal-600 py-3 px-4 shadow-sm hover:shadow-md transition-shadow">
-                    <div className="flex items-center gap-2 text-gray-900 font-bold text-lg leading-tight mb-1">
-                      <span className="text-teal-600">{item.icon}</span>
-                      {item.main}
-                    </div>
-                    <div className="text-gray-500 font-bold text-xs pl-7">
-                      {item.sub}
-                    </div>
+                  <p className="text-xl md:text-2xl text-gray-800 mb-10 leading-relaxed font-bold border-l-4 border-teal-600 pl-6">
+                    貴社の業務フローに合わせた<br/>独自のAIツールを開発します
+                  </p>
+                  
+                  <div className="flex flex-col sm:flex-row gap-4 md:gap-6 mb-10 max-w-2xl">
+                    {[
+                      {
+                        icon: (
+                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-5 h-5">
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M9 17.25v1.007a3 3 0 01-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0115 18.257V17.25m6-12V15a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 15V5.25m18 0A2.25 2.25 0 0018.75 3H5.25A2.25 2.25 0 003 5.25m18 0V12a2.25 2.25 0 01-2.25 2.25H5.25" />
+                          </svg>
+                        ),
+                        main: "AIツール開発",
+                        sub: "AIエージェント開発など"
+                      },
+                      {
+                        icon: (
+                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-5 h-5">
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5" />
+                          </svg>
+                        ),
+                        main: "プロンプト制作",
+                        sub: "マイGPT・Gemなど"
+                      },
+                      {
+                        icon: (
+                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-5 h-5">
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m-15.686 0A8.959 8.959 0 013 12c0-.778.099-1.533.284-2.253m0 0A11.953 11.953 0 0112 10.5c2.998 0 5.74-1.1 7.843-2.918" />
+                          </svg>
+                        ),
+                        main: "Web/LP制作も",
+                        sub: "AI活用で高品質に"
+                      }
+                    ].map((item, i) => (
+                      <div key={i} className="flex-1 bg-white/80 backdrop-blur-sm border-l-4 border-teal-600 py-3 px-4 shadow-sm hover:shadow-md transition-shadow">
+                        <div className="flex items-center gap-2 text-gray-900 font-bold text-lg leading-tight mb-1">
+                          <span className="text-teal-600">{item.icon}</span>
+                          {item.main}
+                        </div>
+                        <div className="text-gray-500 font-bold text-xs pl-7">
+                          {item.sub}
+                        </div>
+                      </div>
+                    ))}
                   </div>
-                ))}
-              </div>
-              
-              <div className="flex flex-col sm:flex-row gap-4 items-start">
-                <div className="flex flex-col items-center gap-2 w-full sm:w-auto">
-                  <Link 
-                    href="https://general-cg.com/contact/" 
-                    className="inline-flex items-center justify-center w-full sm:w-auto bg-teal-600 text-white font-bold py-4 px-12 rounded-full hover:bg-teal-700 transition-all shadow-xl hover:shadow-2xl hover:-translate-y-1 text-lg group"
-                  >
-                    開発について相談する
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform">
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
-                    </svg>
-                  </Link>
-                  <div className="text-center mt-2">
-                    <p className="text-xs text-gray-500 mb-1">※無理な勧誘は一切いたしません</p>
-                    <p className="text-xs text-gray-500">フォーム入力は1分で完了します</p>
+                  
+                  <div className="flex flex-col sm:flex-row gap-4 items-start">
+                    <div className="flex flex-col items-center gap-2 w-full sm:w-auto">
+                      <Link 
+                        href="https://general-cg.com/contact/" 
+                        className="inline-flex items-center justify-center w-full sm:w-auto bg-teal-600 text-white font-bold py-4 px-12 rounded-full hover:bg-teal-700 transition-all shadow-xl hover:shadow-2xl hover:-translate-y-1 text-lg group"
+                      >
+                        開発について相談する
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform">
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                        </svg>
+                      </Link>
+                      <div className="text-center mt-2">
+                        <p className="text-xs text-gray-500 mb-1">※無理な勧誘は一切いたしません</p>
+                        <p className="text-xs text-gray-500">フォーム入力は1分で完了します</p>
+                      </div>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </div>
-            
-            {/* PC Image */}
-            <div className="hidden md:block md:w-2/5 w-full">
-               <div className="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white">
-                 <Image 
-                   src="/service/development.jpg" 
-                   alt="AIツール開発イメージ" 
-                   width={600}
-                   height={800}
-                   className="w-full h-auto object-cover" 
-                 />
-               </div>
-            </div>
+                
+                {/* Image */}
+                <div className="w-2/5">
+                   <div className="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white">
+                     <Image 
+                       src="/service/development.jpg" 
+                       alt="AIツール開発イメージ" 
+                       width={600}
+                       height={800}
+                       className="w-full h-auto object-cover" 
+                     />
+                   </div>
+                </div>
 
-            {/* SP Layout: Features & CTA */}
-            <div className="md:hidden w-full">
-              <div className="grid grid-cols-3 gap-2 mb-4">
-                {[
-                  {
-                    top: "AIツール\n開発",
-                    main: "AI Agent",
-                    sub: "自動化"
-                  },
-                  {
-                    top: "マイGPT\n制作",
-                    main: "GPTs",
-                    sub: "Gemini等"
-                  },
-                  {
-                    top: "Web/LP\n開発",
-                    main: "AI駆動",
-                    sub: "高速開発"
-                  }
-                ].map((item, i) => (
-                  <div key={i} className="bg-teal-50/50 rounded-lg p-2 text-center border border-teal-100 relative pt-5">
-                     <div className="absolute -top-2 left-1/2 transform -translate-x-1/2 w-5 h-5 bg-teal-500 text-white rounded-full flex items-center justify-center border border-white shadow-sm">
-                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={3} stroke="currentColor" className="w-3 h-3">
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
-                      </svg>
-                    </div>
-                    <p className="text-[10px] text-gray-600 font-bold mb-0.5 whitespace-pre-wrap leading-tight">{item.top}</p>
-                    <p className="text-teal-600 font-black leading-tight text-lg">
-                      {item.main}
-                    </p>
-                    <p className="text-[10px] text-gray-500 font-bold leading-tight">{item.sub}</p>
-                  </div>
-                ))}
               </div>
-              
-              <div className="flex flex-col items-center gap-3">
-                  <Link 
-                    href="https://general-cg.com/contact/" 
-                    className="inline-flex items-center justify-center w-full bg-teal-600 text-white font-bold py-4 rounded-full shadow-lg text-lg animate-pulse"
-                  >
-                    開発について相談する
-                  </Link>
-                  <div className="text-center">
-                    <p className="text-xs text-gray-500 mb-1">※無理な勧誘は一切いたしません</p>
-                    <p className="text-xs text-gray-500">フォーム入力は1分で完了します</p>
-                 </div>
-               </div>
             </div>
 
           </div>

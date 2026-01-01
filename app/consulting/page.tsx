@@ -141,168 +141,111 @@ export default function ConsultingPage() {
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-8 md:gap-16">
             
-            {/* SP Layout: Image & Text Mix */}
-            <div className="md:hidden w-full mb-6">
-               <div className="flex items-end justify-between gap-2">
-                  <div className="w-2/3">
-                     <div className="inline-block bg-brand-red/10 text-brand-red font-bold px-3 py-1 rounded-full text-[10px] mb-3 border border-brand-red/20 leading-tight">
-                      中小企業経営者・<br/>AI/マーケ担当の方へ
-                    </div>
-                    <p className="text-3xl font-bold text-gray-900 leading-[1.2] tracking-tight mb-3">
-                      <span className="text-brand-red">圧倒的な<br/>投資対効果</span>
-                    </p>
+            {/* SP/PC Combined Layout with Scaling for Mobile */}
+            <div className="w-[280%] xs:w-[250%] sm:w-[200%] md:w-auto origin-top-left transform scale-[0.35] xs:scale-[0.4] sm:scale-[0.5] md:transform-none md:scale-100 mb-[-60%] md:mb-0">
+              <div className="flex flex-row items-center gap-8 md:gap-16">
+                
+                {/* Text Content */}
+                <div className="w-3/5">
+                  <div className="inline-block bg-brand-red/10 text-brand-red font-bold px-4 py-1.5 rounded-full text-sm mb-6 border border-brand-red/20">
+                    中小企業経営者・AI/マーケ担当の方へ
                   </div>
-                  <div className="w-1/3">
+                  <p className="text-3xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-[1.2] tracking-tight">
+                    <span className="text-brand-red">圧倒的な投資対効果</span>
+                  </p>
+                  <div className="flex items-center gap-4 mb-8">
+                      <div className="h-px bg-gray-300 w-12"></div>
+                      <h1 className="text-lg font-bold text-gray-400 tracking-widest">AIマーケ顧問</h1>
+                      <div className="h-px bg-gray-300 w-12"></div>
+                  </div>
+                  <p className="text-xl md:text-3xl text-gray-800 mb-10 leading-relaxed font-bold border-l-4 border-brand-red pl-6">
+                    やることは減り､成果は最大化
+                  </p>
+                  
+                  {/* 3つの訴求ポイント - Sophisticated Design */}
+                  <div className="flex flex-col sm:flex-row gap-4 md:gap-6 mb-10 max-w-2xl">
+                    {[
+                      {
+                        icon: (
+                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-5 h-5">
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
+                          </svg>
+                        ),
+                        main: "オンライン相談",
+                        sub: "毎月1回"
+                      },
+                      {
+                        icon: (
+                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-5 h-5">
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M8.625 12a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H8.25m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H12m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0h-.375M21 12c0 4.556-4.03 8.25-9 8.25a9.764 9.764 0 01-2.555-.337A5.972 5.972 0 015.41 20.97a5.969 5.969 0 01-.474-.065 4.48 4.48 0 00.978-2.025c.09-.457-.133-.901-.467-1.226C3.93 16.178 3 14.189 3 12c0-4.556 4.03-8.25 9-8.25s9 3.694 9 8.25z" />
+                          </svg>
+                        ),
+                        main: "チャット相談",
+                        sub: "いつでもOK"
+                      },
+                      {
+                        icon: (
+                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-5 h-5">
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 01-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 5.472m0 0a6.002 6.002 0 01-5.153-6.447c.225-.926 1.078-1.55 2.03-1.414.906.13 1.84.226 2.787.226 3.615 0 7.025-1.486 9.47-3.866" />
+                          </svg>
+                        ),
+                        main: "プロ人材紹介",
+                        sub: "仲介手数料 0円"
+                      }
+                    ].map((item, i) => (
+                      <div key={i} className="flex-1 bg-white/80 backdrop-blur-sm border-l-4 border-brand-red py-3 px-4 shadow-sm hover:shadow-md transition-shadow">
+                        <div className="flex items-center gap-2 text-gray-900 font-bold text-lg leading-tight mb-1">
+                          <span className="text-brand-red">{item.icon}</span>
+                          {item.main}
+                        </div>
+                        <div className="text-gray-500 font-bold text-xs pl-7">
+                          {item.sub}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                  
+                  <p className="text-gray-600 font-medium text-sm md:text-base mb-10 flex items-center gap-2">
+                    月額3万円・初期費用ゼロ。1ヶ月からお試し可能
+                  </p>
+                  
+                  <div className="flex flex-col sm:flex-row gap-4 items-start">
+                    <div className="flex flex-col items-center gap-2 w-full sm:w-auto">
+                      <Link 
+                        href="https://general-cg.com/contact/" 
+                        className="inline-flex items-center justify-center w-full sm:w-auto bg-brand-red text-white font-bold py-4 px-12 rounded-full hover:bg-red-700 transition-all shadow-xl hover:shadow-2xl hover:-translate-y-1 text-lg group"
+                      >
+                        無料相談を申し込む
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform">
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                        </svg>
+                      </Link>
+                      <div className="text-center">
+                        <p className="text-xs text-gray-500 mb-1">※無理な勧誘は一切いたしません</p>
+                        <p className="text-[10px] text-gray-400">フォーム入力は1分で完了します</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                {/* Image */}
+                <div className="w-2/5">
+                   <div className="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white">
                      <Image 
                        src="/consulting/representative.jpg" 
                        alt="ジェネラルコンサルティンググループ株式会社 代表取締役 槙 優真" 
-                       width={400}
-                       height={400}
-                       className="w-full h-auto object-cover rounded-xl shadow-md border-2 border-white" 
+                       width={600}
+                       height={800}
+                       className="w-full h-auto object-cover" 
                      />
-                     <p className="text-[10px] text-gray-500 text-right mt-1.5 leading-snug font-medium">
-                       ジェネラルコンサルティング<br/>グループ(株) 代表 槙 優真
-                     </p>
-                  </div>
-               </div>
-               
-               <div className="flex items-center gap-3 mb-3">
-                  <div className="h-px bg-gray-300 flex-grow"></div>
-                  <h1 className="text-sm font-bold text-gray-400 tracking-widest">AIマーケ顧問</h1>
-                  <div className="h-px bg-gray-300 flex-grow"></div>
-               </div>
-
-               <p className="text-xl text-gray-900 font-bold text-center leading-relaxed">
-                 やることは減り､<br/>成果は最大化
-               </p>
-            </div>
-
-            {/* PC Content (Original) */}
-            <div className="hidden md:block md:w-3/5">
-              <div className="inline-block bg-brand-red/10 text-brand-red font-bold px-4 py-1.5 rounded-full text-sm mb-6 border border-brand-red/20">
-                中小企業経営者・AI/マーケ担当の方へ
-              </div>
-              <p className="text-3xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-[1.2] tracking-tight">
-                <span className="text-brand-red">圧倒的な投資対効果</span>
-              </p>
-              <div className="flex items-center gap-4 mb-8">
-                  <div className="h-px bg-gray-300 w-12"></div>
-                  <h1 className="text-lg font-bold text-gray-400 tracking-widest">AIマーケ顧問</h1>
-                  <div className="h-px bg-gray-300 w-12"></div>
-              </div>
-              <p className="text-xl md:text-3xl text-gray-800 mb-10 leading-relaxed font-bold border-l-4 border-brand-red pl-6">
-                やることは減り､成果は最大化
-              </p>
-              
-              {/* 3つの訴求ポイント - Sophisticated Design */}
-              <div className="flex flex-col sm:flex-row gap-4 md:gap-6 mb-10 max-w-2xl">
-                {[
-                  {
-                    icon: (
-                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-5 h-5">
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
-                      </svg>
-                    ),
-                    main: "オンライン相談",
-                    sub: "毎月1回"
-                  },
-                  {
-                    icon: (
-                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-5 h-5">
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M8.625 12a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H8.25m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H12m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0h-.375M21 12c0 4.556-4.03 8.25-9 8.25a9.764 9.764 0 01-2.555-.337A5.972 5.972 0 015.41 20.97a5.969 5.969 0 01-.474-.065 4.48 4.48 0 00.978-2.025c.09-.457-.133-.901-.467-1.226C3.93 16.178 3 14.189 3 12c0-4.556 4.03-8.25 9-8.25s9 3.694 9 8.25z" />
-                      </svg>
-                    ),
-                    main: "チャット相談",
-                    sub: "いつでもOK"
-                  },
-                  {
-                    icon: (
-                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-5 h-5">
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 01-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 5.472m0 0a6.002 6.002 0 01-5.153-6.447c.225-.926 1.078-1.55 2.03-1.414.906.13 1.84.226 2.787.226 3.615 0 7.025-1.486 9.47-3.866" />
-                      </svg>
-                    ),
-                    main: "プロ人材紹介",
-                    sub: "仲介手数料 0円"
-                  }
-                ].map((item, i) => (
-                  <div key={i} className="flex-1 bg-white/80 backdrop-blur-sm border-l-4 border-brand-red py-3 px-4 shadow-sm hover:shadow-md transition-shadow">
-                    <div className="flex items-center gap-2 text-gray-900 font-bold text-lg leading-tight mb-1">
-                      <span className="text-brand-red">{item.icon}</span>
-                      {item.main}
-                    </div>
-                    <div className="text-gray-500 font-bold text-xs pl-7">
-                      {item.sub}
-                    </div>
-                  </div>
-                ))}
-              </div>
-              
-              <p className="text-gray-600 font-medium text-sm md:text-base mb-10 flex items-center gap-2">
-                月額3万円・初期費用ゼロ。1ヶ月からお試し可能
-              </p>
-              
-              <div className="flex flex-col sm:flex-row gap-4 items-start">
-                <div className="flex flex-col items-center gap-2 w-full sm:w-auto">
-                  <Link 
-                    href="https://general-cg.com/contact/" 
-                    className="inline-flex items-center justify-center w-full sm:w-auto bg-brand-red text-white font-bold py-4 px-12 rounded-full hover:bg-red-700 transition-all shadow-xl hover:shadow-2xl hover:-translate-y-1 text-lg group"
-                  >
-                    無料相談を申し込む
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform">
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
-                    </svg>
-                  </Link>
-                  <div className="text-center">
-                    <p className="text-xs text-gray-500 mb-1">※無理な勧誘は一切いたしません</p>
-                    <p className="text-[10px] text-gray-400">フォーム入力は1分で完了します</p>
-                  </div>
+                   </div>
+                   <p className="text-sm text-gray-500 text-right mt-3 font-medium leading-relaxed">
+                     ジェネラルコンサルティンググループ株式会社<br/>
+                     代表取締役 槙 優真
+                   </p>
                 </div>
-              </div>
-            </div>
-            <div className="hidden md:block md:w-2/5 w-full">
-               <div className="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white">
-                 <Image 
-                   src="/consulting/representative.jpg" 
-                   alt="ジェネラルコンサルティンググループ株式会社 代表取締役 槙 優真" 
-                   width={600}
-                   height={800}
-                   className="w-full h-auto object-cover" 
-                 />
-               </div>
-               <p className="text-sm text-gray-500 text-right mt-3 font-medium leading-relaxed">
-                 ジェネラルコンサルティンググループ株式会社<br/>
-                 代表取締役 槙 優真
-               </p>
-            </div>
 
-            {/* SP Layout: Features & CTA */}
-            <div className="md:hidden w-full">
-              {/* 3つの訴求ポイント - Grid for SP */}
-              <div className="grid grid-cols-3 gap-2 mb-6">
-                {[
-                  { main: "オンライン\n相談", sub: "毎月1回" },
-                  { main: "チャット\n相談", sub: "いつでも\nOK" },
-                  { main: "プロ人材\n紹介", sub: "手数料\n0円" },
-                ].map((item, i) => (
-                  <div key={i} className="bg-white rounded-lg p-2 text-center shadow-sm border-t-2 border-brand-red flex flex-col justify-center">
-                    <p className="text-xs font-black text-gray-900 leading-tight whitespace-pre-wrap mb-1">{item.main}</p>
-                    <p className="text-[10px] text-gray-500 font-bold whitespace-pre-wrap leading-tight">{item.sub}</p>
-                    </div>
-                ))}
-                    </div>
-              
-              <div className="flex flex-col items-center gap-3">
-                  <Link 
-                    href="https://general-cg.com/contact/" 
-                    className="inline-flex items-center justify-center w-full bg-brand-red text-white font-bold py-4 rounded-full shadow-lg text-lg animate-pulse"
-                  >
-                    無料相談を申し込む
-                  </Link>
-                  <div className="text-center">
-                    <p className="text-xs text-gray-500 mb-1">※無理な勧誘は一切いたしません</p>
-                    <p className="text-[10px] text-gray-400">フォーム入力は1分で完了します</p>
-                 </div>
-               </div>
+              </div>
             </div>
 
           </div>
@@ -837,11 +780,13 @@ export default function ConsultingPage() {
                  { src: "/projects/promotional-support/promotional-support.jpg", label: "BtoBの販促支援サービス", cat: "マーケティング" },
                ].map((item, i) => (
                  <div key={i} className="group relative rounded-xl overflow-hidden bg-white hover:shadow-lg transition-shadow duration-300">
-                    <div className="aspect-video w-full overflow-hidden rounded-xl border border-gray-100">
-                       <img 
+                    <div className="aspect-video w-full overflow-hidden rounded-xl border border-gray-100 relative">
+                       <Image 
                          src={item.src} 
                          alt={item.label} 
-                         className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500" 
+                         fill
+                         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                         className="object-cover transform group-hover:scale-105 transition-transform duration-500" 
                        />
                        {/* Category Badge */}
                        <div className="absolute top-2 left-2">
