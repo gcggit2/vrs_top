@@ -1,15 +1,41 @@
+'use client';
+
 import Link from 'next/link';
-import Image from 'next/image';
+import { useState, useEffect } from 'react';
+import { usePathname } from 'next/navigation';
 
 export default function Header() {
+  const [isOpen, setIsOpen] = useState(false);
+  const pathname = usePathname();
+
+  // Prevent scrolling when menu is open
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [isOpen]);
+
+  // Close menu when route changes
+  useEffect(() => {
+    setIsOpen(false);
+  }, [pathname]);
+
+  const toggleMenu = () => setIsOpen(!isOpen);
+  const closeMenu = () => setIsOpen(false);
+
   return (
     <header className="w-full bg-white shadow-sm z-50 sticky top-0 border-t-4 border-brand-red">
       {/* Main Navigation */}
       <div className="container mx-auto px-4 py-3">
         <div className="flex flex-col xl:flex-row justify-between items-center">
-          {/* Logo */}
+          {/* Logo & Mobile Menu Button Wrapper */}
           <div className="flex justify-between w-full xl:w-auto items-center">
-            <Link href="/" className="flex flex-col py-2">
+            <Link href="/" className="flex flex-col py-2" onClick={closeMenu}>
               <div className="relative h-6 md:h-8 w-auto">
                 <img 
                   src="/logo.png" 
@@ -20,10 +46,21 @@ export default function Header() {
             </Link>
             
             {/* Mobile Menu Button (Hamburger) */}
-            <button className="xl:hidden p-2 text-gray-600">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-8 h-8">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-              </svg>
+            <button 
+              className="xl:hidden p-2 text-gray-600 focus:outline-none" 
+              onClick={toggleMenu}
+              aria-label="メニューを開く"
+              aria-expanded={isOpen}
+            >
+              {isOpen ? (
+                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-8 h-8">
+                   <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+                 </svg>
+              ) : (
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-8 h-8">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                </svg>
+              )}
             </button>
           </div>
 
@@ -78,6 +115,52 @@ export default function Header() {
             </Link>
           </nav>
         </div>
+      </div>
+
+      {/* Mobile Menu Overlay */}
+      <div 
+        className={`fixed inset-0 bg-white z-40 transition-transform duration-300 ease-in-out xl:hidden pt-24 pb-10 px-6 overflow-y-auto ${
+          isOpen ? 'translate-x-0' : 'translate-x-full'
+        }`}
+        style={{ top: '0' }}
+      >
+        <nav className="flex flex-col gap-6 text-lg font-bold text-gray-700">
+          <Link href="/" onClick={closeMenu} className="border-b border-gray-100 pb-2">TOP</Link>
+          <Link href="/profile" onClick={closeMenu} className="border-b border-gray-100 pb-2">代表プロフィール</Link>
+          
+          <div className="flex flex-col gap-4 border-b border-gray-100 pb-4">
+            <span className="text-gray-400 text-sm font-normal">サービス一覧</span>
+            <Link href="/consulting" onClick={closeMenu} className="pl-4 hover:text-brand-red flex items-center gap-2">
+              <span className="w-1.5 h-1.5 bg-brand-red rounded-full"></span>
+              AIマーケ顧問
+            </Link>
+            <Link href="/ai-marke-training" onClick={closeMenu} className="pl-4 hover:text-brand-red flex items-center gap-2">
+              <span className="w-1.5 h-1.5 bg-brand-red rounded-full"></span>
+              AIマーケ研修
+            </Link>
+            <Link href="/ai-training" onClick={closeMenu} className="pl-4 hover:text-brand-red flex items-center gap-2">
+              <span className="w-1.5 h-1.5 bg-brand-red rounded-full"></span>
+              AI基礎研修
+            </Link>
+            <Link href="/ai-development" onClick={closeMenu} className="pl-4 hover:text-brand-red flex items-center gap-2">
+              <span className="w-1.5 h-1.5 bg-brand-red rounded-full"></span>
+              AIツールの受託開発
+            </Link>
+          </div>
+
+          <Link href="/projects" onClick={closeMenu} className="border-b border-gray-100 pb-2">支援事例</Link>
+          <Link href="/reviews/1" onClick={closeMenu} className="border-b border-gray-100 pb-2">お客様の声</Link>
+          <a href="https://note.com/gcg_maki" target="_blank" rel="noopener noreferrer" onClick={closeMenu} className="border-b border-gray-100 pb-2">コラム記事</a>
+          <Link href="/company" onClick={closeMenu} className="border-b border-gray-100 pb-2">会社紹介</Link>
+          
+          <Link 
+            href="/contact" 
+            onClick={closeMenu}
+            className="bg-brand-red text-white text-center py-4 rounded hover:bg-red-700 transition-colors shadow-sm mt-4"
+          >
+            お問い合わせ
+          </Link>
+        </nav>
       </div>
     </header>
   );

@@ -119,15 +119,15 @@ export default function ContactPage() {
               <div className="w-full">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-3 bg-gray-50 p-4 rounded-lg border border-gray-200">
                       {CATEGORIES.map((cat) => (
-                          <div key={cat} className="flex items-center">
+                          <div key={cat} className="flex items-center p-1">
                               <input
                                   type="checkbox"
                                   id={`cat-${cat}`}
                                   value={cat}
-                                  className="w-4 h-4 text-brand-red border-gray-300 rounded focus:ring-brand-red focus:ring-offset-0"
+                                  className="w-5 h-5 text-brand-red border-gray-300 rounded focus:ring-brand-red focus:ring-offset-0"
                                   {...register("categories")}
                               />
-                              <label htmlFor={`cat-${cat}`} className="ml-2 text-sm text-gray-700 cursor-pointer hover:text-gray-900">
+                              <label htmlFor={`cat-${cat}`} className="ml-3 text-sm text-gray-700 cursor-pointer hover:text-gray-900 flex-1">
                                   {cat}
                               </label>
                           </div>

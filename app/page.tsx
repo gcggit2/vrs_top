@@ -47,11 +47,11 @@ export default function Home() {
         />
         
         <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-5xl mx-auto p-8 md:p-16 relative flex flex-col md:flex-row items-start gap-12 bg-white shadow-xl rounded-none md:rounded-r-3xl border-l-4 border-brand-red">
+          <div className="max-w-5xl mx-auto p-6 md:p-16 relative flex flex-col md:flex-row items-start gap-8 md:gap-12 bg-white shadow-xl rounded-none md:rounded-r-3xl border-l-4 border-brand-red">
             
             {/* Main Content */}
             <div className="w-full text-left">
-              <h2 className="text-2xl md:text-4xl font-bold text-gray-900 mb-8 leading-snug">
+              <h2 className="text-2xl md:text-4xl font-bold text-gray-900 mb-6 md:mb-8 leading-snug">
                 <span className="text-brand-red">AI活用</span><span className="text-lg md:text-3xl ml-1 align-middle text-gray-600">(守り)</span> × <span className="text-brand-red">マーケティング</span><span className="text-lg md:text-3xl ml-1 align-middle text-gray-600">(攻め)</span><br/>
                 コストは最小化、売上は最大化
               </h2>

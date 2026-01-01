@@ -4,9 +4,9 @@ export default function Footer() {
   return (
     <footer className="bg-white text-gray-800 pt-16 pb-8 border-t border-gray-100">
       <div className="container mx-auto px-4">
-        {/* Changed grid layout to give more space to the first column (Company Info) */}
-        <div className="grid md:grid-cols-5 gap-8 mb-16 items-start">
-          {/* Column 1: Company Info - Takes 2 columns width */}
+        {/* Responsive Grid Layout: Mobile 1col, Tablet 2cols, Desktop 5cols */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-16 items-start">
+          {/* Column 1: Company Info - Tablet: Full width, Desktop: 2/5 */}
           <div className="md:col-span-2">
             {/* Logo replaces text header */}
             <div className="mb-8"> 
@@ -50,8 +50,8 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Column 4: Contact */}
-          <div className="md:col-span-1">
+          {/* Column 4: Contact - Tablet: Full width, Desktop: 1/5 */}
+          <div className="md:col-span-2 lg:col-span-1">
             <div className="space-y-4 pt-1">
               <Link 
                 href="/contact" 
