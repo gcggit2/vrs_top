@@ -266,7 +266,9 @@ export default function Profile() {
                   <div className="text-gray-600 leading-loose space-y-6 max-w-4xl mx-auto">
                   
                   <div className="bg-white p-6 md:p-8 rounded-xl shadow-sm border border-gray-100 mb-10">
-                    <h4 className="text-xl font-bold text-gray-900 mb-6 text-center border-b border-gray-100 pb-4">私が伴走して実現したい未来</h4>
+                    <h4 className="text-xl font-bold text-gray-900 mb-6 text-center border-b border-gray-100 pb-4 inline-block md:block">
+                    私が伴走して<br className="md:hidden"/>実現したい未来
+                  </h4>
                     <div className="grid md:grid-cols-3 gap-6">
                       <div>
                         <h5 className="font-bold text-brand-red mb-2 text-center">【脱・属人化の実現】</h5>
@@ -290,9 +292,11 @@ export default function Profile() {
                     素晴らしい価値を持つ企業の経営者さま・スタッフさま共に「仕組みで売れる状態に至り、心にゆとりを持って働ける」。そんな持続可能な経営を実現できるよう、誠実にサポートできればと思っています｡
                   </p>
                   
-                  <div className="text-right mt-12">
-                    <p className="font-bold text-gray-900 mb-1">ジェネラルコンサルティンググループ株式会社</p>
-                    <p className="font-bold text-gray-900">代表取締役　槙 優真</p>
+                  <div className="text-center md:text-right mt-12">
+                    <p className="font-bold text-gray-900 mb-1 inline-block md:block text-left md:text-right">
+                      ジェネラルコンサルティング<br className="md:hidden"/>グループ株式会社
+                    </p>
+                    <p className="font-bold text-gray-900 text-left md:text-right pl-4 md:pl-0">代表取締役　槙 優真</p>
                   </div>
                 </div>
               </div>
