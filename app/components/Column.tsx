@@ -1,22 +1,20 @@
-import Link from 'next/link';
-
 import Image from 'next/image';
 
 const columns = [
   {
-    date: '2025.10.15',
-    title: 'AI時代に求められるマーケティング戦略とは？本質を捉える思考法',
-    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80',
+    title: '「稼げる社長＝スゴい」が経営者を追い詰める｜経営の価値基準を「持続可能な経営」に定義し直す',
+    href: 'https://note.com/gcg_maki/n/nc6be60c6368f',
+    imageSrc: '/column/column-1.png',
   },
   {
-    date: '2025.09.28',
-    title: '中小企業こそAIを導入すべき5つの理由と具体的な活用事例',
-    image: 'https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=800&q=80',
+    title: '1日24時間のうち「たった20％」で成果が激変｜最優先で時間を投資すべき"第二領域"とは？',
+    href: 'https://note.com/gcg_maki/n/n32c8c648a15b',
+    imageSrc: '/column/column-2.png',
   },
   {
-    date: '2025.09.10',
-    title: '売上アップとコスト削減を同時に実現する組織作りのポイント',
-    image: 'https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=800&q=80',
+    title: '売上目標という呪縛を解いたら｜数字を追うのをやめた途端、優良顧客が集まり始めた経営の転換点',
+    href: 'https://note.com/gcg_maki/n/nf6034d1db51f',
+    imageSrc: '/column/column-3.png',
   },
 ];
 
@@ -32,18 +30,25 @@ export default function Column() {
 
         <div className="grid md:grid-cols-3 gap-8 mb-12">
           {columns.map((col, index) => (
-            <a key={index} href="https://note.com/gcg_maki" target="_blank" rel="noopener noreferrer" className="group bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-xl transition-all duration-300">
+            <a
+              key={index}
+              href={col.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-xl transition-all duration-300"
+            >
               <div className="h-48 overflow-hidden relative">
                 <Image 
-                  src={col.image} 
-                  alt={col.title} 
+                  src={col.imageSrc}
+                  alt={col.title}
                   fill
                   sizes="(max-width: 768px) 100vw, 33vw"
+                  quality={85}
+                  priority={index === 0}
                   className="object-cover group-hover:scale-105 transition-transform duration-500"
                 />
               </div>
               <div className="p-6">
-                <time className="text-gray-500 text-sm font-mono block mb-2">{col.date}</time>
                 <h3 className="text-lg font-bold text-gray-900 leading-snug group-hover:text-brand-red transition-colors line-clamp-3">
                   {col.title}
                 </h3>
