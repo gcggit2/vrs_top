@@ -1,65 +1,336 @@
+import type { Metadata } from 'next';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import Link from 'next/link';
+
+export const metadata: Metadata = {
+  title: '槙 優真｜代表プロフィール・創業ストーリー（ジェネラルコンサルティンググループ）',
+  description: 'ジェネラルコンサルティンググループ代表取締役 槙 優真のプロフィールと創業ストーリー。医学部A判定を捨てて選んだビジネスの道、うつ病による挫折、そしてAI×マーケティングに行き着いた経緯を紹介します。',
+};
 
 export default function Profile() {
   return (
     <main className="min-h-screen bg-white font-sans text-gray-800">
       <Header />
       
-      {/* Simple Hero Section */}
-      <div className="w-full bg-white pt-24 pb-12 md:pt-32 md:pb-16">
-        <div className="container mx-auto px-4 flex flex-col items-center text-center">
-          <p className="text-brand-red font-bold tracking-[0.2em] mb-8 text-sm md:text-base">CEO PROFILE & STORY</p>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Person",
+            "name": "槙 優真",
+            "jobTitle": "代表取締役",
+            "affiliation": {
+              "@type": "Organization",
+              "name": "ジェネラルコンサルティンググループ株式会社"
+            },
+            "url": "https://general-consulting.co.jp/profile",
+            "image": "https://general-consulting.co.jp/representative.jpg",
+            "alumniOf": "慶應義塾大学",
+            "description": "ジェネラルコンサルティンググループ株式会社 代表取締役。AI×マーケティングの専門家。10年以上のマーケティング実務経験とAI活用ノウハウを持つ。"
+          }),
+        }}
+      />
+      
+      {/* Simple Hero Section & Navigation */}
+      <div className="w-full bg-white pt-12 pb-4">
+        <div className="container mx-auto px-4">
+          <h1 className="text-brand-red font-bold tracking-[0.2em] mb-8 text-sm md:text-base text-center">CEO PROFILE & STORY</h1>
           
-          <div className="mb-8 w-[200px] md:w-[280px] shadow-lg rounded-xl overflow-hidden">
-            <img 
-              src="/representative.jpg" 
-              alt="槙 優真" 
-              className="w-full h-auto object-cover"
-            />
-          </div>
-          
-          <div className="space-y-2">
-            <p className="text-gray-600 font-medium">ジェネラルコンサルティンググループ株式会社</p>
-            <p className="text-gray-900 font-medium">代表取締役</p>
-            <h1 className="text-2xl md:text-3xl font-bold text-gray-900 mt-2">槙 優真（Yuma Maki）</h1>
+          {/* Navigation Menu */}
+          <div className="mb-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-5xl mx-auto">
+              <Link href="#story" className="group border border-brand-red p-4 flex justify-between items-center bg-white hover:bg-brand-red/5 transition-colors">
+                <span className="text-gray-900 font-medium">ストーリー</span>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1} stroke="currentColor" className="w-6 h-6 text-gray-400 group-hover:text-brand-red transition-colors">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                </svg>
+              </Link>
+              <Link href="#profile" className="group border border-brand-red p-4 flex justify-between items-center bg-white hover:bg-brand-red/5 transition-colors">
+                <span className="text-gray-900 font-medium">プロフィール</span>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1} stroke="currentColor" className="w-6 h-6 text-gray-400 group-hover:text-brand-red transition-colors">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                </svg>
+              </Link>
+              <Link href="#partner" className="group border border-brand-red p-4 flex justify-between items-center bg-white hover:bg-brand-red/5 transition-colors">
+                <span className="text-gray-900 font-medium">パートナー紹介</span>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1} stroke="currentColor" className="w-6 h-6 text-gray-400 group-hover:text-brand-red transition-colors">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                </svg>
+              </Link>
+            </div>
           </div>
         </div>
       </div>
 
-      {/* Navigation Menu */}
-      <div className="bg-white pb-12 md:pb-16">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-5xl mx-auto">
-            <Link href="#profile" className="group border border-brand-red p-4 flex justify-between items-center bg-white hover:bg-brand-red/5 transition-colors">
-              <span className="text-gray-900 font-medium">プロフィール</span>
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1} stroke="currentColor" className="w-6 h-6 text-gray-400 group-hover:text-brand-red transition-colors">
-                <path strokeLinecap="round" strokeLinejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
-              </svg>
-            </Link>
-            <Link href="#story" className="group border border-brand-red p-4 flex justify-between items-center bg-white hover:bg-brand-red/5 transition-colors">
-              <span className="text-gray-900 font-medium">ストーリー</span>
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1} stroke="currentColor" className="w-6 h-6 text-gray-400 group-hover:text-brand-red transition-colors">
-                <path strokeLinecap="round" strokeLinejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
-              </svg>
-            </Link>
-            <Link href="#partner" className="group border border-brand-red p-4 flex justify-between items-center bg-white hover:bg-brand-red/5 transition-colors">
-              <span className="text-gray-900 font-medium">パートナー紹介</span>
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1} stroke="currentColor" className="w-6 h-6 text-gray-400 group-hover:text-brand-red transition-colors">
-                <path strokeLinecap="round" strokeLinejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
-              </svg>
-            </Link>
+      {/* Story Section - Stylish Design */}
+      <section id="story" className="w-full bg-[#FCF5F5] py-20 md:py-32 scroll-mt-20 relative overflow-hidden border-y border-brand-red/10">
+        {/* Background Pattern: Red Grid on Off-White */}
+        <div className="absolute inset-0 z-0" 
+          style={{ 
+            backgroundImage: `linear-gradient(#B91C1C 1px, transparent 1px), linear-gradient(90deg, #B91C1C 1px, transparent 1px)`, 
+            backgroundSize: '30px 30px',
+            opacity: 0.08
+          }}
+        ></div>
+
+        {/* Decorative Watermark Text */}
+        <div className="absolute -top-10 -left-10 text-[150px] md:text-[200px] font-black text-[#991B1B] opacity-[0.05] pointer-events-none select-none leading-none z-0">
+          STORY
+        </div>
+        <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-gradient-to-tl from-[#991B1B]/10 to-transparent rounded-full blur-3xl z-0 pointer-events-none"></div>
+
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="max-w-6xl mx-auto">
+            {/* Intro Section */}
+            <div className="mb-24 text-center max-w-4xl mx-auto">
+              <div className="mb-12 border-b border-gray-200 pb-6">
+                <span className="text-brand-red font-bold tracking-widest text-sm block mb-2">STORY</span>
+                <h2 className="text-2xl md:text-3xl font-bold text-gray-900">ストーリー</h2>
+              </div>
+              <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-8">
+                マンパワーに頼る「属人化の壁」を、<br/>
+                AIとマーケティングで突破する
+              </h3>
+                <p className="text-gray-600 leading-loose text-lg text-justify md:text-center">
+                AI×マーケティングで、コストを最小化し、売上を最大化する「強い経営の仕組み」構築を支援します。<br className="hidden md:inline"/>その背景にある、私の原点とこれまでの歩みをお伝えします。
+              </p>
+            </div>
+
+            {/* Story Sections - Zigzag Layout */}
+            <div className="space-y-24 md:space-y-32">
+              
+              {/* Section 1: Right Image */}
+              <div className="flex flex-col md:flex-row items-center gap-12 md:gap-20">
+                <div className="md:w-1/2 order-2 md:order-1">
+                  <h3 className="text-2xl font-bold text-gray-900 mb-6 border-l-4 border-brand-red pl-4">
+                    医学部A判定を捨て、<br/>あえて選んだ「ビジネス修行」
+                  </h3>
+                  <div className="text-gray-600 leading-loose space-y-4">
+                    <p>
+                      私のキャリアは、少し変わったスタートでした。幼い頃に父を亡くし、医師を目指して勉学に励んだ私は、医学部医学科でA判定を取得するまでになります。しかし大学受験の失敗と震災を経て、「与えられたレールではなく、自分の意思で人生を動かしたい」という想いが強くなりました。
+                    </p>
+                    <p>
+                      19歳で私は予備校を辞め、起業の道へ。しかし、ビジネスの厳しさを知らなかった私は、師事した経営者のもとで一度立ち止まり、会社員としてビジネスの基礎を一から叩き込む決断をしました。そこからの4年間は、まさに修行の日々でした。Webマーケティング支援の現場で、深夜まで泥臭く働き、実務を積み上げました。
+                    </p>
+                  </div>
+                </div>
+                <div className="md:w-1/2 order-1 md:order-2 flex justify-center">
+                  <div className="bg-white p-3 shadow-lg transform rotate-2 max-w-sm">
+                    <img 
+                      src="/story/story1.jpg" 
+                      alt="医学部A判定からビジネス修行の道へ" 
+                      className="w-full h-auto"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              {/* Section 2: Left Image */}
+              <div className="flex flex-col md:flex-row items-center gap-12 md:gap-20">
+                <div className="md:w-1/2 order-1 flex justify-center">
+                  <div className="bg-white p-3 shadow-lg transform -rotate-2 max-w-sm">
+                    <img 
+                      src="/story/story2.jpg" 
+                      alt="事業の成功と蓄積される歪み" 
+                      className="w-full h-auto"
+                    />
+                  </div>
+                </div>
+                <div className="md:w-1/2 order-2">
+                  <h3 className="text-2xl font-bold text-gray-900 mb-6 border-l-4 border-brand-red pl-4">
+                    事業の発展と、<br/>成功の裏側に潜む「リスク」
+                  </h3>
+                  <div className="text-gray-600 leading-loose space-y-4">
+                    <p>
+                      その後、SNSマーケティングのスタートアップ企業やYahoo! JAPANでの経験を経て、23歳で再び独立。独立後の歩みは、決して平坦ではありませんでしたが、それまでの努力が実を結びます｡売上は伸び、経済的な余裕も生まれ、一見すると成功への階段を上っているように見えました。
+                    </p>
+                    <p>
+                      しかし、その「成功」は非常に危ういバランスの上にありました。当時のスタイルは、典型的な「マンパワー依存」。自分が動かなければ売上が止まる。組織が大きくなるほど、私の時間は現場対応に奪われていく。「このまま走り続けることはできるのだろうか？」。拡大する数字とは裏腹に、拭えない違和感が蓄積されていきました。
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Section 2.5: Right Image (Depression & Realization) */}
+              <div className="flex flex-col md:flex-row items-center gap-12 md:gap-20">
+                <div className="md:w-1/2 order-2 md:order-1">
+                  <h3 className="text-2xl font-bold text-gray-900 mb-6 border-l-4 border-brand-red pl-4">
+                    「うつ病」による強制終了。<br/>静寂の中で気づいた、仕組みなき経営の脆さ。
+                  </h3>
+                  <div className="text-gray-600 leading-loose space-y-4">
+                    <p>
+                      2022年9月。ついにその歪みが限界に達しました。私自身の「うつ病」という診断。とても仕事ができる状態ではなく､半年間の療養を余儀なくされました｡
+                    </p>
+                    <p>
+                      強制的に立ち止まったことで、私は痛感しました。社長や特定の個人の頑張りに依存する経営モデルがいかに脆いか。「売れる仕組み」があり、かつ「心のゆとり」がなければ、健全な会社経営は続かない。その事実を、思い知らされました。
+                    </p>
+                  </div>
+                </div>
+                <div className="md:w-1/2 order-1 md:order-2 flex justify-center">
+                  <div className="bg-white p-3 shadow-lg transform rotate-1 max-w-sm">
+                    {/* Placeholder for new image */}
+                    <img 
+                      src="/story/story3.jpg" 
+                      alt="強制終了と静寂の中での気づき" 
+                      className="w-full h-auto"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              {/* Section 3: Left Image (AI Impact) - Swapped Layout */}
+              <div className="flex flex-col md:flex-row items-center gap-12 md:gap-20">
+                <div className="md:w-1/2 order-1 flex justify-center">
+                  <div className="bg-white p-3 shadow-lg transform -rotate-3 max-w-sm">
+                    <img 
+                      src="/story/story4.jpg" 
+                      alt="AIの衝撃と新たな希望" 
+                      className="w-full h-auto"
+                    />
+                  </div>
+                </div>
+                <div className="md:w-1/2 order-2">
+                  <h3 className="text-2xl font-bold text-gray-900 mb-6 border-l-4 border-brand-red pl-4">
+                    AIへの戦慄。<br/>それは「マンパワーの限界」を突破する唯一の鍵。
+                  </h3>
+                  <div className="text-gray-600 leading-loose space-y-4">
+                    <p>
+                      2022年春に復帰し、活動を続ける中、2024年4月に大きな衝撃が走りました。進化を続けるAIツールに触れた際、その圧倒的な処理能力と文章品質に、私は戦慄しました。すでに多くの人間や、専門的なライターよりも、洗練された文章を、瞬時に生成している。
+                    </p>
+                    <p>
+                      専門スキルすら代替される衝撃。しかし同時に、これはかつて私が直面した「属人化と根性の限界」を突破する、唯一無二の鍵になると直感しました。AIを使いこなせば、人間は「作業」から解放され、より本質的な「経営」や「判断」に集中できる。AIは脅威ではなく、経営を次のステージへ押し上げる最強のパートナーになると確信したのです。
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Section 4: Right Image (Market Challenges) - Swapped Layout */}
+              <div className="flex flex-col md:flex-row items-center gap-12 md:gap-20">
+                <div className="md:w-1/2 order-2 md:order-1">
+                  <h3 className="text-2xl font-bold text-gray-900 mb-6 border-l-4 border-brand-red pl-4">
+                    AIという、未開拓市場での挑戦
+                  </h3>
+                  <div className="text-gray-600 leading-loose space-y-4">
+                    <p>
+                      AIに戦慄した私は､AIを主軸とした事業へ舵を切りました。ただ、現実は想像以上にタフなものでした。「まだAIなんて早い」「何ができるのかイメージがわかない」。新しい領域であるがゆえに実績を問われ、商談はできても受注には至らない。
+                    </p>
+                    <p>
+                      正直、最初は相当きつかったです。どれだけ試行錯誤を重ねても、なかなか成果に結びつかない日々。
+                    </p>
+                    <p>
+                      それでも私は諦めませんでした。なぜなら、この活動は必ず「経営を抜本的に変える」と確信していたからです。AIを「パートナー」として使いこなす。それこそが、変化に強く、安定した経営を目指す企業の未来を切り拓く、確かな道だと信じて、愚直に仕事を継続してきました。
+                    </p>
+                  </div>
+                </div>
+                <div className="md:w-1/2 order-1 md:order-2 flex justify-center">
+                  <div className="bg-white p-3 shadow-lg transform rotate-1 max-w-sm">
+                    <img 
+                      src="/story/story5.jpg" 
+                      alt="未開拓市場での挑戦と信念" 
+                      className="w-full h-auto"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              {/* Section 5: Full Width / Centered (Solution & Vision) */}
+              <div className="bg-gray-50 p-8 md:p-16 rounded-xl relative overflow-hidden">
+                <div className="absolute top-0 right-0 w-64 h-64 bg-brand-red/5 rounded-full -mr-32 -mt-32"></div>
+                <div className="absolute bottom-0 left-0 w-64 h-64 bg-brand-red/5 rounded-full -ml-32 -mb-32"></div>
+                
+                <div className="relative z-10">
+                  <h3 className="text-2xl font-bold text-gray-900 mb-12 text-center">
+                    「属人的な経営」から、<br/>「仕組み」で持続可能な経営へ
+                  </h3>
+                  
+                  {/* Image & Intro Text - 2 Column Layout */}
+                  <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12 mb-12 max-w-4xl mx-auto">
+                    <div className="md:w-5/12 flex justify-center md:justify-end">
+                      <div className="max-w-xs w-full shadow-xl rounded-lg overflow-hidden bg-white p-2">
+                        <img 
+                          src="/story/story6.jpg" 
+                          alt="AIとマーケティングによる仕組み化" 
+                          className="w-full h-auto"
+                        />
+                      </div>
+                    </div>
+                    <div className="md:w-7/12">
+                      <p className="text-gray-600 leading-loose">
+                        これまで、私は数名の組織から数百名規模の企業まで、多くの企業・経営者さまに伴走してきました。「AI×マーケティング」という新しい武器と、10年以上磨き続けてきたマーケティングの知見を掛け合わせ、課題を「売れる仕組み」で解決したいと考えています。
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="text-gray-600 leading-loose space-y-6 max-w-4xl mx-auto">
+                  
+                  <div className="bg-white p-6 md:p-8 rounded-xl shadow-sm border border-gray-100 mb-10">
+                    <h4 className="text-xl font-bold text-gray-900 mb-6 text-center border-b border-gray-100 pb-4">私が伴走して実現したい未来</h4>
+                    <div className="grid md:grid-cols-3 gap-6">
+                      <div>
+                        <h5 className="font-bold text-brand-red mb-2 text-center">【脱・属人化の実現】</h5>
+                        <p className="text-sm">特定の誰かの頑張りに依存せず、仕組みとAIがビジネスを支える強固な体制を構築します。</p>
+                      </div>
+                      <div>
+                        <h5 className="font-bold text-brand-red mb-2 text-center">【本来の価値への集中】</h5>
+                        <p className="text-sm">スタッフ一人ひとりが本来向き合うべき「創造的な価値提供」に情熱を注げる環境を整えます。</p>
+                      </div>
+                      <div>
+                        <h5 className="font-bold text-brand-red mb-2 text-center">【持続可能な経営】</h5>
+                        <p className="text-sm">一時の無理な成果ではなく、長期的に安定して利益を生み出し続ける組織へ。</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <p>
+                    私にできることは、戦略立案からWeb広告・SEO・SNS・LP制作まで一気通貫で支援してきた「10年以上の泥臭い実戦知見」と、試行錯誤の末に磨き上げた「実践的なAI活用」を、皆さまの事業に最適に組み込めるよう、支援することです。
+                  </p>
+                  <p>
+                    素晴らしい価値を持つ企業の経営者さま・スタッフさま共に「仕組みで売れる状態に至り、心にゆとりを持って働ける」。そんな持続可能な経営を実現できるよう、誠実にサポートできればと思っています｡
+                  </p>
+                  
+                  <div className="text-right mt-12">
+                    <p className="font-bold text-gray-900 mb-1">ジェネラルコンサルティンググループ株式会社</p>
+                    <p className="font-bold text-gray-900">代表取締役　槙 優真</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            </div>
           </div>
         </div>
-      </div>
+      </section>
 
-      {/* Main Content */}
-      <div className="bg-white py-12 md:py-20">
+      {/* Profile Section - Gray Background */}
+      <section id="profile" className="w-full bg-gray-50 py-16 md:py-24 scroll-mt-20">
         <div className="container mx-auto px-4">
-
-          {/* New Profile Section (Updated) */}
-          <div id="profile" className="scroll-mt-24 max-w-4xl mx-auto mb-32 bg-white border border-gray-100 rounded-2xl p-8 md:p-12 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)]">
+          <div className="max-w-6xl mx-auto">
+            <div className="mb-10 border-b border-gray-200 pb-4">
+              <span className="text-brand-red font-bold tracking-widest text-sm block mb-2">PROFILE</span>
+              <h2 className="text-2xl md:text-3xl font-bold text-gray-900">プロフィール</h2>
+            </div>
+            
+            <div className="flex flex-col md:flex-row items-center md:justify-start gap-8 md:gap-12 mb-12">
+              <div className="w-[160px] md:w-[220px] flex-shrink-0 shadow-lg rounded-xl overflow-hidden">
+                <img 
+                  src="/representative.jpg" 
+                  alt="槙 優真" 
+                  className="w-full h-auto object-cover"
+                />
+              </div>
+              
+              <div className="space-y-4 text-center md:text-left">
+                <div>
+                  <p className="text-gray-600 font-medium mb-1">ジェネラルコンサルティンググループ株式会社</p>
+                  <p className="text-gray-900 font-medium text-lg">代表取締役</p>
+                </div>
+                <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
+                  槙 優真 <span className="text-xl md:text-2xl text-gray-500 font-normal">（Yuma Maki）</span>
+                </h2>
+              </div>
+            </div>
             
             {/* Summary Section */}
             <div className="mb-12 text-gray-700 leading-relaxed font-medium">
@@ -136,194 +407,18 @@ export default function Profile() {
 
             </div>
           </div>
-          
-          {/* Intro Section */}
-          <div id="story" className="scroll-mt-24 max-w-4xl mx-auto mb-24 text-center">
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-8">
-              マンパワーに頼る「属人化の壁」を、<br/>
-              AIとマーケティングで突破する
-            </h2>
-            <p className="text-gray-600 leading-loose text-lg text-justify md:text-center">
-              AI×マーケティングという新しい武器と、10年間磨き続けてきたマーケティングの本質を掛け合わせ、企業の「売れる仕組み」構築を支援します。その背景にある、私の原点とこれまでの歩みをお伝えします。
-            </p>
           </div>
+      </section>
 
-          {/* Story Sections - Zigzag Layout */}
-          <div className="space-y-24 md:space-y-32 max-w-6xl mx-auto">
-            
-            {/* Section 1: Right Image */}
-            <div className="flex flex-col md:flex-row items-center gap-12 md:gap-20">
-              <div className="md:w-1/2 order-2 md:order-1">
-                <h3 className="text-2xl font-bold text-gray-900 mb-6 border-l-4 border-brand-red pl-4">
-                  医学部A判定を捨て、<br/>あえて選んだ「ビジネス修行」
-                </h3>
-                <div className="text-gray-600 leading-loose space-y-4">
-                  <p>
-                    私のキャリアは、少し変わったスタートでした。幼い頃に父を亡くし、医師を目指して勉学に励んだ私は、医学部医学科でA判定を取得するまでになります。しかし震災と本番での挫折を経て、「与えられたレールではなく、自分の意思で人生を動かしたい」という想いが強くなりました。
-                  </p>
-                  <p>
-                    19歳で私は予備校を辞め、起業の道へ。しかし、商売の厳しさを知らなかった私は、師事した経営者のもとで一度立ち止まり、会社員としてビジネスの基礎を一から叩き込む決断をしました。そこからの4年間は、まさに修行の日々でした。Webマーケティング支援の現場で、深夜まで泥臭く働き、実務を積み上げました。
-                  </p>
-                </div>
+      {/* Partner Section - White Background */}
+      <section id="partner" className="w-full bg-white py-16 md:py-24 scroll-mt-20">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+             <div className="bg-gray-50 border border-gray-100 rounded-2xl p-8 md:p-12 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)]">
+              <div className="text-center mb-10 border-b border-gray-200 pb-6">
+                <span className="text-brand-red font-bold tracking-widest text-sm block mb-2">PARTNER</span>
+                <h2 className="text-2xl md:text-3xl font-bold text-gray-900">パートナー紹介</h2>
               </div>
-              <div className="md:w-1/2 order-1 md:order-2 flex justify-center">
-                <div className="bg-white p-3 shadow-lg transform rotate-2 max-w-sm">
-                  <img 
-                    src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=800&auto=format&fit=crop" 
-                    alt="ビジネス修行時代" 
-                    className="w-full h-auto"
-                  />
-                </div>
-              </div>
-            </div>
-
-            {/* Section 2: Left Image */}
-            <div className="flex flex-col md:flex-row items-center gap-12 md:gap-20">
-              <div className="md:w-1/2 order-1 flex justify-center">
-                <div className="bg-white p-3 shadow-lg transform -rotate-2 max-w-sm">
-                  <img 
-                    src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?q=80&w=800&auto=format&fit=crop" 
-                    alt="独立と挫折" 
-                    className="w-full h-auto"
-                  />
-                </div>
-              </div>
-              <div className="md:w-1/2 order-2">
-                <h3 className="text-2xl font-bold text-gray-900 mb-6 border-l-4 border-brand-red pl-4">
-                  事業の発展と､「うつ病」という限界
-                </h3>
-                <div className="text-gray-600 leading-loose space-y-4">
-                  <p>
-                    その後、SNSマーケティングのスタートアップやYahoo! JAPANでの経験を経て、23歳で再び独立。独立後の歩みは、決して平坦ではありませんでしたが、それまでの努力が実を結びます｡売上は伸び、経済的な余裕も生まれ、一見すると成功への階段を上っているように見えました。
-                  </p>
-                  <p>
-                    しかし、その「成功」の裏側では、ある歪みが蓄積されていました。当時の私のスタイルは、典型的な「マンパワーと努力に依存した経営」でした。仕事が好調になればなるほど、現場の負担は増大し、私が止まれば全てが止まるという危ういバランスの上に立っていました。
-                  </p>
-                  <p>
-                    2022年9月。ついにその歪みが限界に達しました。私自身の「うつ病」という診断。とても仕事ができる状態ではなく､半年間の療養を余儀なくされました｡
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            {/* Section 3: Right Image */}
-            <div className="flex flex-col md:flex-row items-center gap-12 md:gap-20">
-              <div className="md:w-1/2 order-2 md:order-1">
-                <h3 className="text-2xl font-bold text-gray-900 mb-6 border-l-4 border-brand-red pl-4">
-                  AIの衝撃､そして希望
-                </h3>
-                <div className="text-gray-600 leading-loose space-y-4">
-                  <p>
-                    静まり返った部屋で私が痛感したのは、社長やキーマンがいないと立ち行かない経営モデルの脆さでした。「売れる仕組み」に昇華できなければ、経営者も、そこで働くメンバーも、いつか必ず疲弊してしまう。その事実に、私は打ちのめされました。
-                  </p>
-                  <p>
-                    2022年春に復帰し、活動を続ける中、2024年4月に大きな衝撃が走りました。進化を続けるAIツールに触れた際、それが書き出した文章の質の高さに言葉を失ったのです。すでに多くの人間や、専門的なライターよりも、洗練された文章を、瞬時に生成している。
-                  </p>
-                  <p>
-                    Webマーケティングに不可欠な専門スキルですら、一瞬で代替されようとしている。その光景に、私は正直、戦慄を覚えました。しかし同時に、これはかつて私が直面した「マンパワーと根性の限界」を突破するための、唯一無二の鍵になると直感しました。
-                  </p>
-                </div>
-              </div>
-              <div className="md:w-1/2 order-1 md:order-2 flex justify-center">
-                <div className="bg-white p-3 shadow-lg transform rotate-1 max-w-sm">
-                  <img 
-                    src="https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=800&auto=format&fit=crop" 
-                    alt="AIとの出会い" 
-                    className="w-full h-auto"
-                  />
-                </div>
-              </div>
-            </div>
-
-            {/* Section 4: Left Image (Market Challenges) */}
-            <div className="flex flex-col md:flex-row items-center gap-12 md:gap-20">
-              <div className="md:w-1/2 order-1 flex justify-center">
-                <div className="bg-white p-3 shadow-lg transform -rotate-1 max-w-sm">
-                  <img 
-                    src="https://images.unsplash.com/photo-1556761175-b413da4baf72?q=80&w=800&auto=format&fit=crop" 
-                    alt="未開拓市場での挑戦" 
-                    className="w-full h-auto"
-                  />
-                </div>
-              </div>
-              <div className="md:w-1/2 order-2">
-                <h3 className="text-2xl font-bold text-gray-900 mb-6 border-l-4 border-brand-red pl-4">
-                  未開拓市場での苦労
-                </h3>
-                <div className="text-gray-600 leading-loose space-y-4">
-                  <p>
-                    AIに戦慄した私は､AIを主軸とした事業へ舵を切りました。ただ、現実は想像以上にタフなものでした。「まだAIなんて早い」「何ができるのかイメージがわかない」。新しい領域であるがゆえに実績を問われ、商談はできても受注には至らない。未開拓の市場で､ゼロから需要を創出するような苦労がありました｡
-                  </p>
-                  <p>
-                    それでも私は諦めませんでした。なぜなら、この活動は必ず「経営を抜本的に変える」と確信していたからです。AIを「経営のパートナー」として使いこなす。それこそが、マンパワー頼みの属人化に悩む企業の未来を救う唯一の道だと信じて、愚直に仕事を継続してきました。
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            {/* Section 5: Full Width / Centered (Solution & Vision) */}
-            <div className="bg-gray-50 p-8 md:p-16 rounded-xl relative overflow-hidden">
-              <div className="absolute top-0 right-0 w-64 h-64 bg-brand-red/5 rounded-full -mr-32 -mt-32"></div>
-              <div className="absolute bottom-0 left-0 w-64 h-64 bg-brand-red/5 rounded-full -ml-32 -mb-32"></div>
-              
-              <div className="relative z-10">
-                <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">
-                  集客を「人手と根性」から「仕組み」という資産へ
-                </h3>
-                
-                {/* Visual Image for Section 5 */}
-                <div className="max-w-2xl mx-auto mb-12 shadow-2xl rounded-lg overflow-hidden">
-                  <img 
-                    src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1200&auto=format&fit=crop" 
-                    alt="Strategic Marketing and Systems" 
-                    className="w-full h-64 object-cover"
-                  />
-                </div>
-
-                <div className="text-gray-600 leading-loose space-y-6 max-w-3xl mx-auto">
-                  <p>
-                    現在、私は数名の組織から数百名規模の企業まで、多くの企業・経営者さまに伴走させていただいています。「AI×マーケティング」という新しい武器と、10年間磨き続けてきたマーケティングの本質を掛け合わせ、課題を「売れる仕組み」で解決したいと考えています。
-                  </p>
-                
-                <div className="bg-white p-6 rounded-lg shadow-sm my-8">
-                  <h4 className="text-xl font-bold text-gray-900 mb-6 text-center border-b border-gray-100 pb-4">私が伴走して実現したい未来</h4>
-                  <div className="grid md:grid-cols-3 gap-6">
-                    <div>
-                      <h5 className="font-bold text-brand-red mb-2 text-center">【脱・属人化の実現】</h5>
-                      <p className="text-sm">特定の誰かの頑張りに依存せず、仕組みとAIがビジネスを支える強固な体制を構築します。</p>
-                    </div>
-                    <div>
-                      <h5 className="font-bold text-brand-red mb-2 text-center">【本来の価値への集中】</h5>
-                      <p className="text-sm">スタッフ一人ひとりが本来向き合うべき「創造的な価値提供」に情熱を注げる環境を整えます。</p>
-                    </div>
-                    <div>
-                      <h5 className="font-bold text-brand-red mb-2 text-center">【心にゆとりある働き方】</h5>
-                      <p className="text-sm">効率化で生まれた時間は、次の成長への投資や、心身を整えるための余白へ。</p>
-                    </div>
-                  </div>
-                </div>
-
-                <p>
-                  私にできることは、戦略立案からWeb広告・SEO・SNS・LP制作まで一気通貫で支援してきた「10年の泥臭い実戦知見」と、試行錯誤の末に磨き上げた「実践的なAI活用」を、皆さまの事業に最適に繋ぎ込むことです。
-                </p>
-                <p>
-                  素晴らしい価値を持つ企業の経営者さま・スタッフさま共に「仕組みで売れる状態に至り、心にゆとりを持って働ける」。そんな自由で持続可能な経営を実現できるよう、誠実にサポートできればと思っています｡
-                </p>
-                
-                <div className="text-right mt-12">
-                  <p className="font-bold text-gray-900 mb-1">ジェネラルコンサルティンググループ株式会社</p>
-                  <p className="font-bold text-gray-900">代表取締役　槙 優真</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          </div>
-
-          {/* Partner Section */}
-          <div id="partner" className="scroll-mt-24 max-w-6xl mx-auto mt-32">
-             <div className="bg-white border border-gray-100 rounded-2xl p-8 md:p-12 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)]">
-              <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6 text-center">パートナー紹介</h2>
               <p className="text-gray-600 text-center mb-12 max-w-3xl mx-auto">
                 各領域で最高品質の支援を実現するため、多様な専門性を持つパートナーと連携しています。<br className="hidden md:block"/>
                 ご相談内容の特性に合わせて、最適な布陣で貴社をサポートいたします。
@@ -331,9 +426,9 @@ export default function Profile() {
 
               <div className="grid md:grid-cols-2 gap-8 mb-8">
                 {/* Partner 1 */}
-                <div className="bg-gray-50 p-6 rounded-lg border border-gray-100 flex flex-col md:flex-row gap-6 group hover:border-brand-red/30 transition-colors duration-300 items-center md:items-start">
+                <div className="bg-white p-6 rounded-lg border border-gray-100 flex flex-col md:flex-row gap-6 group hover:border-brand-red/30 transition-colors duration-300 items-center md:items-start">
                   <div className="md:w-1/3 flex-shrink-0 flex justify-center md:justify-start">
-                    <div className="w-32 h-32 md:w-full md:h-auto md:aspect-square rounded-full md:rounded-lg overflow-hidden relative shadow-sm border-4 border-white">
+                    <div className="w-32 h-32 md:w-full md:h-auto md:aspect-square rounded-full md:rounded-lg overflow-hidden relative shadow-sm border-4 border-gray-50">
                       <img 
                         src="/partner-ryoichi.jpg" 
                         alt="Ryoichi.E" 
@@ -361,9 +456,9 @@ export default function Profile() {
                 </div>
 
                 {/* Partner 2 */}
-                <div className="bg-gray-50 p-6 rounded-lg border border-gray-100 flex flex-col md:flex-row gap-6 group hover:border-brand-red/30 transition-colors duration-300 items-center md:items-start">
+                <div className="bg-white p-6 rounded-lg border border-gray-100 flex flex-col md:flex-row gap-6 group hover:border-brand-red/30 transition-colors duration-300 items-center md:items-start">
                   <div className="md:w-1/3 flex-shrink-0 flex justify-center md:justify-start">
-                    <div className="w-32 h-32 md:w-full md:h-auto md:aspect-square rounded-full md:rounded-lg overflow-hidden relative shadow-sm border-4 border-white">
+                    <div className="w-32 h-32 md:w-full md:h-auto md:aspect-square rounded-full md:rounded-lg overflow-hidden relative shadow-sm border-4 border-gray-50">
                       <img 
                         src="/partner-masahiro.jpg" 
                         alt="Masahiro.N" 
@@ -390,9 +485,9 @@ export default function Profile() {
                 </div>
 
                 {/* Partner 3 */}
-                <div className="bg-gray-50 p-6 rounded-lg border border-gray-100 flex flex-col md:flex-row gap-6 group hover:border-brand-red/30 transition-colors duration-300 items-center md:items-start">
+                <div className="bg-white p-6 rounded-lg border border-gray-100 flex flex-col md:flex-row gap-6 group hover:border-brand-red/30 transition-colors duration-300 items-center md:items-start">
                   <div className="md:w-1/3 flex-shrink-0 flex justify-center md:justify-start">
-                    <div className="w-32 h-32 md:w-full md:h-auto md:aspect-square rounded-full md:rounded-lg overflow-hidden relative shadow-sm border-4 border-white">
+                    <div className="w-32 h-32 md:w-full md:h-auto md:aspect-square rounded-full md:rounded-lg overflow-hidden relative shadow-sm border-4 border-gray-50">
                       <img 
                         src="/partner-miki.jpg" 
                         alt="Miki.S" 
@@ -419,9 +514,9 @@ export default function Profile() {
                 </div>
 
                 {/* Partner 4 */}
-                <div className="bg-gray-50 p-6 rounded-lg border border-gray-100 flex flex-col md:flex-row gap-6 group hover:border-brand-red/30 transition-colors duration-300 items-center md:items-start">
+                <div className="bg-white p-6 rounded-lg border border-gray-100 flex flex-col md:flex-row gap-6 group hover:border-brand-red/30 transition-colors duration-300 items-center md:items-start">
                   <div className="md:w-1/3 flex-shrink-0 flex justify-center md:justify-start">
-                    <div className="w-32 h-32 md:w-full md:h-auto md:aspect-square rounded-full md:rounded-lg overflow-hidden relative shadow-sm border-4 border-white">
+                    <div className="w-32 h-32 md:w-full md:h-auto md:aspect-square rounded-full md:rounded-lg overflow-hidden relative shadow-sm border-4 border-gray-50">
                       <img 
                         src="/partner-seiichi.jpg" 
                         alt="Seiichi.S" 
@@ -453,19 +548,9 @@ export default function Profile() {
               </p>
              </div>
           </div>
-          
-          {/* CTA */}
-          <div className="mt-24 text-center">
-            <Link 
-              href="/contact" 
-              className="bg-brand-red hover:bg-red-700 text-white font-bold py-5 px-16 rounded-full text-lg transition-all shadow-xl hover:shadow-2xl inline-block transform hover:-translate-y-1"
-            >
-              お問い合わせ・相談する
-            </Link>
-          </div>
 
         </div>
-      </div>
+      </section>
 
       <Footer />
     </main>

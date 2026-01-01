@@ -1,0 +1,84 @@
+import type { Metadata } from 'next';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
+
+export const metadata: Metadata = {
+  title: '会社概要｜ジェネラルコンサルティンググループ',
+  robots: {
+    index: false,
+  },
+};
+
+export default function CompanyProfile() {
+  const companyInfo = [
+    { label: '社名', value: 'ジェネラルコンサルティンググループ株式会社' },
+    { label: '代表者名', value: '代表取締役　槙 優真' },
+    { 
+      label: '本社所在地', 
+      value: (
+        <>
+          〒221-0056<br />
+          神奈川県横浜市神奈川区金港町7-3<br />
+          金港ビル7階
+        </>
+      ) 
+    },
+    { label: '設立年月日', value: '2017年2月7日' },
+    { label: '連絡先', value: 'MAIL : info@general-cg.com' },
+    { label: 'URL', value: <a href="https://general-cg.com/" className="text-brand-red hover:underline">https://general-cg.com/</a> },
+    { 
+      label: '事業内容', 
+      value: (
+        <ul className="list-disc list-inside">
+          <li>マーケティングコンサル事業</li>
+          <li>AIコンサル事業</li>
+        </ul>
+      ) 
+    },
+  ];
+
+  return (
+    <main className="min-h-screen bg-white font-sans text-gray-800">
+      <Header />
+      
+      {/* Page Header */}
+      <div className="bg-gray-50 py-16 md:py-24 border-b border-gray-100">
+        <div className="container mx-auto px-4 text-center">
+          <span className="text-brand-red font-bold tracking-widest block mb-2">COMPANY PROFILE</span>
+          <h1 className="text-3xl md:text-5xl font-bold text-gray-900">会社概要</h1>
+          <div className="w-16 h-1 bg-brand-red mx-auto mt-6"></div>
+        </div>
+      </div>
+
+      {/* Main Content */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <div className="bg-white rounded-2xl shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] border border-gray-100 overflow-hidden">
+              <table className="w-full text-left border-collapse">
+                <tbody>
+                  {companyInfo.map((item, index) => (
+                    <tr key={index} className="border-b border-gray-50 last:border-0 group">
+                      <th className="py-6 px-6 md:px-12 w-1/3 bg-gray-50/50 text-gray-900 font-bold align-top">
+                        {item.label}
+                      </th>
+                      <td className="py-6 px-6 md:px-12 text-gray-700 leading-relaxed">
+                        {item.value}
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <Footer />
+    </main>
+  );
+}
+
+
+
+

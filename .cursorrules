@@ -1,0 +1,34 @@
+# 支援事例ページの作成ルール
+
+支援事例ページ（`app/projects/[slug]/page.tsx`）を作成・修正する際は、以下のデザインルール（`app/projects/eikokuya/page.tsx`準拠）に従うこと。
+
+## 1. ページ構成と背景色
+セクションごとに背景色を交互に変更し、視認性を高める。
+- **Header**
+- **Hero Section**: `bg-gray-50`
+- **Client Overview**: `bg-white`
+- **Support Details**: `bg-gray-50`
+- **Screenshots**: `bg-white`
+- **Footer**
+
+## 2. Hero Section (bg-gray-50)
+- 上部余白: `pt-8 md:pt-12` (グローバルナビとの間隔を狭める)
+- 下部余白: `pb-12 md:pb-16`
+- アイキャッチ画像: タイトル直下に配置。サイズは `max-w-md`。
+- 「CASE STUDY」ラベル: `text-sm md:text-base`
+- タイトル下の余白: `mb-10`
+
+## 3. 本文エリア (Client Overview / Support Details)
+- **見出し**: `h2`タグ。左側にブランドカラーの赤いバー (`w-1.5 h-8 bg-brand-red`) を配置。
+- **強調テキスト**: 赤い下線装飾 (`underline decoration-brand-red decoration-2 underline-offset-1`) を使用。
+- **成果表示**: Before/Afterの変化がわかるカードデザインを使用（背景は白 `bg-white`、角丸 `rounded-xl`）。
+- **コンテナ幅**: `max-w-3xl`
+
+## 4. スクリーンショット (bg-white)
+- レイアウト: 1カラム (`grid-cols-1`) で大きく縦積みに表示。
+- 画像パス: `public/projects/[案件名]/` フォルダを作成して管理する。
+
+## 5. その他
+- 「トップページに戻る」ボタンは設置しない。
+- 既存のコンポーネント（Header, Footer）を使用する。
+
