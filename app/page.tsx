@@ -51,8 +51,8 @@ export default function Home() {
             
             {/* Main Content */}
             <div className="w-full text-left">
-              <h2 className="text-2xl md:text-4xl font-bold text-gray-900 mb-6 md:mb-8 leading-snug">
-                <span className="text-brand-red">AI活用</span><span className="text-lg md:text-3xl ml-1 align-middle text-gray-600">(守り)</span> × <span className="text-brand-red">マーケティング</span><span className="text-lg md:text-3xl ml-1 align-middle text-gray-600">(攻め)</span><br/>
+              <h2 className="text-lg md:text-4xl font-bold text-gray-900 mb-6 md:mb-8 leading-snug tracking-tight">
+                <span className="text-brand-red">AI活用</span><span className="text-xs md:text-3xl ml-1 align-middle text-gray-600">(守り)</span> × <span className="text-brand-red">マーケティング</span><span className="text-xs md:text-3xl ml-1 align-middle text-gray-600">(攻め)</span><br/>
                 コストは最小化、売上は最大化
               </h2>
               <p className="text-gray-600 leading-relaxed text-base md:text-lg font-medium border-t border-gray-100 pt-8 mt-8">
@@ -89,8 +89,8 @@ export default function Home() {
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row items-start gap-12 max-w-6xl mx-auto">
-            <div className="md:w-5/12 sticky top-24">
-              <div className="bg-gray-100 aspect-[3/4] rounded-lg overflow-hidden relative shadow-lg">
+            <div className="w-full md:w-5/12 md:sticky md:top-24 mb-10 md:mb-0">
+              <div className="bg-gray-100 aspect-[3/4] rounded-lg overflow-hidden relative shadow-lg max-w-sm md:max-w-none mx-auto">
                  <Image 
                    src="/representative.jpg" 
                    alt="代表・コンサルタント写真" 

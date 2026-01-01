@@ -15,10 +15,10 @@ export default function Hero() {
         
         <div className="container mx-auto px-4 relative z-10 text-center">
           <div className="max-w-4xl mx-auto">
-            <h1 className="text-brand-red font-bold mb-6 tracking-widest text-sm md:text-base uppercase">
+            <h1 className="text-brand-red font-bold mb-6 tracking-widest text-xs md:text-base uppercase">
               GENERAL CONSULTING GROUP Inc.
             </h1>
-            <h2 className="text-2xl md:text-5xl font-bold leading-snug mb-12 text-gray-900 drop-shadow-sm">
+            <h2 className="text-lg md:text-5xl font-bold leading-relaxed md:leading-snug mb-8 md:mb-12 text-gray-900 drop-shadow-sm tracking-tight">
               コストは下がり、売上は増える。<br/>
               やることは減り、利益は最大化する。
             </h2>
