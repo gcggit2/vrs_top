@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import { usePathname } from 'next/navigation';
@@ -37,9 +38,11 @@ export default function Header() {
           <div className="flex justify-between w-full xl:w-auto items-center">
             <Link href="/" className="flex flex-col py-2" onClick={closeMenu}>
               <div className="relative h-6 md:h-8 w-auto">
-                <img 
+                <Image 
                   src="/logo.png" 
                   alt="GENERAL CONSULTING GROUP" 
+                  width={160}
+                  height={60}
                   className="h-full w-auto object-contain object-left"
                 />
               </div>

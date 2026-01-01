@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import Link from 'next/link';
@@ -315,37 +316,37 @@ export default function ConsultingPage() {
         <div className="flex w-fit animate-scroll hover:pause">
            {/* Logos Set 1 */}
            <div className="flex items-center gap-3 md:gap-6 px-3 md:px-6 whitespace-nowrap min-w-full justify-around shrink-0 grayscale">
-             <img src="/projects/ad-house/ad-house.png" alt="AD HOUSE" className="h-12 md:h-20 w-auto object-contain" />
+             <Image src="/projects/ad-house/ad-house.png" alt="AD HOUSE" width={80} height={48} className="h-12 md:h-20 w-auto object-contain" />
              <div className="px-3 py-1.5 border border-gray-300 rounded-lg text-xs md:text-sm font-bold text-gray-500 whitespace-nowrap">東証プライム上場企業</div>
-             <img src="/projects/eikokuya/eikoya.png" alt="銀座英國屋" className="h-12 md:h-20 w-auto object-contain" />
+             <Image src="/projects/eikokuya/eikoya.png" alt="銀座英國屋" width={80} height={48} className="h-12 md:h-20 w-auto object-contain" />
              <div className="px-3 py-1.5 border border-gray-300 rounded-lg text-xs md:text-sm font-bold text-gray-500 whitespace-nowrap">法律事務所</div>
-             <img src="/projects/sks/sks.png" alt="新経営戦略塾" className="h-14 md:h-24 w-auto object-contain" />
+             <Image src="/projects/sks/sks.png" alt="新経営戦略塾" width={96} height={56} className="h-14 md:h-24 w-auto object-contain" />
              <div className="px-3 py-1.5 border border-gray-300 rounded-lg text-xs md:text-sm font-bold text-gray-500 whitespace-nowrap">医療機関</div>
-             <img src="/projects/coconala/coconala.png" alt="coconala" className="h-12 md:h-20 w-auto object-contain" />
+             <Image src="/projects/coconala/coconala.png" alt="coconala" width={80} height={48} className="h-12 md:h-20 w-auto object-contain" />
              <div className="px-3 py-1.5 border border-gray-300 rounded-lg text-xs md:text-sm font-bold text-gray-500 whitespace-nowrap">BtoB販促支援</div>
-             <img src="/projects/japan-shredder-service/japan-shredder-service.png" alt="日本シュレッダーサービス" className="h-12 md:h-20 w-auto object-contain" />
+             <Image src="/projects/japan-shredder-service/japan-shredder-service.png" alt="日本シュレッダーサービス" width={80} height={48} className="h-12 md:h-20 w-auto object-contain" />
              <div className="px-3 py-1.5 border border-gray-300 rounded-lg text-xs md:text-sm font-bold text-gray-500 whitespace-nowrap">リゾートホテル</div>
-             <img src="/projects/blue-sky/blue-sky.png" alt="Blue Sky" className="h-12 md:h-20 w-auto object-contain" />
+             <Image src="/projects/blue-sky/blue-sky.png" alt="Blue Sky" width={80} height={48} className="h-12 md:h-20 w-auto object-contain" />
              <div className="px-3 py-1.5 border border-gray-300 rounded-lg text-xs md:text-sm font-bold text-gray-500 whitespace-nowrap">プロモーション代行</div>
-             <img src="/projects/aini-ku/aini-ku.png" alt="aini-ku" className="h-12 md:h-20 w-auto object-contain" />
+             <Image src="/projects/aini-ku/aini-ku.png" alt="aini-ku" width={80} height={48} className="h-12 md:h-20 w-auto object-contain" />
              <div className="px-3 py-1.5 border border-gray-300 rounded-lg text-xs md:text-sm font-bold text-gray-500 whitespace-nowrap">船舶免許スクール</div>
            </div>
 
            {/* Logos Set 2 (Duplicate for loop) */}
            <div className="flex items-center gap-3 md:gap-6 px-3 md:px-6 whitespace-nowrap min-w-full justify-around shrink-0 grayscale">
-             <img src="/projects/ad-house/ad-house.png" alt="AD HOUSE" className="h-12 md:h-20 w-auto object-contain" />
+             <Image src="/projects/ad-house/ad-house.png" alt="AD HOUSE" width={80} height={48} className="h-12 md:h-20 w-auto object-contain" />
              <div className="px-3 py-1.5 border border-gray-300 rounded-lg text-xs md:text-sm font-bold text-gray-500 whitespace-nowrap">東証プライム上場企業</div>
-             <img src="/projects/eikokuya/eikoya.png" alt="銀座英國屋" className="h-12 md:h-20 w-auto object-contain" />
+             <Image src="/projects/eikokuya/eikoya.png" alt="銀座英國屋" width={80} height={48} className="h-12 md:h-20 w-auto object-contain" />
              <div className="px-3 py-1.5 border border-gray-300 rounded-lg text-xs md:text-sm font-bold text-gray-500 whitespace-nowrap">法律事務所</div>
-             <img src="/projects/sks/sks.png" alt="新経営戦略塾" className="h-14 md:h-24 w-auto object-contain" />
+             <Image src="/projects/sks/sks.png" alt="新経営戦略塾" width={96} height={56} className="h-14 md:h-24 w-auto object-contain" />
              <div className="px-3 py-1.5 border border-gray-300 rounded-lg text-xs md:text-sm font-bold text-gray-500 whitespace-nowrap">医療機関</div>
-             <img src="/projects/coconala/coconala.png" alt="coconala" className="h-12 md:h-20 w-auto object-contain" />
+             <Image src="/projects/coconala/coconala.png" alt="coconala" width={80} height={48} className="h-12 md:h-20 w-auto object-contain" />
              <div className="px-3 py-1.5 border border-gray-300 rounded-lg text-xs md:text-sm font-bold text-gray-500 whitespace-nowrap">BtoB販促支援</div>
-             <img src="/projects/japan-shredder-service/japan-shredder-service.png" alt="日本シュレッダーサービス" className="h-12 md:h-20 w-auto object-contain" />
+             <Image src="/projects/japan-shredder-service/japan-shredder-service.png" alt="日本シュレッダーサービス" width={80} height={48} className="h-12 md:h-20 w-auto object-contain" />
              <div className="px-3 py-1.5 border border-gray-300 rounded-lg text-xs md:text-sm font-bold text-gray-500 whitespace-nowrap">リゾートホテル</div>
-             <img src="/projects/blue-sky/blue-sky.png" alt="Blue Sky" className="h-12 md:h-20 w-auto object-contain" />
+             <Image src="/projects/blue-sky/blue-sky.png" alt="Blue Sky" width={80} height={48} className="h-12 md:h-20 w-auto object-contain" />
              <div className="px-3 py-1.5 border border-gray-300 rounded-lg text-xs md:text-sm font-bold text-gray-500 whitespace-nowrap">プロモーション代行</div>
-             <img src="/projects/aini-ku/aini-ku.png" alt="aini-ku" className="h-12 md:h-20 w-auto object-contain" />
+             <Image src="/projects/aini-ku/aini-ku.png" alt="aini-ku" width={80} height={48} className="h-12 md:h-20 w-auto object-contain" />
              <div className="px-3 py-1.5 border border-gray-300 rounded-lg text-xs md:text-sm font-bold text-gray-500 whitespace-nowrap">船舶免許スクール</div>
            </div>
         </div>

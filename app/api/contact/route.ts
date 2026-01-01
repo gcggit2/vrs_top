@@ -37,7 +37,7 @@ export async function POST(request: Request) {
 
     // 1. 管理者への通知メール
     await resend.emails.send({
-      from: 'Contact Form <onboarding@resend.dev>', // 本番運用時はドメイン認証後に変更
+      from: 'Contact Form <info@general-cg.com>', // 本番運用時はドメイン認証後に変更
       to: ['yuma.maki@general-cg.com'],
       subject: `【お問い合わせ】${companyName} ${name}様より`,
       text: `
@@ -57,7 +57,7 @@ ${message}
 
     // 2. ユーザーへの自動返信メール
     await resend.emails.send({
-      from: 'Contact Form <onboarding@resend.dev>',
+      from: 'Contact Form <info@general-cg.com>',
       to: [email],
       subject: '【自動送信】お問い合わせを受け付けました',
       text: `

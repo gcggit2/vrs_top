@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://general-consulting.co.jp'; // 仮のドメイン
+  const baseUrl = 'https://general-cg.com'; // 本番ドメイン
 
   // 静的ページ
   const routes = [

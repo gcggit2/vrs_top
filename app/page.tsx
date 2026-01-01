@@ -25,7 +25,7 @@ export default function Home() {
             '@context': 'https://schema.org',
             '@type': 'Organization',
             name: 'ジェネラルコンサルティンググループ株式会社',
-            url: 'https://general-consulting.co.jp',
+            url: 'https://general-cg.com',
             description: 'AIとマーケティングの知見を融合し、企業の持続的な成長と高収益化を実現するコンサルティングファーム',
           }),
         }}

@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 
 export default function Footer() {
@@ -12,9 +13,11 @@ export default function Footer() {
             <div className="mb-8"> 
               {/* Increased margin for better spacing */}
               <Link href="/">
-                <img 
+                <Image 
                   src="/logo.png" 
                   alt="GENERAL CONSULTING GROUP Inc." 
+                  width={160}
+                  height={60}
                   className="w-32 md:w-40 h-auto object-contain" 
                 />
               </Link>

@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next';
 
 export default function robots(): MetadataRoute.Robots {
-  const baseUrl = 'https://general-consulting.co.jp'; // 仮のドメイン。本番環境に合わせて変更してください。
+  const baseUrl = 'https://general-cg.com'; // 本番ドメイン
 
   return {
     rules: {
