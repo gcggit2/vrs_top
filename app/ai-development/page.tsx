@@ -503,14 +503,14 @@ export default function AiDevelopmentPage() {
       {/* Flow Section */}
       <section className="py-24 bg-white">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
+          <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
                 開発の流れ
               </h2>
             </div>
 
-            <div className="grid md:grid-cols-4 gap-8">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
               <div className="relative text-center">
                 <div className="w-16 h-16 bg-teal-600 text-white rounded-full flex items-center justify-center text-2xl font-black mx-auto mb-6 shadow-lg z-10 relative">1</div>
                 <h3 className="text-lg font-bold text-gray-900 mb-2">ヒアリング</h3>
