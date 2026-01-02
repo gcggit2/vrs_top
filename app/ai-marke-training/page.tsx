@@ -141,7 +141,7 @@ export default function AiMarkeTrainingPage() {
                       <div className="h-px bg-gray-300 w-12"></div>
                   </div>
                   <p className="text-xl md:text-2xl text-gray-800 mb-10 leading-relaxed font-bold border-l-4 border-orange-600 pl-6">
-                    AI×マーケで&quot;売れる仕組み&quot;を再現性高く内製化
+                    AI×マーケで"売れる仕組み"を<br/>再現性高く内製化
                   </p>
                   
                   {/* 3つの訴求ポイント */}
@@ -701,7 +701,7 @@ export default function AiMarkeTrainingPage() {
                 <div className="w-16 h-16 bg-orange-600 text-white rounded-full flex items-center justify-center text-lg font-black mx-auto mb-4 shadow-md z-10 relative">1</div>
                 <h3 className="text-lg font-bold text-gray-900 mb-3 min-h-[3.5rem] flex items-center justify-center">マーケ・AIの基礎</h3>
                 <ul className="text-gray-600 text-sm leading-relaxed text-left list-disc pl-5 inline-block mx-auto w-full">
-                  <li>&quot;売れる仕組み&quot;とは？</li>
+                  <li>"売れる仕組み"とは？</li>
                   <li>AI活用の基礎知識</li>
                 </ul>
               </div>

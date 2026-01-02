@@ -141,7 +141,7 @@ export default function AiTrainingPage() {
                       <div className="h-px bg-gray-300 w-12"></div>
                   </div>
                   <p className="text-xl md:text-2xl text-gray-800 mb-10 leading-relaxed font-bold border-l-4 border-blue-600 pl-6">
-                    全職種の生産性UPで、人手不足も解決
+                    全職種の生産性UPで、<br/>人手不足も解決
                   </p>
                   
                   {/* 3つの訴求ポイント - Sophisticated Design (Matching Consulting LP) */}
