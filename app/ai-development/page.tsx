@@ -439,7 +439,7 @@ export default function AiDevelopmentPage() {
                 <p className="text-gray-500 font-bold mb-2 text-sm">料金目安</p>
                 <p className="text-3xl font-black text-teal-600">
                   約10〜30万円
-                  <span className="text-sm text-gray-500 font-normal ml-2">（難易度に応じてお見積り）</span>
+                  <span className="block md:inline text-sm text-gray-500 font-normal mt-1 md:mt-0 md:ml-2">（難易度に応じてお見積り）</span>
                 </p>
               </div>
             </div>
