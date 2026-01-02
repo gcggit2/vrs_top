@@ -122,19 +122,22 @@ export default function AiMarkeTrainingPage() {
       />
       
       {/* Hero Section */}
-      <section className="pt-16 pb-12 md:pt-24 md:pb-32 bg-orange-50 relative overflow-hidden">
+      <section className="pt-16 pb-12 lg:pt-24 lg:pb-32 bg-orange-50 relative overflow-hidden">
         {/* Background Decoration */}
         <div className="absolute top-0 right-0 w-1/2 h-full bg-white skew-x-12 transform origin-top-right z-0 opacity-50"></div>
         
         <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-10 md:gap-16">
+          <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 items-center gap-10 lg:gap-16">
             {/* Text Content */}
             <div className="w-full">
                   <div className="inline-block bg-orange-600/10 text-orange-600 font-bold px-4 py-1.5 rounded-full text-sm mb-6 border border-orange-600/20">
                     社員数名〜150名規模の、経営層・集客担当にオススメ
                   </div>
-                  <p className="text-3xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-[1.2] tracking-tight">
-                    <span className="text-orange-600">兼務でも､集客最大化</span>
+                  <p className="text-3xl md:text-5xl lg:text-5xl xl:text-5xl 2xl:text-6xl font-bold text-gray-900 mb-6 leading-[1.2] tracking-tight">
+                    <span className="text-orange-600">
+                      兼務でも､<wbr />
+                      <span className="whitespace-nowrap inline-block">集客最大化</span>
+                    </span>
                   </p>
                   <div className="flex items-center gap-4 mb-8">
                       <div className="h-px bg-gray-300 w-12"></div>
@@ -212,7 +215,7 @@ export default function AiMarkeTrainingPage() {
                 </div>
 
             {/* Image (Representative) */}
-            <div className="hidden md:block w-full">
+            <div className="hidden lg:block w-full">
               <div className="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white mx-auto max-w-sm md:max-w-none">
                 <Image 
                   src="/ai-marke-training/representative.jpg" 
@@ -233,7 +236,7 @@ export default function AiMarkeTrainingPage() {
       </section>
 
       {/* Representative Image (Mobile) */}
-      <section className="md:hidden bg-orange-50 pb-10">
+      <section className="lg:hidden bg-orange-50 pb-10">
         <div className="container mx-auto px-4">
           <div className="max-w-md mx-auto">
             <div className="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white">
@@ -1299,7 +1302,8 @@ export default function AiMarkeTrainingPage() {
 
         <div className="container mx-auto px-4 text-center relative z-10">
           <h2 className="text-3xl md:text-5xl font-bold mb-8 leading-tight">
-            兼務でも､集客最大化
+            兼務でも､<wbr />
+            <span className="whitespace-nowrap inline-block">集客最大化</span>
           </h2>
           <p className="text-gray-300 mb-12 max-w-xl mx-auto text-lg">
             無理な勧誘は一切ございませんので、ご安心ください。

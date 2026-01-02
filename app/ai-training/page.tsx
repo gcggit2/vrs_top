@@ -122,12 +122,12 @@ export default function AiTrainingPage() {
       />
       
       {/* Hero Section */}
-      <section className="pt-16 pb-12 md:pt-24 md:pb-32 bg-gray-50 relative overflow-hidden">
+      <section className="pt-16 pb-12 lg:pt-24 lg:pb-32 bg-gray-50 relative overflow-hidden">
         {/* Background Decoration */}
         <div className="absolute top-0 right-0 w-1/2 h-full bg-white skew-x-12 transform origin-top-right z-0 opacity-50"></div>
         
         <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-10 md:gap-16">
+          <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 items-center gap-10 lg:gap-16">
             {/* Text Content */}
             <div className="w-full">
                   <div className="inline-block bg-blue-600/10 text-blue-600 font-bold px-4 py-1.5 rounded-full text-sm mb-6 border border-blue-600/20">
@@ -212,7 +212,7 @@ export default function AiTrainingPage() {
                 </div>
 
             {/* Image (Representative) */}
-            <div className="hidden md:block w-full">
+            <div className="hidden lg:block w-full">
               <div className="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white mx-auto max-w-sm md:max-w-none">
                 <Image 
                   src="/ai-training/representative.jpg" 
@@ -233,7 +233,7 @@ export default function AiTrainingPage() {
       </section>
 
       {/* Representative Image (Mobile) */}
-      <section className="md:hidden bg-gray-50 pb-10">
+      <section className="lg:hidden bg-gray-50 pb-10">
         <div className="container mx-auto px-4">
           <div className="max-w-md mx-auto">
             <div className="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white">
