@@ -130,15 +130,16 @@ export default function Company() {
                     )}
                   </div>
                 </div>
-                <div className="md:w-1/2 sticky top-24">
+                <div className="md:w-1/2 md:sticky md:top-24">
                   <div className="relative group">
                     <div className="absolute inset-0 bg-brand-red/5 transform translate-x-4 translate-y-4 rounded-2xl transition-transform duration-500 group-hover:translate-x-2 group-hover:translate-y-2"></div>
-                    <div className="relative rounded-2xl overflow-hidden shadow-xl z-10 aspect-[4/3]">
-                      <Image 
-                        src={s.image} 
-                        alt={s.title} 
-                        fill
-                        className="object-cover transform group-hover:scale-105 transition-transform duration-700"
+                    <div className="relative rounded-2xl overflow-hidden shadow-xl z-10">
+                      <Image
+                        src={s.image}
+                        alt={s.title}
+                        width={1200}
+                        height={900}
+                        className="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700"
                         sizes="(max-width: 768px) 100vw, 50vw"
                       />
                     </div>

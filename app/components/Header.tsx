@@ -32,7 +32,7 @@ export default function Header() {
   return (
     <header className="w-full bg-white shadow-sm z-50 sticky top-0 border-t-4 border-brand-red">
       {/* Main Navigation */}
-      <div className="container mx-auto px-4 py-3">
+      <div className="container mx-auto px-4 py-3 relative z-50">
         <div className="flex flex-col xl:flex-row justify-between items-center">
           {/* Logo & Mobile Menu Button Wrapper */}
           <div className="flex justify-between w-full xl:w-auto items-center">
@@ -52,7 +52,7 @@ export default function Header() {
             <button 
               className="xl:hidden p-2 text-gray-600 focus:outline-none" 
               onClick={toggleMenu}
-              aria-label="メニューを開く"
+              aria-label={isOpen ? "メニューを閉じる" : "メニューを開く"}
               aria-expanded={isOpen}
             >
               {isOpen ? (
@@ -126,7 +126,21 @@ export default function Header() {
           isOpen ? 'translate-x-0' : 'translate-x-full'
         }`}
         style={{ top: '0' }}
+        role="dialog"
+        aria-modal="true"
       >
+        {/* Close Button (visible inside menu) */}
+        <button
+          type="button"
+          className="fixed top-4 right-4 p-2 text-gray-600 xl:hidden z-50"
+          onClick={closeMenu}
+          aria-label="メニューを閉じる"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-8 h-8">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+
         <nav className="flex flex-col gap-6 text-lg font-bold text-gray-700">
           <Link href="/" onClick={closeMenu} className="border-b border-gray-100 pb-2">TOP</Link>
           <Link href="/profile" onClick={closeMenu} className="border-b border-gray-100 pb-2">代表プロフィール</Link>

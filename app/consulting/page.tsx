@@ -279,7 +279,8 @@ export default function ConsultingPage() {
           <div className="max-w-5xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-5xl font-black text-gray-900 mb-4 leading-tight">
-                こんな<span className="text-brand-red mx-2">課題</span>ありませんか？
+                こんな<span className="text-brand-red mx-2">課題</span>
+                <span className="whitespace-nowrap">ありませんか？</span>
               </h2>
             </div>
 
@@ -347,7 +348,14 @@ export default function ConsultingPage() {
             <div className="bg-gray-900 rounded-2xl p-8 md:p-12 relative overflow-hidden shadow-2xl border border-gray-800">
               <div className="relative z-10">
                 <h3 className="text-xl md:text-3xl font-black text-white mb-12 text-center leading-tight">
-                  その課題を放置すると､<br className="md:hidden"/>企業存続の<span className="text-red-500 text-3xl md:text-5xl underline decoration-4 decoration-red-900 underline-offset-8 mx-2">リスク</span>に…
+                  その課題を放置すると､<br className="md:hidden"/>
+                  企業存続の
+                  <span className="whitespace-nowrap">
+                    <span className="text-red-500 text-3xl md:text-5xl underline decoration-4 decoration-red-900 underline-offset-8 mx-2">
+                      リスク
+                    </span>
+                    に…
+                  </span>
                 </h3>
                 
                 <div className="flex flex-col gap-6 max-w-3xl mx-auto">
@@ -355,21 +363,29 @@ export default function ConsultingPage() {
                      <div className="absolute left-0 top-0 bottom-0 w-1.5 bg-red-600"></div>
                      <span className="text-red-600/80 font-black text-4xl leading-none opacity-80 group-hover:opacity-100 transition-opacity">✕</span>
                      <p className="font-bold text-gray-200 text-lg md:text-2xl leading-snug">
-                       競合にお客様をとられ､<br className="md:hidden"/><span className="text-white border-b-2 border-red-600 pb-1">売上減少が止まらない</span>
+                       <span className="whitespace-nowrap">競合にお客様をとられ､</span>
+                       <br className="md:hidden"/>
+                       <span className="text-white border-b-2 border-red-600 pb-1">売上減少が止まらない</span>
                      </p>
                   </div>
                   <div className="bg-gray-800/50 p-6 rounded-xl flex items-center gap-5 shadow-lg transform hover:scale-[1.02] transition-transform relative overflow-hidden group">
                      <div className="absolute left-0 top-0 bottom-0 w-1.5 bg-red-600"></div>
                      <span className="text-red-600/80 font-black text-4xl leading-none opacity-80 group-hover:opacity-100 transition-opacity">✕</span>
                      <p className="font-bold text-gray-200 text-lg md:text-2xl leading-snug">
-                       ムダな広告費・外注費が<br className="md:hidden"/><span className="text-white border-b-2 border-red-600 pb-1">垂れ流しのまま</span>
+                       <span className="whitespace-nowrap">ムダな広告費・外注費が</span>
+                       <br className="md:hidden"/>
+                       <span className="text-white border-b-2 border-red-600 pb-1">垂れ流しのまま</span>
                      </p>
                   </div>
                   <div className="bg-gray-800/50 p-6 rounded-xl flex items-center gap-5 shadow-lg transform hover:scale-[1.02] transition-transform relative overflow-hidden group">
                      <div className="absolute left-0 top-0 bottom-0 w-1.5 bg-red-600"></div>
                      <span className="text-red-600/80 font-black text-4xl leading-none opacity-80 group-hover:opacity-100 transition-opacity">✕</span>
                      <p className="font-bold text-gray-200 text-lg md:text-2xl leading-snug">
-                       同じ仕事に､競合は2時間､<br className="md:hidden"/><span className="text-white border-b-2 border-red-600 pb-1">あなたは10時間かかる</span>
+                       <span className="whitespace-nowrap">同じ仕事に､競合は2時間､</span>
+                       <br className="md:hidden"/>
+                       <span className="text-white border-b-2 border-red-600 pb-1">
+                         あなたは10時間<wbr /><span className="whitespace-nowrap">かかる</span>
+                       </span>
                      </p>
                   </div>
                 </div>
@@ -381,7 +397,7 @@ export default function ConsultingPage() {
                 <div className="w-px h-16 bg-gray-300 mx-auto mb-6"></div>
                 <p className="text-lg font-bold text-gray-500 mb-4">これらは全て</p>
                 <div className="inline-block bg-brand-red text-white text-3xl md:text-5xl font-black py-4 px-12 rounded-full shadow-xl">
-                    AIマーケ顧問で解決！
+                    AIマーケ顧問で<span className="whitespace-nowrap">解決！</span>
                 </div>
             </div>
 
@@ -399,18 +415,22 @@ export default function ConsultingPage() {
             </div>
 
             {/* Concept Diagram - Simplified & Benefit-Oriented */}
-            <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8 mb-20">
-               <div className="bg-gray-50 w-64 h-64 rounded-full flex flex-col items-center justify-center shadow-sm border border-gray-100 relative z-10">
+            <div className="flex flex-col md:flex-row md:flex-wrap lg:flex-nowrap items-center justify-center gap-4 md:gap-8 mb-20">
+               <div className="bg-gray-50 w-56 h-56 lg:w-64 lg:h-64 rounded-full flex flex-col items-center justify-center shadow-sm border border-gray-100 relative z-10 shrink-0">
                   <span className="text-3xl font-black text-gray-900 mb-2">AI活用</span>
                   <span className="text-sm font-bold text-gray-500 bg-white px-3 py-1 rounded-full border border-gray-200">生産性UP・コスト削減</span>
                </div>
                <div className="text-4xl font-black text-gray-300">×</div>
-               <div className="bg-gray-50 w-64 h-64 rounded-full flex flex-col items-center justify-center shadow-sm border border-gray-100 relative z-10">
+               <div className="bg-gray-50 w-56 h-56 lg:w-64 lg:h-64 rounded-full flex flex-col items-center justify-center shadow-sm border border-gray-100 relative z-10 shrink-0">
                   <span className="text-3xl font-black text-brand-red mb-2">マーケティング</span>
                   <span className="text-sm font-bold text-gray-500 bg-white px-3 py-1 rounded-full border border-gray-200">売上UP・集客強化</span>
                </div>
-               <div className="hidden md:block text-4xl font-black text-gray-300">=</div>
-               <div className="bg-gradient-to-br from-brand-red to-red-700 w-72 h-72 rounded-full flex flex-col items-center justify-center shadow-2xl text-white relative z-20 transform scale-110 border-4 border-white">
+               {/* スマホでは縦並びなので「＝」の代わりに下向き矢印を表示 */}
+               <div className="md:hidden text-4xl font-black text-gray-300 leading-none my-2">↓</div>
+               {/* md帯では「＝」以降を2段目に回す */}
+               <div className="hidden md:block lg:hidden basis-full h-0"></div>
+               <div className="hidden md:block text-4xl font-black text-gray-300 md:mt-6 lg:mt-0">=</div>
+               <div className="bg-gradient-to-br from-brand-red to-red-700 w-60 h-60 lg:w-72 lg:h-72 rounded-full flex flex-col items-center justify-center shadow-2xl text-white relative z-20 transform scale-110 border-4 border-white shrink-0 md:mt-6 lg:mt-0">
                   <span className="text-4xl font-black text-center leading-tight">
                     利益<br/>最大化
                   </span>

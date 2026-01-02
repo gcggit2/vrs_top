@@ -206,7 +206,8 @@ export default function AiDevelopmentPage() {
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-5xl font-black text-gray-900 mb-4 leading-tight">
-                こんな<span className="text-teal-600 mx-2">課題</span>ありませんか？
+                こんな<span className="text-teal-600 mx-2">課題</span>
+                <span className="whitespace-nowrap">ありませんか？</span>
               </h2>
             </div>
 
@@ -273,7 +274,7 @@ export default function AiDevelopmentPage() {
                 <div className="w-px h-16 bg-gray-300 mx-auto mb-6"></div>
                 <p className="text-lg font-bold text-gray-500 mb-4">その展望・課題</p>
                 <div className="inline-block bg-teal-600 text-white text-3xl md:text-5xl font-black py-4 px-12 rounded-full shadow-xl">
-                    AIツール受託開発で解決
+                    AIツール受託開発<span className="whitespace-nowrap">で解決！</span>
                 </div>
             </div>
 
