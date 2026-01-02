@@ -458,9 +458,9 @@ export default function Profile() {
                     </div>
                   </div>
                   <div className="md:w-2/3 w-full">
-                    <div className="flex items-baseline justify-between mb-3 border-b border-gray-200 pb-2 group-hover:border-brand-red/30 transition-colors">
+                    <div className="flex items-center gap-3 mb-3 border-b border-gray-200 pb-2 group-hover:border-brand-red/30 transition-colors">
                       <h3 className="text-xl font-bold text-gray-900 group-hover:text-brand-red transition-colors">Ryoichi.E</h3>
-                      <span className="text-sm font-bold text-brand-red">パートナー</span>
+                      <span className="ml-auto text-sm font-bold text-brand-red whitespace-nowrap shrink-0 leading-none">パートナー</span>
                     </div>
                     <div className="space-y-3">
                       <div>
@@ -488,9 +488,9 @@ export default function Profile() {
                     </div>
                   </div>
                   <div className="md:w-2/3 w-full">
-                    <div className="flex items-baseline justify-between mb-3 border-b border-gray-200 pb-2 group-hover:border-brand-red/30 transition-colors">
+                    <div className="flex items-center gap-3 mb-3 border-b border-gray-200 pb-2 group-hover:border-brand-red/30 transition-colors">
                       <h3 className="text-xl font-bold text-gray-900 group-hover:text-brand-red transition-colors">Masahiro.N</h3>
-                      <span className="text-sm font-bold text-brand-red">パートナー</span>
+                      <span className="ml-auto text-sm font-bold text-brand-red whitespace-nowrap shrink-0 leading-none">パートナー</span>
                     </div>
                     <div className="space-y-3">
                       <div>
@@ -518,9 +518,9 @@ export default function Profile() {
                     </div>
                   </div>
                   <div className="md:w-2/3 w-full">
-                    <div className="flex items-baseline justify-between mb-3 border-b border-gray-200 pb-2 group-hover:border-brand-red/30 transition-colors">
+                    <div className="flex items-center gap-3 mb-3 border-b border-gray-200 pb-2 group-hover:border-brand-red/30 transition-colors">
                       <h3 className="text-xl font-bold text-gray-900 group-hover:text-brand-red transition-colors">Miki.S</h3>
-                      <span className="text-sm font-bold text-brand-red">パートナー</span>
+                      <span className="ml-auto text-sm font-bold text-brand-red whitespace-nowrap shrink-0 leading-none">パートナー</span>
                     </div>
                     <div className="space-y-3">
                       <div>
@@ -548,9 +548,9 @@ export default function Profile() {
                     </div>
                   </div>
                   <div className="md:w-2/3 w-full">
-                    <div className="flex items-baseline justify-between mb-3 border-b border-gray-200 pb-2 group-hover:border-brand-red/30 transition-colors">
+                    <div className="flex items-center gap-3 mb-3 border-b border-gray-200 pb-2 group-hover:border-brand-red/30 transition-colors">
                       <h3 className="text-xl font-bold text-gray-900 group-hover:text-brand-red transition-colors">Seiichi.S</h3>
-                      <span className="text-sm font-bold text-brand-red">パートナー</span>
+                      <span className="ml-auto text-sm font-bold text-brand-red whitespace-nowrap shrink-0 leading-none">パートナー</span>
                     </div>
                     <div className="space-y-3">
                       <div>

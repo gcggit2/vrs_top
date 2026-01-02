@@ -18,9 +18,9 @@ export default function Hero() {
             <h1 className="text-brand-red font-bold mb-6 tracking-widest text-xs md:text-base uppercase">
               GENERAL CONSULTING GROUP Inc.
             </h1>
-            <h2 className="text-lg md:text-5xl font-bold leading-relaxed md:leading-snug mb-8 md:mb-12 text-gray-900 drop-shadow-sm tracking-tight">
+            <h2 className="text-lg md:text-4xl lg:text-5xl font-bold leading-relaxed md:leading-snug mb-8 md:mb-12 text-gray-900 drop-shadow-sm tracking-tight">
               コストは下がり、売上は増える。<br/>
-              やることは減り、利益は最大化する。
+              やることは減り、利益は<span className="whitespace-nowrap inline-block">最大化する。</span>
             </h2>
           </div>
         </div>
