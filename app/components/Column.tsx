@@ -37,7 +37,7 @@ export default function Column() {
               rel="noopener noreferrer"
               className="group bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-xl transition-all duration-300"
             >
-              <div className="h-48 overflow-hidden relative">
+              <div className="h-48 overflow-hidden relative bg-gray-50">
                 <Image 
                   src={col.imageSrc}
                   alt={col.title}
@@ -45,7 +45,7 @@ export default function Column() {
                   sizes="(max-width: 768px) 100vw, 33vw"
                   quality={85}
                   priority={index === 0}
-                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  className="object-contain md:group-hover:scale-[1.02] transition-transform duration-500"
                 />
               </div>
               <div className="p-6">
