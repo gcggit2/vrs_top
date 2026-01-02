@@ -3,6 +3,7 @@ import type { Metadata } from 'next';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import Link from 'next/link';
+import LogoSlider from '../components/LogoSlider';
 
 export const metadata: Metadata = {
   title: 'AIマーケ顧問｜月額3万円のAI活用・マーケティング支援｜ジェネラルコンサルティンググループ',
@@ -267,50 +268,7 @@ export default function ConsultingPage() {
       </section>
 
       {/* Authority Section (Logo Slider) */}
-      <section className="py-2 bg-white overflow-hidden relative">
-        
-        <div className="flex w-fit animate-scroll hover:pause">
-           {/* Logos Set 1 */}
-           <div className="flex items-center gap-3 md:gap-6 px-3 md:px-6 whitespace-nowrap min-w-full justify-around shrink-0 grayscale">
-             <Image src="/projects/ad-house/ad-house.png" alt="AD HOUSE" width={80} height={48} className="h-12 md:h-20 w-auto object-contain" />
-             <div className="px-3 py-1.5 border border-gray-300 rounded-lg text-xs md:text-sm font-bold text-gray-500 whitespace-nowrap">東証プライム上場企業</div>
-             <Image src="/projects/eikokuya/eikoya.png" alt="銀座英國屋" width={80} height={48} className="h-12 md:h-20 w-auto object-contain" />
-             <div className="px-3 py-1.5 border border-gray-300 rounded-lg text-xs md:text-sm font-bold text-gray-500 whitespace-nowrap">法律事務所</div>
-             <Image src="/projects/sks/sks.png" alt="新経営戦略塾" width={96} height={56} className="h-14 md:h-24 w-auto object-contain" />
-             <div className="px-3 py-1.5 border border-gray-300 rounded-lg text-xs md:text-sm font-bold text-gray-500 whitespace-nowrap">医療機関</div>
-             <Image src="/projects/coconala/coconala.png" alt="coconala" width={80} height={48} className="h-12 md:h-20 w-auto object-contain" />
-             <div className="px-3 py-1.5 border border-gray-300 rounded-lg text-xs md:text-sm font-bold text-gray-500 whitespace-nowrap">BtoB販促支援</div>
-             <Image src="/projects/japan-shredder-service/japan-shredder-service.png" alt="日本シュレッダーサービス" width={80} height={48} className="h-12 md:h-20 w-auto object-contain" />
-             <div className="px-3 py-1.5 border border-gray-300 rounded-lg text-xs md:text-sm font-bold text-gray-500 whitespace-nowrap">リゾートホテル</div>
-             <Image src="/projects/blue-sky/blue-sky.png" alt="Blue Sky" width={80} height={48} className="h-12 md:h-20 w-auto object-contain" />
-             <div className="px-3 py-1.5 border border-gray-300 rounded-lg text-xs md:text-sm font-bold text-gray-500 whitespace-nowrap">プロモーション代行</div>
-             <Image src="/projects/aini-ku/aini-ku.png" alt="aini-ku" width={80} height={48} className="h-12 md:h-20 w-auto object-contain" />
-             <div className="px-3 py-1.5 border border-gray-300 rounded-lg text-xs md:text-sm font-bold text-gray-500 whitespace-nowrap">船舶免許スクール</div>
-           </div>
-
-           {/* Logos Set 2 (Duplicate for loop) */}
-           <div className="flex items-center gap-3 md:gap-6 px-3 md:px-6 whitespace-nowrap min-w-full justify-around shrink-0 grayscale">
-             <Image src="/projects/ad-house/ad-house.png" alt="AD HOUSE" width={80} height={48} className="h-12 md:h-20 w-auto object-contain" />
-             <div className="px-3 py-1.5 border border-gray-300 rounded-lg text-xs md:text-sm font-bold text-gray-500 whitespace-nowrap">東証プライム上場企業</div>
-             <Image src="/projects/eikokuya/eikoya.png" alt="銀座英國屋" width={80} height={48} className="h-12 md:h-20 w-auto object-contain" />
-             <div className="px-3 py-1.5 border border-gray-300 rounded-lg text-xs md:text-sm font-bold text-gray-500 whitespace-nowrap">法律事務所</div>
-             <Image src="/projects/sks/sks.png" alt="新経営戦略塾" width={96} height={56} className="h-14 md:h-24 w-auto object-contain" />
-             <div className="px-3 py-1.5 border border-gray-300 rounded-lg text-xs md:text-sm font-bold text-gray-500 whitespace-nowrap">医療機関</div>
-             <Image src="/projects/coconala/coconala.png" alt="coconala" width={80} height={48} className="h-12 md:h-20 w-auto object-contain" />
-             <div className="px-3 py-1.5 border border-gray-300 rounded-lg text-xs md:text-sm font-bold text-gray-500 whitespace-nowrap">BtoB販促支援</div>
-             <Image src="/projects/japan-shredder-service/japan-shredder-service.png" alt="日本シュレッダーサービス" width={80} height={48} className="h-12 md:h-20 w-auto object-contain" />
-             <div className="px-3 py-1.5 border border-gray-300 rounded-lg text-xs md:text-sm font-bold text-gray-500 whitespace-nowrap">リゾートホテル</div>
-             <Image src="/projects/blue-sky/blue-sky.png" alt="Blue Sky" width={80} height={48} className="h-12 md:h-20 w-auto object-contain" />
-             <div className="px-3 py-1.5 border border-gray-300 rounded-lg text-xs md:text-sm font-bold text-gray-500 whitespace-nowrap">プロモーション代行</div>
-             <Image src="/projects/aini-ku/aini-ku.png" alt="aini-ku" width={80} height={48} className="h-12 md:h-20 w-auto object-contain" />
-             <div className="px-3 py-1.5 border border-gray-300 rounded-lg text-xs md:text-sm font-bold text-gray-500 whitespace-nowrap">船舶免許スクール</div>
-           </div>
-        </div>
-
-        {/* Gradient Overlay */}
-        <div className="absolute inset-y-0 left-0 w-12 md:w-32 bg-gradient-to-r from-white to-transparent pointer-events-none"></div>
-        <div className="absolute inset-y-0 right-0 w-12 md:w-32 bg-gradient-to-l from-white to-transparent pointer-events-none"></div>
-      </section>
+      <LogoSlider />
 
       {/* Pain Points Section - High Impact Design */}
       <section className="py-24 bg-brand-red/5 relative overflow-hidden">

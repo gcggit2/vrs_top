@@ -3,6 +3,7 @@ import type { Metadata } from 'next';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import Link from 'next/link';
+import LogoSlider from '../components/LogoSlider';
 
 export const metadata: Metadata = {
   title: 'AIツール受託開発・AIエージェント開発｜ジェネラルコンサルティンググループ',
@@ -192,6 +193,9 @@ export default function AiDevelopmentPage() {
           </div>
         </div>
       </section>
+
+      {/* Authority Section (Logo Slider) */}
+      <LogoSlider />
 
       {/* Pain Points Section - New Split Design */}
       <section className="py-24 bg-white relative overflow-hidden">

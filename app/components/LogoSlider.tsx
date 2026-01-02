@@ -19,49 +19,56 @@ export default function LogoSlider() {
     { type: 'text', text: "船舶免許スクール" },
   ];
 
+  // 支援事例一覧（サムネカテゴリ）で使用している3色に合わせる
+  const textColorCycle = [
+    'border-brand-red',
+    'border-[#00509d]',
+    'border-amber-600',
+  ] as const;
+
+  const renderItems = (keyPrefix: string) => {
+    let textIndex = 0;
+
+    return items.map((item, index) => {
+      if (item.type === 'image') {
+        return (
+          <div key={`${keyPrefix}-${index}`} className={`relative ${item.className} w-auto`}>
+            <Image
+              src={item.src as string}
+              alt={item.alt as string}
+              width={200}
+              height={100}
+              className="w-auto h-full object-contain"
+            />
+          </div>
+        );
+      }
+
+      const colorClass = textColorCycle[textIndex % textColorCycle.length];
+      textIndex += 1;
+
+      return (
+        <div
+          key={`${keyPrefix}-${index}`}
+          className={`px-3 py-1.5 border-2 rounded-lg text-xs md:text-sm font-bold whitespace-nowrap bg-white/80 text-gray-600 ${colorClass}`}
+        >
+          {item.text}
+        </div>
+      );
+    });
+  };
+
   return (
     <section className="py-2 bg-white overflow-hidden relative border-b border-gray-100">
       <div className="flex w-fit animate-scroll hover:pause">
         {/* Set 1 */}
-        <div className="flex items-center gap-3 md:gap-6 px-3 md:px-6 whitespace-nowrap min-w-full justify-around shrink-0 grayscale">
-          {items.map((item, index) => (
-            item.type === 'image' ? (
-              <div key={index} className={`relative ${item.className} w-auto`}>
-                <Image 
-                  src={item.src as string} 
-                  alt={item.alt as string} 
-                  width={200}
-                  height={100}
-                  className="w-auto h-full object-contain" 
-                />
-              </div>
-            ) : (
-              <div key={index} className="px-3 py-1.5 border border-gray-300 rounded-lg text-xs md:text-sm font-bold text-gray-500 whitespace-nowrap">
-                {item.text}
-              </div>
-            )
-          ))}
+        <div className="flex items-center gap-3 md:gap-6 px-3 md:px-6 whitespace-nowrap min-w-full justify-around shrink-0">
+          {renderItems('set1')}
         </div>
 
         {/* Set 2 */}
-        <div className="flex items-center gap-3 md:gap-6 px-3 md:px-6 whitespace-nowrap min-w-full justify-around shrink-0 grayscale">
-          {items.map((item, index) => (
-             item.type === 'image' ? (
-              <div key={`clone-${index}`} className={`relative ${item.className} w-auto`}>
-                <Image 
-                  src={item.src as string} 
-                  alt={item.alt as string} 
-                  width={200}
-                  height={100}
-                  className="w-auto h-full object-contain" 
-                />
-              </div>
-            ) : (
-              <div key={`clone-${index}`} className="px-3 py-1.5 border border-gray-300 rounded-lg text-xs md:text-sm font-bold text-gray-500 whitespace-nowrap">
-                {item.text}
-              </div>
-            )
-          ))}
+        <div className="flex items-center gap-3 md:gap-6 px-3 md:px-6 whitespace-nowrap min-w-full justify-around shrink-0">
+          {renderItems('set2')}
         </div>
       </div>
 
