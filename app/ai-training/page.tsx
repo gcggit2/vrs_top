@@ -198,7 +198,7 @@ export default function AiTrainingPage() {
                         href="https://general-cg.com/contact/" 
                         className="inline-flex items-center justify-center w-full sm:w-auto bg-blue-600 text-white font-bold py-4 px-12 rounded-full hover:bg-blue-700 transition-all shadow-xl hover:shadow-2xl hover:-translate-y-1 text-lg group"
                       >
-                        AI基礎研修の話を聞く
+                        無料相談を申し込む
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform">
                           <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
                         </svg>

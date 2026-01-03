@@ -202,7 +202,7 @@ export default function AiMarkeTrainingPage() {
                         href="https://general-cg.com/contact/" 
                         className="inline-flex items-center justify-center w-full sm:w-auto bg-orange-600 text-white font-bold py-4 px-12 rounded-full hover:bg-orange-700 transition-all shadow-xl hover:shadow-2xl hover:-translate-y-1 text-lg group"
                       >
-                        AIマーケ研修の話を聞く
+                        無料相談を申し込む
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform">
                           <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
                         </svg>
@@ -1353,7 +1353,7 @@ export default function AiMarkeTrainingPage() {
                 href="https://general-cg.com/contact/" 
                 className="inline-flex items-center justify-center bg-orange-600 text-white font-bold py-5 px-16 rounded-full hover:bg-white hover:text-orange-600 transition-all shadow-2xl hover:shadow-white/20 text-xl group"
               >
-                <span>AIマーケ研修の話を聞く</span>
+                <span>無料相談を申し込む</span>
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
                 </svg>

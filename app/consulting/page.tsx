@@ -821,6 +821,9 @@ export default function ConsultingPage() {
                  <h3 className="text-2xl font-bold text-gray-900">広告代理店との違い</h3>
                </div>
                
+               <p className="lg:hidden text-sm text-gray-500 font-medium mb-2">
+                 ※横にスクロールできます
+               </p>
                <div className="overflow-x-auto bg-white rounded-2xl shadow-lg border border-gray-200">
                  <table className="w-full text-left border-collapse min-w-[700px]">
                    <thead>
@@ -877,6 +880,9 @@ export default function ConsultingPage() {
                  <h3 className="text-2xl font-bold text-gray-900">他のコンサル会社との違い</h3>
                </div>
 
+               <p className="lg:hidden text-sm text-gray-500 font-medium mb-2">
+                 ※横にスクロールできます
+               </p>
                <div className="overflow-x-auto bg-white rounded-2xl shadow-lg border border-gray-200">
               <table className="w-full text-left border-collapse min-w-[900px]">
                 <thead>
