@@ -131,7 +131,7 @@ export default function AiMarkeTrainingPage() {
             {/* Text Content */}
             <div className="w-full">
                   <div className="inline-block bg-orange-600/10 text-orange-600 font-bold px-4 py-1.5 rounded-full text-sm mb-6 border border-orange-600/20">
-                    社員数名〜150名規模の、経営層・集客担当に
+                    社員数名〜150名規模の中小企業に
                     <span className="whitespace-nowrap">オススメ</span>
                   </div>
                   <p className="text-3xl md:text-5xl lg:text-5xl xl:text-5xl 2xl:text-6xl font-bold text-gray-900 mb-6 leading-[1.2] tracking-tight">
