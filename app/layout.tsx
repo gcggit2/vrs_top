@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { GoogleTagManager } from '@next/third-parties/google';
 import { Noto_Sans_JP } from "next/font/google";
 import "./globals.css";
 
@@ -23,6 +24,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ja">
+      <GoogleTagManager gtmId="GTM-PX9WTDV" />
       <body
         className={`${notoSansJP.variable} antialiased font-sans text-gray-800`}
       >
