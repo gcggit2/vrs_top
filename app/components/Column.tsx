@@ -49,7 +49,7 @@ export default function Column() {
                 />
               </div>
               <div className="p-6">
-                <h3 className="text-lg font-bold text-gray-900 leading-snug group-hover:text-brand-red transition-colors line-clamp-3">
+                <h3 className="text-sm font-bold text-gray-900 leading-snug group-hover:text-brand-red transition-colors line-clamp-3">
                   {col.title}
                 </h3>
               </div>
