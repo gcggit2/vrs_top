@@ -2,18 +2,18 @@ import Image from 'next/image';
 
 const columns = [
   {
-    title: '「稼げる社長＝スゴい」が経営者を追い詰める｜経営の価値基準を「持続可能な経営」に定義し直す',
-    href: 'https://note.com/gcg_maki/n/nc6be60c6368f',
+    title: 'AIツール､「あれもこれも」は不要｜AI研修のプロが教える、万能1つ＋特化1つで十分な理由',
+    href: 'https://note.com/gcg_maki/n/n9d2f840e3ba3',
     imageSrc: '/column/column-1.png',
   },
   {
-    title: '1日24時間のうち「たった20％」で成果が激変｜最優先で時間を投資すべき"第二領域"とは？',
-    href: 'https://note.com/gcg_maki/n/n32c8c648a15b',
+    title: '商談前リサーチを2時間→30分に短縮｜AI活用で準備時間75%カットする方法',
+    href: 'https://note.com/gcg_maki/n/n0c1b8089c986',
     imageSrc: '/column/column-2.png',
   },
   {
-    title: '売上目標という呪縛を解いたら｜数字を追うのをやめた途端、優良顧客が集まり始めた経営の転換点',
-    href: 'https://note.com/gcg_maki/n/nf6034d1db51f',
+    title: '「稼げる社長＝スゴい」が経営者を追い詰める｜経営の価値基準を「持続可能な経営」に定義し直す',
+    href: 'https://note.com/gcg_maki/n/nc6be60c6368f',
     imageSrc: '/column/column-3.png',
   },
 ];
