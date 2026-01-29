@@ -33,7 +33,10 @@ export default function ConfirmPage() {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({
+          type: "contact", // 識別用
+          ...formData, // categories などの既存データ
+        }),
       });
 
       if (!response.ok) {

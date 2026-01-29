@@ -1,12 +1,16 @@
 "use client";
 
 import { createContext, useContext, useState, ReactNode } from "react";
-import { ContactFormData } from "@/lib/schema";
+import { ContactFormData, KabeuchiFormData } from "@/lib/schema";
 
 type ContactContextType = {
   formData: ContactFormData;
   setFormData: (data: ContactFormData) => void;
   clearFormData: () => void;
+  // 壁打ち用
+  kabeuchiData: KabeuchiFormData;
+  setKabeuchiData: (data: KabeuchiFormData) => void;
+  clearKabeuchiData: () => void;
 };
 
 const defaultValues: ContactFormData = {
@@ -17,17 +21,44 @@ const defaultValues: ContactFormData = {
   message: "",
 };
 
+const defaultKabeuchiValues: KabeuchiFormData = {
+  name: "",
+  companyName: "",
+  position: "",
+  email: "",
+  url: "",
+  topics: [],
+  otherTopic: "",
+  marketingBudget: "",
+  businessIssues: "",
+  requests: "",
+};
+
 const ContactContext = createContext<ContactContextType | undefined>(undefined);
 
 export function ContactProvider({ children }: { children: ReactNode }) {
   const [formData, setFormData] = useState<ContactFormData>(defaultValues);
+  const [kabeuchiData, setKabeuchiData] = useState<KabeuchiFormData>(defaultKabeuchiValues);
 
   const clearFormData = () => {
     setFormData(defaultValues);
   };
 
+  const clearKabeuchiData = () => {
+    setKabeuchiData(defaultKabeuchiValues);
+  };
+
   return (
-    <ContactContext.Provider value={{ formData, setFormData, clearFormData }}>
+    <ContactContext.Provider 
+      value={{ 
+        formData, 
+        setFormData, 
+        clearFormData,
+        kabeuchiData,
+        setKabeuchiData,
+        clearKabeuchiData
+      }}
+    >
       {children}
     </ContactContext.Provider>
   );

@@ -3,6 +3,7 @@ import type { Metadata } from 'next';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import Link from 'next/link';
+import Script from 'next/script';
 import LogoSlider from '../components/LogoSlider';
 
 export const metadata: Metadata = {
@@ -102,9 +103,9 @@ export default function KabeuchiPage() {
                  中小企業の経営者さま向け
                </div>
 
-               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 md:mb-8 leading-tight tracking-tight">
-                 <span className="block lg:inline-block mb-1 md:mb-2 lg:mb-0">60分の壁打ちで、</span>
-                 <span className="text-[oklch(0.623_0.19_145.35)] block lg:inline-block">利益1.2倍へ。</span>
+               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-bold text-gray-900 mb-6 md:mb-8 leading-tight tracking-tight">
+                 <span className="block mb-1 md:mb-2 lg:mb-0">60分の壁打ちで、</span>
+                 <span className="text-[oklch(0.623_0.19_145.35)] block whitespace-nowrap">利益UPの道筋を特定</span>
                </h1>
 
                <div className="flex items-center justify-center lg:justify-start gap-4 mb-8">
@@ -116,8 +117,8 @@ export default function KabeuchiPage() {
                {/* 信頼のバッジ */}
                <div className="flex flex-col sm:flex-row gap-3 md:gap-6 mb-8 md:mb-10 max-w-2xl mx-auto lg:mx-0">
                  {[
-                   { text: "上場企業Web広告を統括支援" },
-                   { text: "AI×マーケティングで利益改善" }
+                   { text: "AIによる時短・コスト削減" },
+                   { text: "集客数UP・獲得コスト改善" }
                  ].map((badge, i) => (
                    <div key={i} className="flex-1 bg-white/80 backdrop-blur-sm border-l-4 border-[oklch(0.623_0.19_145.35)] py-3 px-4 shadow-sm hover:shadow-md transition-shadow flex items-center justify-center sm:justify-start text-left">
                      <div className="text-gray-900 font-bold text-sm md:text-base">
@@ -134,7 +135,7 @@ export default function KabeuchiPage() {
                <div className="flex flex-col sm:flex-row gap-4 items-center lg:items-start justify-center lg:justify-start">
                  <div className="flex flex-col items-center lg:items-start gap-2 w-full sm:w-auto">
                    <Link 
-                     href="#form" 
+                     href="/kabeuchi/apply" 
                      className="inline-flex items-center justify-center w-full sm:w-auto bg-[oklch(0.623_0.19_145.35)] text-white font-bold py-4 px-8 md:px-12 rounded-full hover:bg-[oklch(0.55_0.19_145.35)] transition-all shadow-xl hover:shadow-2xl hover:-translate-y-1 text-base md:text-lg group"
                    >
                      利益の『伸びしろ』を壁打ちする
@@ -332,18 +333,19 @@ export default function KabeuchiPage() {
              <h2 className="text-2xl md:text-3xl font-bold mb-8">「利益の『伸びしろ』壁打ち」とは？</h2>
              
              {/* 動画プレースホルダー */}
-             <div className="aspect-video bg-gray-800 rounded-2xl border border-gray-700 flex items-center justify-center relative group cursor-pointer overflow-hidden shadow-2xl mb-8">
-                <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors"></div>
-                <div className="w-20 h-20 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center relative z-10 group-hover:scale-110 transition-transform">
-                   <div className="w-0 h-0 border-t-[15px] border-t-transparent border-l-[25px] border-l-white border-b-[15px] border-b-transparent ml-2"></div>
-                </div>
-             </div>
-             
-             <div className="text-center">
-               <p className="text-lg md:text-xl font-bold text-white mb-2">
-                 テロップ付きなので､音声なしでも視聴できます
-               </p>
-             </div>
+            <div className="mb-8 rounded-2xl overflow-hidden shadow-2xl border border-gray-700">
+              <div style={{ padding: '55.93% 0 0 0', position: 'relative' }}>
+                <iframe 
+                  src="https://player.vimeo.com/video/1159529164?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" 
+                  frameBorder="0" 
+                  allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" 
+                  referrerPolicy="strict-origin-when-cross-origin" 
+                  style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }} 
+                  title="利益の伸びしろ壁打ち_説明動画"
+                ></iframe>
+              </div>
+              <Script src="https://player.vimeo.com/api/player.js" strategy="lazyOnload" />
+            </div>
            </div>
         </div>
       </section>
@@ -600,7 +602,7 @@ export default function KabeuchiPage() {
              {/* フォームプレースホルダー */}
              <div className="bg-white rounded-3xl p-8 md:p-12 border border-gray-200 shadow-xl text-center">
                 <Link 
-                   href="https://general-cg.com/contact/" 
+                   href="/kabeuchi/apply" 
                    className="inline-flex items-center justify-center bg-[oklch(0.623_0.19_145.35)] text-white font-bold py-5 px-8 md:px-16 rounded-full hover:bg-[oklch(0.55_0.19_145.35)] transition-all shadow-xl hover:shadow-2xl text-lg md:text-xl w-full md:w-auto"
                 >
                   利益の『伸びしろ』を壁打ちする

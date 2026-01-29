@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { GoogleTagManager } from '@next/third-parties/google';
 import { Noto_Sans_JP } from "next/font/google";
+import { ContactProvider } from "@/context/ContactContext";
 import "./globals.css";
 
 const notoSansJP = Noto_Sans_JP({
@@ -28,7 +29,9 @@ export default function RootLayout({
       <body
         className={`${notoSansJP.variable} antialiased font-sans text-gray-800`}
       >
-        {children}
+        <ContactProvider>
+          {children}
+        </ContactProvider>
       </body>
     </html>
   );

@@ -35,6 +35,14 @@ export default function ContactPage() {
     defaultValues: formData, // Contextから初期値を設定
   });
 
+  // コンポーネントマウント時にデフォルト値をフォームにセットする（確認画面から戻ってきた時用）
+  // useFormのdefaultValuesだけでは、再マウント時にContextの値が反映されないことがあるため
+  // useEffect(() => {
+  //   if (formData) {
+  //     // 必要に応じてsetValueなどでセット
+  //   }
+  // }, [formData, setValue]);
+
   const onSubmit: SubmitHandler<ContactFormData> = (data) => {
     setFormData(data); // Contextに保存
     router.push("/contact/confirm");
@@ -62,7 +70,7 @@ export default function ContactPage() {
                     id="companyName"
                     type="text"
                     placeholder="株式会社〇〇"
-                    className="w-full p-3 bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-red/20 focus:border-brand-red transition-all"
+                    className="w-full p-3 bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-red/20 focus:border-brand-red transition-all text-gray-900"
                     {...register("companyName")}
                 />
                 {errors.companyName && (
@@ -81,7 +89,7 @@ export default function ContactPage() {
                     id="name"
                     type="text"
                     placeholder="苗字 名前"
-                    className="w-full p-3 bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-red/20 focus:border-brand-red transition-all"
+                    className="w-full p-3 bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-red/20 focus:border-brand-red transition-all text-gray-900"
                     {...register("name")}
                 />
                 {errors.name && (
@@ -100,7 +108,7 @@ export default function ContactPage() {
                     id="email"
                     type="email"
                     placeholder="sample@example.com"
-                    className="w-full p-3 bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-red/20 focus:border-brand-red transition-all"
+                    className="w-full p-3 bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-red/20 focus:border-brand-red transition-all text-gray-900"
                     {...register("email")}
                 />
                 {errors.email && (
@@ -150,7 +158,7 @@ export default function ContactPage() {
                     id="message"
                     rows={8}
                     placeholder="例：AIマーケ研修の導入を検討しています。現在、マーケティング専任者がおらず兼務体制のため、AIを活用して集客の仕組みを効率的に内製化できる研修を探しています。具体的なカリキュラム内容、実務レベルでどこまで対応できるようになるか、また所要時間や費用感について詳しく知りたいです。"
-                    className="w-full p-3 bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-red/20 focus:border-brand-red transition-all resize-y placeholder-gray-400"
+                    className="w-full p-3 bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-red/20 focus:border-brand-red transition-all resize-y placeholder-gray-400 text-gray-900"
                     {...register("message")}
                 ></textarea>
                 {errors.message && (
