@@ -89,6 +89,9 @@ export default function Header() {
               {/* Dropdown Menu */}
               <div className="absolute left-0 top-full pt-2 w-56 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform translate-y-2 group-hover:translate-y-0 z-50">
                 <div className="bg-white shadow-xl rounded-lg border border-gray-100 overflow-hidden">
+                  <Link href="/kabeuchi" className="block px-4 py-3 hover:bg-red-50 hover:text-brand-red transition-colors border-b border-gray-50 text-sm">
+                    利益の『伸びしろ』壁打ち
+                  </Link>
                   <Link href="/consulting" className="block px-4 py-3 hover:bg-red-50 hover:text-brand-red transition-colors border-b border-gray-50 text-sm">
                     AIマーケ顧問
                   </Link>
@@ -110,6 +113,12 @@ export default function Header() {
             <a href="https://note.com/gcg_maki" target="_blank" rel="noopener noreferrer" className="hover:text-brand-red transition-colors py-2 whitespace-nowrap">コラム記事</a>
             <Link href="/company" className="hover:text-brand-red transition-colors py-2 whitespace-nowrap">会社紹介</Link>
             
+            <Link 
+              href="/kabeuchi" 
+              className="bg-white text-brand-red border-2 border-brand-red px-5 py-2.5 rounded hover:bg-red-50 transition-colors shadow-sm font-bold whitespace-nowrap ml-4"
+            >
+              利益の『伸びしろ』壁打ち
+            </Link>
             <Link 
               href="/contact" 
               className="bg-brand-red text-white px-5 py-2.5 rounded hover:bg-red-700 transition-colors shadow-sm font-bold whitespace-nowrap ml-2"
@@ -147,6 +156,10 @@ export default function Header() {
           
           <div className="flex flex-col gap-4 border-b border-gray-100 pb-4">
             <span className="text-gray-400 text-sm font-normal">サービス一覧</span>
+            <Link href="/kabeuchi" onClick={closeMenu} className="pl-4 hover:text-brand-red flex items-center gap-2">
+              <span className="w-1.5 h-1.5 bg-brand-red rounded-full"></span>
+              利益の『伸びしろ』壁打ち
+            </Link>
             <Link href="/consulting" onClick={closeMenu} className="pl-4 hover:text-brand-red flex items-center gap-2">
               <span className="w-1.5 h-1.5 bg-brand-red rounded-full"></span>
               AIマーケ顧問
@@ -170,6 +183,13 @@ export default function Header() {
           <a href="https://note.com/gcg_maki" target="_blank" rel="noopener noreferrer" onClick={closeMenu} className="border-b border-gray-100 pb-2">コラム記事</a>
           <Link href="/company" onClick={closeMenu} className="border-b border-gray-100 pb-2">会社紹介</Link>
           
+          <Link 
+            href="/kabeuchi" 
+            onClick={closeMenu}
+            className="bg-white text-brand-red border-2 border-brand-red text-center py-4 rounded hover:bg-red-50 transition-colors shadow-sm mt-8"
+          >
+            利益の『伸びしろ』壁打ち
+          </Link>
           <Link 
             href="/contact" 
             onClick={closeMenu}

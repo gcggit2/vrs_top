@@ -34,6 +34,7 @@ export default function Footer() {
           <div className="md:col-span-1">
             <h4 className="font-bold mb-6 text-brand-red">サービス一覧</h4>
             <ul className="space-y-3 text-sm text-gray-600">
+              <li><Link href="/kabeuchi" className="hover:text-brand-red transition-colors">利益の『伸びしろ』壁打ち</Link></li>
               <li><Link href="/consulting" className="hover:text-brand-red transition-colors">AIマーケ顧問</Link></li>
               <li><Link href="/ai-marke-training" className="hover:text-brand-red transition-colors">AIマーケ研修</Link></li>
               <li><Link href="/ai-training" className="hover:text-brand-red transition-colors">AI基礎研修</Link></li>
@@ -56,6 +57,12 @@ export default function Footer() {
           {/* Column 4: Contact - Tablet: Full width, Desktop: 1/5 */}
           <div className="md:col-span-2 lg:col-span-1">
             <div className="space-y-4 pt-1">
+              <Link 
+                href="/kabeuchi" 
+                className="block bg-white text-brand-red border-2 border-brand-red hover:bg-red-50 text-center py-3 rounded font-bold transition-colors shadow-sm"
+              >
+                利益の『伸びしろ』壁打ち
+              </Link>
               <Link 
                 href="/contact" 
                 className="block bg-brand-red hover:bg-red-700 text-white text-center py-3 rounded font-bold transition-colors shadow-sm"
