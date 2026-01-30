@@ -8,7 +8,7 @@ import LogoSlider from '../components/LogoSlider';
 
 export const metadata: Metadata = {
   title: '利益の『伸びしろ』壁打ち｜無料の経営・マーケティング診断｜ジェネラルコンサルティンググループ',
-  description: '【毎月10社限定・無料】貴社の利益には、まだ「伸びしろ」が眠っています。コスト削減・Web広告の機会損失・AI活用など、60分間の壁打ちで「隠れた利益」を可視化。中小企業から上場企業まで､豊富な支援経験を持つ槙優真が直接アドバイスします。',
+  description: '【毎月5社限定・無料】貴社の利益には、まだ「伸びしろ」が眠っています。コスト削減・Web広告の機会損失・AI活用など、60分間の壁打ちで「隠れた利益」を可視化。中小企業から上場企業まで､豊富な支援経験を持つ槙優真が直接アドバイスします。',
 };
 
 export default function KabeuchiPage() {
@@ -145,7 +145,7 @@ export default function KabeuchiPage() {
                    </Link>
                    <div className="text-center mt-3">
                      <p className="text-xs md:text-sm text-red-600 font-bold bg-white/80 px-4 py-1 rounded-full border border-red-200 shadow-sm inline-block">
-                       ※完全無料｡毎月先着10社限定
+                       ※完全無料｡毎月先着5社限定
                      </p>
                    </div>
                  </div>
@@ -589,7 +589,7 @@ export default function KabeuchiPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
              <div className="text-center mb-12">
-               <span className="bg-[oklch(0.623_0.19_145.35)] text-white font-bold px-4 py-1 rounded-full text-sm mb-4 inline-block">毎月10社限定</span>
+               <span className="bg-[oklch(0.623_0.19_145.35)] text-white font-bold px-4 py-1 rounded-full text-sm mb-4 inline-block">毎月5社限定</span>
                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
                  お申し込みフォーム
                </h2>
@@ -610,7 +610,7 @@ export default function KabeuchiPage() {
                 
                 <div className="mt-6 flex flex-col items-center gap-2">
                   <p className="text-base text-red-600 font-bold bg-red-50 px-6 py-2 rounded-full border border-red-200 inline-block">
-                    ※完全無料｡毎月先着10社限定
+                    ※完全無料｡毎月先着5社限定
                   </p>
                 </div>
              </div>
