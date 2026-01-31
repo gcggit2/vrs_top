@@ -3,7 +3,8 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 
 export const metadata: Metadata = {
-  title: '特定商取引法に基づく表記｜ジェネラルコンサルティンググループ',
+  title: '特定商取引法に基づく表記｜ヴェルセンス株式会社',
+  description: 'ヴェルセンス株式会社の特定商取引法に基づく表記です。販売価格、代金の支払時期・方法、返品・キャンセルに関する規定など、法令に基づく表示事項を掲載しています。',
   robots: {
     index: false,
   },
@@ -11,7 +12,7 @@ export const metadata: Metadata = {
 
 export default function Law() {
   const lawInfo = [
-    { label: '事業者', value: 'ジェネラルコンサルティンググループ株式会社' },
+    { label: '事業者', value: 'ヴェルセンス株式会社' },
     { label: '代表者', value: '槙 優真' },
     { 
       label: '所在地', 
@@ -22,7 +23,7 @@ export default function Law() {
         </>
       ) 
     },
-    { label: '連絡先', value: 'info@general-cg.com' },
+    { label: '連絡先', value: 'info@versence.jp' },
     { 
       label: '商品の販売価格', 
       value: (
@@ -57,9 +58,9 @@ export default function Law() {
       {/* Page Header */}
       <div className="bg-gray-50 py-16 md:py-24 border-b border-gray-100">
         <div className="container mx-auto px-4 text-center">
-          <span className="text-brand-red font-bold tracking-widest block mb-2">LAW</span>
+          <span className="text-brand-blue font-bold tracking-widest block mb-2">LAW</span>
           <h1 className="text-3xl md:text-5xl font-bold text-gray-900">特定商取引法に基づく表示</h1>
-          <div className="w-16 h-1 bg-brand-red mx-auto mt-6"></div>
+          <div className="w-16 h-1 bg-brand-blue mx-auto mt-6"></div>
         </div>
       </div>
 

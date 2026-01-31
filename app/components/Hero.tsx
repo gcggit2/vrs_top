@@ -15,12 +15,12 @@ export default function Hero() {
         
         <div className="container mx-auto px-4 relative z-10 text-center">
           <div className="max-w-4xl mx-auto">
-            <h1 className="text-brand-red font-bold mb-6 tracking-widest text-xs md:text-base uppercase">
-              GENERAL CONSULTING GROUP Inc.
+            <h1 className="text-brand-blue font-bold mb-6 tracking-widest text-xs md:text-base uppercase">
+              VERSENCE Inc.
             </h1>
             <h2 className="text-lg md:text-4xl lg:text-5xl font-bold leading-relaxed md:leading-snug mb-8 md:mb-12 text-gray-900 antialiased tracking-tight">
-              コストは下がり、売上は増える。<br/>
-              やることは減り、利益は<span className="whitespace-nowrap inline-block">最大化する。</span>
+              物理的・精神的ウェルビーイングを<br/>
+              社会に実装する
             </h2>
           </div>
         </div>

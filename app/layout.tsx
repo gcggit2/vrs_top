@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { GoogleTagManager } from '@next/third-parties/google';
 import { Noto_Sans_JP } from "next/font/google";
 import { ContactProvider } from "@/context/ContactContext";
 import "./globals.css";
@@ -10,11 +9,14 @@ const notoSansJP = Noto_Sans_JP({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://general-cg.com'), // 本番ドメイン
-  title: "ジェネラルコンサルティンググループ株式会社",
-  description: "価値ある商品・サービスを広め、「幸せ」が循環する社会を創る。ジェネラルコンサルティンググループ株式会社は、コストダウン・売上UPの両面から、貴社の利益を増やします。",
+  metadataBase: new URL('https://versence.jp'), // 本番ドメイン
+  title: "ヴェルセンス株式会社",
+  description: "物理的・精神的ウェルビーイングを社会に実装することを目指すヴェルセンス株式会社。心身の健康と豊かさを追求し、持続可能な社会の実現に貢献します。",
   alternates: {
     canonical: '/',
+  },
+  robots: {
+    index: false, // サイト全体をnoindexに設定
   },
 };
 
@@ -25,7 +27,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ja">
-      <GoogleTagManager gtmId="GTM-PX9WTDV" />
       <body
         className={`${notoSansJP.variable} antialiased font-sans text-gray-800`}
       >

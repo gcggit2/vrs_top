@@ -5,14 +5,13 @@ import Hero from './components/Hero';
 import News from './components/News';
 import Service from './components/Service';
 import Projects from './components/Projects';
-import Column from './components/Column';
 import Footer from './components/Footer';
 import LogoSlider from './components/LogoSlider';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'ジェネラルコンサルティンググループ株式会社｜AI×マーケティング支援',
-  description: 'AIとマーケティングの知見を融合し、企業の持続的な成長と高収益化を実現するジェネラルコンサルティンググループ株式会社の公式サイトです。',
+  title: 'ヴェルセンス株式会社｜ウェルビーイングを社会に実装する',
+  description: '物理的・精神的ウェルビーイングを社会に実装することを目指すヴェルセンス株式会社の公式サイトです。心身の健康と豊かさを追求し、すべての人々がより良く生きられる持続可能な社会の実現に貢献します。',
 };
 
 export default function Home() {
@@ -24,17 +23,17 @@ export default function Home() {
           __html: JSON.stringify({
             '@context': 'https://schema.org',
             '@type': 'Organization',
-            name: 'ジェネラルコンサルティンググループ株式会社',
-            url: 'https://general-cg.com',
-            description: 'AIとマーケティングの知見を融合し、企業の持続的な成長と高収益化を実現するコンサルティングファーム',
+            name: 'ヴェルセンス株式会社',
+            url: 'https://versence.jp',
+            description: '物理的・精神的ウェルビーイングを社会に実装し、持続可能な社会の実現を目指す企業',
           }),
         }}
       />
       <Header />
       <Hero />
       
-      {/* Logo Slider Section */}
-      <LogoSlider />
+      {/* Logo Slider Section Removed */}
+      {/* <LogoSlider /> */}
       
       {/* Introduction Section (Redesigned) */}
       <section className="py-12 md:py-20 bg-gray-50 overflow-hidden relative">
@@ -47,18 +46,18 @@ export default function Home() {
         />
         
         <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-5xl mx-auto p-6 md:p-16 relative flex flex-col md:flex-row items-start gap-8 md:gap-12 bg-white shadow-xl rounded-none md:rounded-r-3xl border-l-4 border-brand-red">
+          <div className="max-w-5xl mx-auto p-6 md:p-16 relative flex flex-col md:flex-row items-start gap-8 md:gap-12 bg-white shadow-xl rounded-none md:rounded-r-3xl border-l-4 border-brand-blue">
             
             {/* Main Content */}
             <div className="w-full text-left">
               <h2 className="text-lg md:text-4xl font-bold text-gray-900 mb-6 md:mb-8 leading-snug tracking-tight">
-                <span className="text-brand-red">AI活用</span><span className="text-xs md:text-3xl ml-1 align-middle text-gray-600">(守り)</span> × <span className="text-brand-red">マーケティング</span><span className="text-xs md:text-3xl ml-1 align-middle text-gray-600">(攻め)</span><br/>
-                コストは最小化、売上は最大化
+                物理的・精神的ウェルビーイングを<br/>
+                社会に実装する
               </h2>
               <p className="text-gray-600 leading-relaxed text-base md:text-lg font-medium border-t border-gray-100 pt-8 mt-8">
-                <span className="block text-xl font-bold text-gray-800 mb-4">属人的な経営から、仕組みで利益を生む経営へ。</span>
-                AIとマーケティング、攻守の両輪で<span className="font-bold text-brand-red">「圧倒的な投資対効果」</span>を実現。<br className="hidden md:block"/>
-                「仕組み」で売上をつくり、心にゆとりある経営をサポートします。
+                <span className="block text-xl font-bold text-gray-800 mb-4">持続可能な社会の実現へ。</span>
+                私たちは、心身の健康と豊かさを追求し、<span className="font-bold text-brand-blue">「ウェルビーイング」</span>を軸とした事業を展開しています。<br className="hidden md:block"/>
+                すべての人々が、より良く生きられる社会を目指して。
               </p>
             </div>
           </div>
@@ -66,30 +65,34 @@ export default function Home() {
       </section>
 
       <Service />
+      {/* 
       <Projects />
+      */}
       
       {/* Customer Reviews Snippet */}
+      {/* 
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4 text-center">
-          <span className="text-brand-red font-bold block mb-2 tracking-wider">CUSTOMER REVIEWS</span>
+          <span className="text-brand-blue font-bold block mb-2 tracking-wider">CUSTOMER REVIEWS</span>
           <h2 className="text-3xl font-bold text-gray-900 mb-8">お客様の声</h2>
           <p className="text-gray-600 mb-10">
             当社のサービスをご利用いただいたお客様の声を一覧で掲載しています。
           </p>
           <Link 
             href="/reviews/1"
-            className="inline-block border-2 border-brand-red text-brand-red font-bold py-3 px-10 rounded hover:bg-brand-red hover:text-white transition-colors"
+            className="inline-block border-2 border-brand-blue text-brand-blue font-bold py-3 px-10 rounded hover:bg-brand-blue hover:text-white transition-colors"
           >
             お客様の声 一覧を見る
           </Link>
         </div>
       </section>
+      */}
 
       {/* Profile Snippet (Updated) */}
+      {/*
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row items-start gap-12 max-w-6xl mx-auto">
-            {/* PC/Tablet Image Column */}
             <div className="hidden md:block w-full md:w-5/12 md:sticky md:top-24">
               <div className="bg-gray-100 aspect-[3/4] rounded-lg overflow-hidden relative shadow-lg">
                  <Image 
@@ -103,12 +106,11 @@ export default function Home() {
             </div>
             
             <div className="md:w-7/12">
-              <span className="text-brand-red font-bold block mb-4 tracking-wider">CEO PROFILE & STORY</span>
+              <span className="text-brand-blue font-bold block mb-4 tracking-wider">CEO PROFILE & STORY</span>
               <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-8 leading-tight">
                 属人的な経営から、<br className="md:hidden"/>AIと仕組みで「変化に強い、安定した」経営へ。
               </h2>
               
-              {/* Mobile Image - Inserted between Title and Body */}
               <div className="md:hidden mb-10">
                 <div className="bg-gray-100 aspect-[3/4] rounded-lg overflow-hidden relative shadow-md w-48 mx-auto">
                    <Image 
@@ -137,9 +139,8 @@ export default function Home() {
                 <div className="flex flex-col items-start gap-3">
                   <Link 
                     href="/profile" 
-                    className="group relative inline-flex items-center gap-3 bg-brand-red text-white font-bold py-4 px-6 md:py-5 md:px-12 rounded-full hover:bg-red-700 transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:-translate-y-1 overflow-hidden w-full md:w-auto justify-center"
+                    className="group relative inline-flex items-center gap-3 bg-brand-blue text-white font-bold py-4 px-6 md:py-5 md:px-12 rounded-full hover:bg-red-700 transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:-translate-y-1 overflow-hidden w-full md:w-auto justify-center"
                   >
-                    {/* Shine Effect */}
                     <div className="absolute top-0 left-0 w-1/2 h-full bg-gradient-to-r from-transparent via-white/30 to-transparent -skew-x-12 -translate-x-full animate-shine" />
                     
                     <span className="relative z-10 text-sm md:text-lg whitespace-nowrap">代表プロフィール・ストーリー</span>
@@ -153,9 +154,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+      */}
 
-      <Column />
-      <News />
+      {/* <News /> */}
       <Footer />
     </main>
   );

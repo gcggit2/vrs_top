@@ -41,10 +41,10 @@ export default function News() {
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-10 border-b border-gray-200 pb-4">
           <div className="w-full md:w-auto text-left">
-            <span className="text-brand-red font-bold block mb-2 tracking-wider">ACTIVITY & INFO</span>
+            <span className="text-brand-blue font-bold block mb-2 tracking-wider">ACTIVITY & INFO</span>
             <h2 className="text-3xl font-bold text-gray-900">活動報告・お知らせ</h2>
           </div>
-          <Link href="/news" className="text-brand-red hover:text-red-700 font-bold mt-4 md:mt-0 flex items-center gap-1 group self-end md:self-auto">
+          <Link href="/news" className="text-brand-blue hover:text-red-700 font-bold mt-4 md:mt-0 flex items-center gap-1 group self-end md:self-auto">
             一覧を見る <span className="transform group-hover:translate-x-1 transition-transform">&rarr;</span>
           </Link>
         </div>
@@ -59,10 +59,10 @@ export default function News() {
               <div className="flex items-center gap-4 flex-shrink-0">
                 <time className="text-gray-500 font-mono text-sm">{item.date}</time>
               </div>
-              <h3 className="text-gray-900 font-medium flex-1 group-hover:text-brand-red transition-colors text-base leading-snug">
+              <h3 className="text-gray-900 font-medium flex-1 group-hover:text-brand-blue transition-colors text-base leading-snug">
                 {item.title}
               </h3>
-              <div className="hidden md:block text-brand-red opacity-0 group-hover:opacity-100 transform translate-x-[-10px] group-hover:translate-x-0 transition-all">
+              <div className="hidden md:block text-brand-blue opacity-0 group-hover:opacity-100 transform translate-x-[-10px] group-hover:translate-x-0 transition-all">
                 &rarr;
               </div>
             </Link>

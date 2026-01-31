@@ -21,7 +21,7 @@ export default function LogoSlider() {
 
   // 支援事例一覧（サムネカテゴリ）で使用している3色に合わせる
   const textColorCycle = [
-    'border-brand-red',
+    'border-brand-blue',
     'border-[#00509d]',
     'border-amber-600',
   ] as const;

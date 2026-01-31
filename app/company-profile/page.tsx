@@ -3,7 +3,8 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 
 export const metadata: Metadata = {
-  title: '会社概要｜ジェネラルコンサルティンググループ',
+  title: '会社概要｜ヴェルセンス株式会社',
+  description: 'ヴェルセンス株式会社の会社概要です。代表者、所在地、設立日、事業内容（ウェルビーイングに関するサービスの企画・開発・運用）などの基本情報を掲載しています。',
   robots: {
     index: false,
   },
@@ -11,7 +12,7 @@ export const metadata: Metadata = {
 
 export default function CompanyProfile() {
   const companyInfo = [
-    { label: '社名', value: 'ジェネラルコンサルティンググループ株式会社' },
+    { label: '社名', value: 'ヴェルセンス株式会社' },
     { label: '代表者名', value: '代表取締役　槙 優真' },
     { 
       label: '本社所在地', 
@@ -22,17 +23,12 @@ export default function CompanyProfile() {
         </>
       ) 
     },
-    { label: '設立年月日', value: '2017年2月7日' },
-    { label: '連絡先', value: 'MAIL : info@general-cg.com' },
-    { label: 'URL', value: <a href="https://general-cg.com/" className="text-brand-red hover:underline">https://general-cg.com/</a> },
+    { label: '設立年月日', value: '2025年3月31日' },
+    { label: '連絡先', value: 'MAIL : info@versence.jp' },
+    { label: 'URL', value: <a href="https://versence.jp" className="text-brand-blue hover:underline">https://versence.jp</a> },
     { 
       label: '事業内容', 
-      value: (
-        <ul className="list-disc list-inside">
-          <li>マーケティングコンサル事業</li>
-          <li>AIコンサル事業</li>
-        </ul>
-      ) 
+      value: 'ウェルビーイングに関するサービスの企画、開発、提供及び運用'
     },
   ];
 
@@ -43,9 +39,9 @@ export default function CompanyProfile() {
       {/* Page Header */}
       <div className="bg-gray-50 py-16 md:py-24 border-b border-gray-100">
         <div className="container mx-auto px-4 text-center">
-          <span className="text-brand-red font-bold tracking-widest block mb-2">COMPANY PROFILE</span>
+          <span className="text-brand-blue font-bold tracking-widest block mb-2">COMPANY PROFILE</span>
           <h1 className="text-3xl md:text-5xl font-bold text-gray-900">会社概要</h1>
-          <div className="w-16 h-1 bg-brand-red mx-auto mt-6"></div>
+          <div className="w-16 h-1 bg-brand-blue mx-auto mt-6"></div>
         </div>
       </div>
 

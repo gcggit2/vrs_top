@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next';
 
 export default function robots(): MetadataRoute.Robots {
-  const baseUrl = 'https://general-cg.com'; // 本番ドメイン
+  const baseUrl = 'https://versence.jp'; // 本番ドメイン
 
   return {
     rules: {
