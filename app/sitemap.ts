@@ -6,14 +6,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // 静的ページ
   const routes = [
     '', // top
-    '/profile',
-    '/consulting',
-    '/ai-marke-training',
-    '/ai-training',
-    '/company',
-    '/news',
-    '/projects',
-    '/reviews/1', // ページネーションの1ページ目
+    '/company-profile',
+    '/law',
+    '/privacy',
   ].map((route) => ({
     url: `${baseUrl}${route}`,
     lastModified: new Date(),
@@ -23,4 +18,3 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   return [...routes];
 }
-

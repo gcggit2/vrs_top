@@ -40,7 +40,7 @@ export default function Header() {
               <div className="relative h-6 md:h-8 w-auto">
                 <Image 
                   src="/logo.png" 
-                  alt="GENERAL CONSULTING GROUP" 
+                  alt="VERSENCE Inc." 
                   width={160}
                   height={60}
                   className="h-full w-auto object-contain object-left"
