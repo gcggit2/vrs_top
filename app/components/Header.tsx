@@ -23,6 +23,7 @@ export default function Header() {
 
   // Close menu when route changes
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setIsOpen(false);
   }, [pathname]);
 
@@ -40,7 +41,7 @@ export default function Header() {
               <div className="relative h-6 md:h-8 w-auto">
                 <Image 
                   src="/logo.png" 
-                  alt="VERSENCE Inc." 
+                  alt="Versence Inc." 
                   width={160}
                   height={60}
                   className="h-full w-auto object-contain object-left"

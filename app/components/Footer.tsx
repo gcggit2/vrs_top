@@ -15,7 +15,7 @@ export default function Footer() {
               <Link href="/">
                 <Image 
                   src="/logo.png" 
-                  alt="VERSENCE Inc." 
+                  alt="Versence Inc." 
                   width={160}
                   height={60}
                   className="w-32 md:w-40 h-auto object-contain" 
@@ -41,7 +41,7 @@ export default function Footer() {
             <Link href="/privacy" className="hover:text-brand-blue transition-colors">プライバシーポリシー</Link>
             <Link href="/law" className="hover:text-brand-blue transition-colors">特定商取引法に基づく表示</Link>
           </div>
-          <p>© VERSENCE Inc. All rights reserved.</p>
+          <p>© Versence Inc. All rights reserved.</p>
         </div>
       </div>
     </footer>

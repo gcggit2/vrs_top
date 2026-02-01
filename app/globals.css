@@ -3,13 +3,16 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --primary-color: #0a84ba;
+  --accent-color: #C50E1D;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-noto-sans-jp);
-  --color-brand-blue: #0a84ba;
+  --color-brand-blue: var(--primary-color);
+  --color-brand-red: var(--accent-color);
 
   /* Custom Animation for Logo Slider */
   --animate-scroll: scroll 60s linear infinite;

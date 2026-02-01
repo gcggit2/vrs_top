@@ -1,13 +1,8 @@
-import Image from 'next/image';
 import type { Metadata } from 'next';
 import Header from './components/Header';
 import Hero from './components/Hero';
-import News from './components/News';
 import Service from './components/Service';
-import Projects from './components/Projects';
 import Footer from './components/Footer';
-import LogoSlider from './components/LogoSlider';
-import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'ヴェルセンス株式会社｜ウェルビーイングを社会に実装する',

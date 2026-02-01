@@ -44,7 +44,7 @@ export default function News() {
             <span className="text-brand-blue font-bold block mb-2 tracking-wider">ACTIVITY & INFO</span>
             <h2 className="text-3xl font-bold text-gray-900">活動報告・お知らせ</h2>
           </div>
-          <Link href="/news" className="text-brand-blue hover:text-red-700 font-bold mt-4 md:mt-0 flex items-center gap-1 group self-end md:self-auto">
+          <Link href="/news" className="text-brand-blue hover:text-brand-red font-bold mt-4 md:mt-0 flex items-center gap-1 group self-end md:self-auto">
             一覧を見る <span className="transform group-hover:translate-x-1 transition-transform">&rarr;</span>
           </Link>
         </div>
@@ -54,7 +54,7 @@ export default function News() {
             <Link 
               key={index} 
               href={`/news/${item.id}`}
-              className="flex flex-col md:flex-row md:items-center gap-3 md:gap-8 p-6 hover:bg-red-50/30 transition-colors border-b border-gray-100 last:border-0 group relative"
+              className="flex flex-col md:flex-row md:items-center gap-3 md:gap-8 p-6 hover:bg-brand-red/5 transition-colors border-b border-gray-100 last:border-0 group relative"
             >
               <div className="flex items-center gap-4 flex-shrink-0">
                 <time className="text-gray-500 font-mono text-sm">{item.date}</time>
